@@ -1,0 +1,77 @@
+{
+  "hypotheses": [
+    {
+      "issue": "Recent ROAS Decline",
+      "hypothesis": "Implementing a promotion targeting new customers will counteract the recent ROAS decline by driving incremental sales.",
+      "supporting_signals": [
+        "ROAS decreasing from 2025-03-24 to 2025-03-31",
+        "No specific creative or audience issues identified as the root cause of the decline"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "issue": "Creative Fatigue on Women's Apparel",
+      "hypothesis": "Replacing fatigued creatives for women's bras and boyshorts with new visuals and messaging focused on comfort and support will increase ROAS.",
+      "supporting_signals": [
+        "High impressions and declining ROAS for specific creatives related to women's bras and boyshorts",
+        "Creative messaging 'Breathable cotton that moves with you — limited offer on women bras.' has 1794973 impressions and a ROAS of 41.28.",
+        "Creative messaging 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.' has 6678048 impressions and a ROAS of 20.65."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "issue": "Underperforming Creatives",
+      "hypothesis": "Pausing the underperforming creatives ('Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable cotton that moves with you — limited offer on women sports bras.') and reallocating their budget to top-performing creatives will improve overall ROAS.",
+      "supporting_signals": [
+        "Low ROAS for creatives with messaging 'Breathable microfiber that moves with you — limited offer on women panties.' (ROAS: 2.76)",
+        "Low ROAS for creatives with messaging 'Breathable cotton that moves with you — limited offer on women sports bras.' (ROAS: 2.71)"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "issue": "Retargeting Audience Success",
+      "hypothesis": "Increasing budget allocation to retargeting campaigns, combined with dynamically updated creative messaging based on products viewed, will further increase ROAS from this high-performing audience.",
+      "supporting_signals": [
+        "Retargeting audience ROAS is significantly higher (14.40) than broad (8.06) and lookalike (9.66) audiences"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "issue": "US Market Dominance",
+      "hypothesis": "Duplicating successful US creatives and ad targeting strategies in the IN and UK markets, with localized messaging and offers, will improve ROAS in those regions.",
+      "supporting_signals": [
+        "US market has a higher ROAS (10.28) compared to IN (8.71) and UK (9.08)"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "issue": "Facebook and Instagram performance",
+      "hypothesis": "Adjusting budget allocation between Facebook and Instagram based on a weekly ROAS analysis will optimize platform performance.",
+      "supporting_signals": [
+        "Facebook (ROAS: 9.90) performs slightly better than Instagram (ROAS: 9.38)"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "issue": "Creative Fatigue on Women's Apparel",
+      "hypothesis": "Testing influencer-created content for women's apparel (bras, boyshorts) will provide fresh creative assets and appeal to a broader audience, mitigating creative fatigue and improving ROAS.",
+      "supporting_signals": [
+        "High impressions and declining ROAS for specific creatives related to women's bras and boyshorts"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "issue": "Underperforming Creatives",
+      "hypothesis": "A/B testing different call-to-actions (e.g., 'Shop Now' vs. 'Learn More') on the underperforming creatives will determine if a simple CTA change can improve their performance.",
+      "supporting_signals": [
+        "Low ROAS for creatives with messaging 'Breathable microfiber that moves with you — limited offer on women panties.'",
+        "Low ROAS for creatives with messaging 'Breathable cotton that moves with you — limited offer on women sports bras.'"
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "meta": {
+    "agent": "HypothesisAgent",
+    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"Recent ROAS Decline\",\n      \"hypothesis\": \"Implementing a promotion targeting new customers will counteract the recent ROAS decline by driving incremental sales.\",\n      \"supporting_signals\": [\n        \"ROAS decreasing from 2025-03-24 to 2025-03-31\",\n        \"No specific creative or audience issues identified as the root cause of the decline\"\n      ],\n      \"confidence\": 0.7\n    },\n    {\n      \"issue\": \"Creative Fatigue on Women's Apparel\",\n      \"hypothesis\": \"Replacing fatigued creatives for women's bras and boyshorts with new visuals and messaging focused on comfort and support will increase ROAS.\",\n      \"supporting_signals\": [\n        \"High impressions and declining ROAS for specific creatives related to women's bras and boyshorts\",\n  "
+  }
+}
