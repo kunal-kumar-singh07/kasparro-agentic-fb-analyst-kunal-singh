@@ -4,10 +4,10 @@ import re
 import time
 from tqdm import tqdm
 
+RESULTS_DIR = r"E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\results"
 JSON_REGEX = re.compile(r'({[\s\S]*})|(\[[\s\S]*\])', re.MULTILINE)
 
 def clean_llm_output(text: str) -> str:
-    """Remove <think> tags and junk wrappers."""
     text = re.sub(r'<think>[\s\S]*?</think>', '', text)
     text = re.sub(r'```json|```', '', text)
     return text.strip()
@@ -17,7 +17,7 @@ def extract_json(text: str):
 
     try:
         return json.loads(text)
-    except Exception:
+    except:
         pass
 
     m = JSON_REGEX.search(text)
@@ -31,15 +31,11 @@ def extract_json(text: str):
 
 
 class ValidatorAgent:
-    """
-    Validates hypotheses and strengthens reasoning.
-    Saves output to validated_hypotheses.json
-    """
-
     def __init__(self, llm, save_path=None):
         self.llm = llm
-        base = os.path.dirname(__file__)
-        self.save_path = save_path or os.path.join(base, "validated_hypotheses.json")
+        self.save_path = save_path or os.path.join(
+            RESULTS_DIR, "validated_hypotheses.json"
+        )
 
     def _build_prompt(self, hypotheses: dict) -> str:
         schema = {
@@ -56,22 +52,17 @@ class ValidatorAgent:
         }
 
         return f"""
-You are a Validator Agent. Your job is to evaluate hypotheses based on available insights.
+You are a Validator Agent. Return ONLY one valid JSON object.
 
-FOLLOW STRICT RULES:
-1. Output ONE valid JSON object ONLY.
-2. Use EXACT schema:
-
+Use this schema:
 {json.dumps(schema, indent=2)}
 
-3. Strengthen each hypothesis with deeper logic.
-4. Use marketing science, causal reasoning, and signals.
-5. Confidence = 0.0–1.0
+Validate each hypothesis with deeper marketing logic and causal reasoning.
 
-HYPOHESES TO VALIDATE:
+Hypotheses:
 {json.dumps(hypotheses, indent=2, ensure_ascii=False)}
 
-Return ONLY JSON.
+Return JSON only.
 """
 
     def _call_llm(self, prompt: str) -> str:
@@ -87,7 +78,7 @@ Return ONLY JSON.
 
         for attempt in range(1, max_attempts + 1):
 
-            for _ in tqdm(range(3), desc="ValidatorAgent processing", leave=False):
+            for _ in tqdm(range(3), desc="ValidatorAgent", leave=False):
                 time.sleep(0.08)
 
             try:
@@ -109,9 +100,10 @@ Return ONLY JSON.
 
             except Exception as e:
                 last_err = e
+
                 if attempt < max_attempts:
                     prompt = (
-                        "Your last response was invalid JSON. "
+                        "Your previous output was not valid JSON. "
                         "Return ONLY JSON.\nPrevious output:\n"
                         f"{raw}\n"
                     ) + self._build_prompt(hypotheses)
@@ -123,7 +115,9 @@ Return ONLY JSON.
             "meta": {"error": str(last_err), "agent": "ValidatorAgent"}
         }
 
-        with open(self.save_path, "w") as f:
-            json.dump(fallback, f, indent=2)
+        os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+        with open(self.save_path, "w", encoding="utf-8") as f:
+            json.dump(fallback, f, indent=2, ensure_ascii=False)
 
+        print("Saved fallback validated hypotheses ->", self.save_path)
         return fallback

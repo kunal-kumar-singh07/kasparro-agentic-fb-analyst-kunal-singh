@@ -16,7 +16,7 @@ def clean_llm_output(text: str) -> str:
 def extract_json(text: str):
     text = clean_llm_output(text)
 
-    # First try direct parse
+    # Try direct parse
     try:
         return json.loads(text)
     except Exception:
@@ -34,15 +34,11 @@ def extract_json(text: str):
 
 
 class HypothesisAgent:
-    """
-    Takes insights.json and generates a list of hypotheses.
-    Output saved to src/agents/hypotheses.json
-    """
 
     def __init__(self, llm, save_path=None):
+        from config import RESULTS_DIR
         self.llm = llm
-        base = os.path.dirname(__file__)
-        self.save_path = save_path or os.path.join(base, "hypotheses.json")
+        self.save_path = save_path or os.path.join(RESULTS_DIR, "hypotheses.json")
 
     def _build_prompt(self, insights: dict) -> str:
         schema = {
@@ -58,22 +54,16 @@ class HypothesisAgent:
         }
 
         return f"""
-You are a hypothesis-generating agent. You will convert insights into strong, testable marketing hypotheses.
+You are a hypothesis-generating agent. Convert insights into strong, testable marketing hypotheses.
 
-OUTPUT REQUIREMENTS:
-1. Output MUST be one valid JSON object only.
-2. Follow EXACTLY this schema:
+OUTPUT RULES:
+- Output ONLY one clean JSON object.
+- MUST follow this schema exactly:
 
 {json.dumps(schema, indent=2)}
 
-3. Produce 5–10 high-quality, testable hypotheses.
-4. Each hypothesis must be tied to an issue + list of supporting signals.
-5. Use insights below to generate hypotheses.
-
 INSIGHTS:
 {json.dumps(insights, indent=2, ensure_ascii=False)}
-
-Return ONLY the JSON object. If you want to think, do so silently — do NOT output <think> tags.
 """
 
     def _call_llm(self, prompt: str) -> str:
@@ -101,6 +91,7 @@ Return ONLY the JSON object. If you want to think, do so silently — do NOT out
                     "agent": "HypothesisAgent"
                 })
 
+                # Save final output
                 os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
                 with open(self.save_path, "w", encoding="utf-8") as f:
                     json.dump(parsed, f, indent=2, ensure_ascii=False)
@@ -112,22 +103,25 @@ Return ONLY the JSON object. If you want to think, do so silently — do NOT out
                 last_err = e
                 if attempt < max_attempts:
                     prompt = (
-                        "Your previous response was not valid JSON. "
-                        "Return ONLY a clean JSON object. Here is your previous attempt:\n\n"
+                        "Your previous response was NOT valid JSON. Fix it.\n"
+                        "Return ONLY clean JSON. Previous output:\n\n"
                         f"{raw}\n\n"
                     ) + self._build_prompt(insights)
-                    time.sleep(0.5 * attempt)
+                    time.sleep(0.5)
                     continue
                 break
 
-        # Fallback JSON
+        # ---- FALLBACK ----
         fallback = {
             "hypotheses": [],
             "meta": {"error": str(last_err), "agent": "HypothesisAgent"}
         }
 
-        with open(self.save_path, "w", encoding="utf-8") as f:
+        # Save fallback in results folder
+        from config import RESULTS_DIR
+        path = os.path.join(RESULTS_DIR, "hypotheses.json")
+        with open(path, "w", encoding="utf-8") as f:
             json.dump(fallback, f, indent=2)
 
-        print("Saved fallback hypotheses ->", self.save_path)
+        print("Saved fallback hypotheses ->", path)
         return fallback

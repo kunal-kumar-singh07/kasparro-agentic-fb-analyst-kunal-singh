@@ -1,0 +1,62 @@
+{
+  "hypotheses": [
+    {
+      "issue": "Retargeting Audience ROAS",
+      "hypothesis": "Increasing the budget allocation to retargeting audiences by 20% will increase overall ROAS by at least 5%.",
+      "supporting_signals": [
+        "Retargeting audiences demonstrate significantly higher ROAS compared to Lookalike and Broad audiences.",
+        "ROAS for retargeting audience is 14.4 compared to 9.66 for lookalike and 8.06 for broad audiences."
+      ],
+      "confidence": 0.9
+    },
+    {
+      "issue": "Creative Fatigue",
+      "hypothesis": "Replacing the bottom 20% performing creatives (based on ROAS) with new creatives that highlight different product features (e.g., emphasizing breathability vs. wire-free) will increase overall campaign ROAS by 10% within two weeks.",
+      "supporting_signals": [
+        "Multiple creatives with high impressions and declining ROAS observed.",
+        "Several creatives with high impressions are showing a lower ROAS, indicating potential fatigue."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "issue": "US Market Performance",
+      "hypothesis": "Shifting 15% of the budget from IN and UK to the US market will increase overall ROAS by at least 3% without significantly impacting performance in IN and UK.",
+      "supporting_signals": [
+        "The US market yields the highest ROAS and revenue compared to IN and UK.",
+        "US ROAS is 10.28 compared to IN (8.71) and UK (9.08)."
+      ],
+      "confidence": 0.85
+    },
+    {
+      "issue": "Broad Audience Optimization",
+      "hypothesis": "Implementing interest-based targeting within the broad audience segment, focusing on 'active lifestyle' and 'comfort clothing', will increase the ROAS of the broad audience by at least 15%.",
+      "supporting_signals": [
+        "Broad audiences show the lowest ROAS.",
+        "ROAS for broad audience is 8.06."
+      ],
+      "confidence": 0.7
+    },
+    {
+      "issue": "Underperforming Creatives",
+      "hypothesis": "Pausing creatives with a ROAS below 3 and replacing them with variations focusing on customer testimonials will increase the overall campaign ROAS by 7% within one week.",
+      "supporting_signals": [
+        "Creatives with ROAS below 3",
+        "Creatives with very low ROAS. These creatives should be paused or replaced to improve overall campaign performance."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "issue": "Facebook vs. Instagram Performance",
+      "hypothesis": "Allocating 10% more budget to Facebook from Instagram will increase overall ROAS by 2%.",
+      "supporting_signals": [
+        "Facebook demonstrates slightly higher ROAS and revenue compared to Instagram.",
+        "Facebook ROAS is 9.9, while Instagram ROAS is 9.38."
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "meta": {
+    "agent": "HypothesisAgent",
+    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"Retargeting Audience ROAS\",\n      \"hypothesis\": \"Increasing the budget allocation to retargeting audiences by 20% will increase overall ROAS by at least 5%.\",\n      \"supporting_signals\": [\n        \"Retargeting audiences demonstrate significantly higher ROAS compared to Lookalike and Broad audiences.\",\n        \"ROAS for retargeting audience is 14.4 compared to 9.66 for lookalike and 8.06 for broad audiences.\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Creative Fatigue\",\n      \"hypothesis\": \"Replacing the bottom 20% performing creatives (based on ROAS) with new creatives that highlight different product features (e.g., emphasizing breathability vs. wire-free) will increase overall campaign ROAS by 10% within two weeks.\",\n  "
+  }
+}

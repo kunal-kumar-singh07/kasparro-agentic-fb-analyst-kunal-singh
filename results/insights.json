@@ -1,0 +1,143 @@
+{
+  "summary_text": "Overall strong ROAS, but some creative fatigue is evident. Retargeting audiences perform the best, while broad audiences require optimization. US and Facebook platforms show better performance.",
+  "insights": [
+    {
+      "title": "Retargeting Audiences Outperforming Others",
+      "description": "Retargeting audiences demonstrate significantly higher ROAS compared to Lookalike and Broad audiences.",
+      "evidence": {
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "retargeting": 14.4,
+            "lookalike": 9.66,
+            "broad": 8.06
+          }
+        ],
+        "creative_issues": [],
+        "audience_issues": []
+      },
+      "severity": "High",
+      "confidence": 0.95
+    },
+    {
+      "title": "Potential Creative Fatigue",
+      "description": "Several creatives with high impressions are showing a lower ROAS, indicating potential fatigue. Focus on refreshing these creatives or testing new ones.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          "Multiple creatives with high impressions and declining ROAS observed.",
+          {
+            "creative_message": "Wire‑free ease, cloud‑soft cups — women sports bras that fits right.",
+            "ctr": 0.011178898811699452,
+            "impressions": 6678048,
+            "roas": 20.651928984595017
+          },
+          {
+            "creative_message": "Push comfort, not wires — everyday women panties.",
+            "ctr": 0.011869776680116483,
+            "impressions": 9155867,
+            "roas": 16.258512114198677
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "Medium",
+      "confidence": 0.8
+    },
+    {
+      "title": "US Market Provides Best Performance",
+      "description": "The US market yields the highest ROAS and revenue compared to IN and UK. Consider allocating more budget to this region.",
+      "evidence": {
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "US": 10.28,
+            "IN": 8.71,
+            "UK": 9.08
+          },
+          {
+            "metric": "Spend",
+            "US": 1151440.49,
+            "IN": 549372.09,
+            "UK": 404767.32
+          }
+        ],
+        "creative_issues": [],
+        "audience_issues": []
+      },
+      "severity": "Medium",
+      "confidence": 0.9
+    },
+    {
+      "title": "Facebook Platform Performing Better",
+      "description": "Facebook demonstrates slightly higher ROAS and revenue compared to Instagram.",
+      "evidence": {
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "Facebook": 9.9,
+            "Instagram": 9.38
+          },
+          {
+            "metric": "Spend",
+            "Facebook": 1068612.07,
+            "Instagram": 1036967.83
+          }
+        ],
+        "creative_issues": [],
+        "audience_issues": []
+      },
+      "severity": "Low",
+      "confidence": 0.75
+    },
+    {
+      "title": "Identify Underperforming Creatives",
+      "description": "Several creatives have very low ROAS. These creatives should be paused or replaced to improve overall campaign performance.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          "Creatives with ROAS below 3:",
+          {
+            "creative_message": "Breathable modal that moves with you — limited offer on women sports bras.",
+            "roas": 0.669166208654445
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "High",
+      "confidence": 0.9
+    },
+    {
+      "title": "Broad Audience Optimization Needed",
+      "description": "Broad audiences show the lowest ROAS. Refine targeting or test new creative approaches to improve performance with this audience segment.",
+      "evidence": {
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "broad": 8.06
+          }
+        ],
+        "creative_issues": [],
+        "audience_issues": []
+      },
+      "severity": "Medium",
+      "confidence": 0.7
+    },
+    {
+      "title": "Clicks Do Not Directly Correlate to Revenue",
+      "description": "Some of the best creatives have a high CTR, but a relatively low ROAS. Explore and test new strategies, or messaging within these ads.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [],
+        "audience_issues": []
+      },
+      "severity": "Low",
+      "confidence": 0.6
+    }
+  ],
+  "meta": {
+    "agent": "InsightAgent",
+    "dataset_path": "/mnt/data/synthetic_fb_ads_undergarments.csv",
+    "raw_preview": "```json\n{\n  \"summary_text\": \"Overall strong ROAS, but some creative fatigue is evident. Retargeting audiences perform the best, while broad audiences require optimization. US and Facebook platforms show better performance.\",\n  \"insights\": [\n    {\n      \"title\": \"Retargeting Audiences Outperforming Others\",\n      \"description\": \"Retargeting audiences demonstrate significantly higher ROAS compared to Lookalike and Broad audiences.\",\n      \"evidence\": {\n        \"kpi_changes\": [\n          {\n            \"metric\": \"ROAS\",\n            \"retargeting\": 14.40,\n            \"lookalike\": 9.66,\n            \"broad\": 8.06\n          }\n        ],\n        \"creative_issues\": [],\n        \"audience_issues\": []\n      },\n      \"severity\": \"High\",\n      \"confidence\": 0.95\n    },\n    {\n      \"title\": \"Potential Crea"
+  }
+}
