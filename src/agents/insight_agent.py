@@ -11,24 +11,42 @@ class InsightAgent:
         self.llm = llm
         self.prompt_template = Path(prompt_path).read_text()
 
+        self.json_system = (
+            "You are a strict JSON generator. "
+            "Output ONLY valid JSON. "
+            "No explanations. No markdown. No lists. No text before or after. "
+            "If unsure, output an empty JSON object {}."
+        )
+
+        self.json_fix_prompt = (
+            "Fix the following text into valid JSON. "
+            "If missing JSON, generate {}. "
+            "Output ONLY JSON:\n\n"
+        )
+
     def run(self, data_dict):
-        metrics_json = json.dumps(data_dict)
+        metrics = json.dumps(data_dict)
+        prompt = self.prompt_template.replace("{{data_json}}", metrics)
+        final_prompt = self.json_system + "\n\n" + prompt
 
-        prompt = self.prompt_template.replace("{{data_json}}", metrics_json)
-
-        # retry 3 times until DeepSeek returns JSON
         for attempt in range(3):
-            response = self.llm.generate(prompt)
+            response = self.llm.generate(final_prompt)
 
-            # debug print
-            print("\nRAW MODEL RESPONSE (first 500 chars):")
+            print("\nRAW MODEL RESPONSE:")
             print(response[:500])
 
             try:
-                parsed = extract_json(response)
-                return parsed
+                return extract_json(response)
             except:
-                print("JSON parsing failed, retrying... (attempt " + str(attempt+1) + ")")
+                print(f"Parse failed, attempting JSON repair ({attempt+1})...")
 
-        # total failure
-        raise ValueError("InsightAgent could not produce JSON after 3 attempts")
+            # second pass: force JSON repair
+            repair_prompt = self.json_system + "\n" + self.json_fix_prompt + response
+            repaired = self.llm.generate(repair_prompt)
+
+            try:
+                return extract_json(repaired)
+            except:
+                print(f"JSON repair failed ({attempt+1})")
+
+        raise ValueError("Gemini failed to generate JSON after 3 attempts.")
