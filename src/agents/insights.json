@@ -1,9 +1,9 @@
 {
-  "summary_text": "Overall ROAS is healthy at 5.83, but recent ROAS shows signs of decline. Focus on creative optimization and audience targeting to improve performance.",
+  "summary_text": "Overall ROAS is healthy, but recent ROAS has been decreasing. There are also some underperforming creatives that should be paused or updated.",
   "insights": [
     {
       "title": "Recent ROAS Decline",
-      "description": "ROAS has been decreasing from 2025-03-24 to 2025-03-31. Investigate the cause of this recent decline; it could be due to increased competition, seasonality, or ad fatigue.",
+      "description": "ROAS has declined in the last week, from 2025-03-24 to 2025-03-31. This could be due to increased competition, changes in audience behavior, or ineffective creatives and requires investigation.",
       "evidence": {
         "kpi_changes": [
           {
@@ -17,108 +17,120 @@
         "audience_issues": []
       },
       "severity": "Medium",
-      "confidence": 0.8
+      "confidence": 0.75
     },
     {
-      "title": "Creative Fatigue on Women's Apparel",
-      "description": "Several creatives, particularly those for women's apparel like bras and boyshorts, show signs of fatigue with high impressions and declining ROAS. Refresh these creatives with new messaging or visuals to improve engagement.",
+      "title": "Underperforming Creative: Women Sports Bras (Microfiber)",
+      "description": "The creative \"Breathable microfiber that moves with you — limited offer on women sports bras.\" has a very low ROAS of 1.90, significantly underperforming compared to other creatives. Pausing this creative or updating the copy/visuals is recommended.",
       "evidence": {
         "kpi_changes": [],
         "creative_issues": [
           {
-            "creative_message": "Breathable cotton that moves with you — limited offer on women bras.",
-            "ctr": 0.011954344207052414,
-            "impressions": 1794973,
-            "roas": 41.27707890567064
-          },
-          {
-            "creative_message": "Wire‑free ease, cloud‑soft cups — women sports bras that fits right.",
-            "ctr": 0.011178898811699452,
-            "impressions": 6678048,
-            "roas": 20.651928984595017
+            "creative_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
+            "roas": 1.8972133577309582,
+            "ctr": 0.008363483439536799
           }
         ],
+        "audience_issues": []
+      },
+      "severity": "High",
+      "confidence": 0.85
+    },
+    {
+      "title": "Underperforming Creative: Men Athletic Briefs (Modal)",
+      "description": "The creative \"Doctors recommend breathable modal — meet our men athletic briefs.\" has a low ROAS of 1.95. Evaluate the targeting and ad copy for this creative.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          {
+            "creative_message": "Doctors recommend breathable modal — meet our men athletic briefs.",
+            "roas": 1.9509858201884054,
+            "ctr": 0.010794897040742848
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "Medium",
+      "confidence": 0.8
+    },
+    {
+      "title": "Top Performing Creative: Men Boxers (Modal)",
+      "description": "The creative \"Doctors recommend breathable modal — meet our men boxers.\" demonstrates high ROAS of 50.91 and CTR of 0.014. Consider increasing spend on this creative and exploring similar creatives.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          {
+            "creative_message": "Doctors recommend breathable modal — meet our men boxers.",
+            "roas": 50.90970083956857,
+            "ctr": 0.014241794508582309
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "High",
+      "confidence": 0.9
+    },
+    {
+      "title": "Creative Fatigue Detected",
+      "description": "Multiple creatives have high impressions and declining ROAS, indicating creative fatigue. Refresh ad copy and visuals for creatives with high impressions but ROAS below 10.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [],
         "audience_issues": []
       },
       "severity": "Medium",
       "confidence": 0.7
     },
     {
-      "title": "Underperforming Creatives",
-      "description": "Certain creatives consistently underperform, specifically those using the messaging 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable cotton that moves with you — limited offer on women sports bras.'. Consider pausing these creatives and reallocating budget to higher-performing ads.",
-      "evidence": {
-        "kpi_changes": [],
-        "creative_issues": [
-          {
-            "creative_message": "Breathable microfiber that moves with you — limited offer on women panties.",
-            "roas": 2.758138501450194,
-            "ctr": 0.014363204245222501
-          },
-          {
-            "creative_message": "Breathable cotton that moves with you — limited offer on women sports bras.",
-            "roas": 2.7061571711859522,
-            "ctr": 0.011400458558729398
-          }
-        ],
-        "audience_issues": []
-      },
-      "severity": "Medium",
-      "confidence": 0.9
-    },
-    {
-      "title": "Retargeting Audience Success",
-      "description": "The retargeting audience demonstrates a significantly higher ROAS (14.40) compared to broad (8.06) and lookalike (9.66) audiences.  Continue to invest in and optimize retargeting campaigns to capitalize on this high-performing segment.",
+      "title": "Retargeting Audience Outperforming",
+      "description": "The retargeting audience has a significantly higher ROAS (14.40) compared to Broad (8.06) and Lookalike (9.66) audiences. Focus more spend on retargeting efforts.",
       "evidence": {
         "kpi_changes": [],
         "creative_issues": [],
         "audience_issues": [
           {
             "audience_type": "Retargeting",
-            "roas": 14.403837609684036,
-            "ctr": 0.01341458210026519
+            "roas": 14.403837609684036
           },
           {
             "audience_type": "Broad",
-            "roas": 8.060617744038403,
-            "ctr": 0.012610974433092245
+            "roas": 8.060617744038403
           },
           {
             "audience_type": "Lookalike",
-            "roas": 9.6560880216139,
-            "ctr": 0.013747821594466773
+            "roas": 9.6560880216139
+          }
+        ]
+      },
+      "severity": "Medium",
+      "confidence": 0.8
+    },
+    {
+      "title": "Platform Performance Comparison",
+      "description": "Facebook has slightly higher ROAS (9.90) than Instagram (9.38), though both perform well. Monitor platform performance closely and adjust spend accordingly.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [],
+        "audience_issues": [],
+        "platform_performance": [
+          {
+            "platform": "Facebook",
+            "roas": 9.898630814900162
+          },
+          {
+            "platform": "Instagram",
+            "roas": 9.37970972370064
           }
         ]
       },
       "severity": "Low",
-      "confidence": 0.95
-    },
-    {
-      "title": "US Market Dominance",
-      "description": "The US market shows a higher ROAS (10.28) compared to IN (8.71) and UK (9.08).  Allocate more budget to the US market or investigate why other markets are lagging behind, looking at creative performance and audience targeting within each region.",
-      "evidence": {
-        "kpi_changes": [],
-        "creative_issues": [],
-        "audience_issues": []
-      },
-      "severity": "Low",
-      "confidence": 0.75
-    },
-    {
-      "title": "Facebook and Instagram performance",
-      "description": "Facebook (ROAS: 9.90) performs slightly better than Instagram (ROAS: 9.38). Continue to run ads on both platforms and adjust budgeting based on performance.",
-      "evidence": {
-        "kpi_changes": [],
-        "creative_issues": [],
-        "audience_issues": []
-      },
-      "severity": "Low",
-      "confidence": 0.8
+      "confidence": 0.6
     }
   ],
   "meta": {
     "agent": "InsightAgent",
     "dataset_path": "/mnt/data/synthetic_fb_ads_undergarments.csv",
-    "raw_length": 4910,
-    "raw_preview": "```json\n{\n  \"summary_text\": \"Overall ROAS is healthy at 5.83, but recent ROAS shows signs of decline. Focus on creative optimization and audience targeting to improve performance.\",\n  \"insights\": [\n    {\n      \"title\": \"Recent ROAS Decline\",\n      \"description\": \"ROAS has been decreasing from 2025-03-24 to 2025-03-31. Investigate the cause of this recent decline; it could be due to increased competition, seasonality, or ad fatigue.\",\n      \"evidence\": {\n        \"kpi_changes\": [\n          {\n            \"kpi\": \"ROAS\",\n            \"trend\": \"decreasing\",\n            \"dates\": \"2025-03-24 to 2025-03-31\",\n            \"values\": []\n          }\n        ],\n        \"creative_issues\": [],\n        \"audience_issues\": []\n      },\n      \"severity\": \"Medium\",\n      \"confidence\": 0.8\n    },\n    {\n      \"title\": \"Creative Fatigue on Women's Apparel\",\n      \"description\": \"Several creatives, particularly those for women's apparel like bras and boyshorts, show signs of fatigue with high impressions and decl"
+    "raw_length": 4822,
+    "raw_preview": "```json\n{\n  \"summary_text\": \"Overall ROAS is healthy, but recent ROAS has been decreasing. There are also some underperforming creatives that should be paused or updated.\",\n  \"insights\": [\n    {\n      \"title\": \"Recent ROAS Decline\",\n      \"description\": \"ROAS has declined in the last week, from 2025-03-24 to 2025-03-31. This could be due to increased competition, changes in audience behavior, or ineffective creatives and requires investigation.\",\n      \"evidence\": {\n        \"kpi_changes\": [\n          {\n            \"kpi\": \"ROAS\",\n            \"trend\": \"decreasing\",\n            \"dates\": \"2025-03-24 to 2025-03-31\",\n            \"values\": []\n          }\n        ],\n        \"creative_issues\": [],\n        \"audience_issues\": []\n      },\n      \"severity\": \"Medium\",\n      \"confidence\": 0.75\n    },\n    {\n      \"title\": \"Underperforming Creative: Women Sports Bras (Microfiber)\",\n      \"description\": \"The creative \\\"Breathable microfiber that moves with you — limited offer on women sports bras.\\\" has"
   }
 }
