@@ -1,6 +1,4 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-RESULTS_DIR = os.path.join(BASE_DIR, "results")
-
-os.makedirs(RESULTS_DIR, exist_ok=True)
+RESULTS_DIR = r"E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\results"
+DATA_CSV_PATH = r"E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\data\synthetic_fb_ads_undergarments.csv"

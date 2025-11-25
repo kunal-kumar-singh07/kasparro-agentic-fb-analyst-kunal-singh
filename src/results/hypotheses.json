@@ -1,69 +1,66 @@
 {
   "hypotheses": [
     {
-      "issue": "Retargeting audience outperforming other audiences.",
-      "hypothesis": "Increasing budget allocation to the retargeting audience will increase overall ROAS.",
+      "issue": "ROAS Decline in Late January",
+      "hypothesis": "The ROAS decline at the end of January was caused by a change in ad platform algorithm impacting ad delivery and optimization. Reverting to campaign settings from before January 28th or adopting bidding strategies focused on conversions will improve ROAS.",
       "supporting_signals": [
-        "Retargeting audience ROAS: 14.40",
-        "Broad audience ROAS: 8.06",
-        "Lookalike audience ROAS: 9.66"
-      ],
-      "confidence": 0.9
-    },
-    {
-      "issue": "Creative fatigue affecting campaign performance.",
-      "hypothesis": "Replacing or refreshing creatives with high impressions and lower ROAS will improve overall campaign ROAS.",
-      "supporting_signals": [
-        "Creatives with highest impressions showing ROAS between 7.83 and 20.65"
-      ],
-      "confidence": 0.75
-    },
-    {
-      "issue": "US market exhibiting strong performance.",
-      "hypothesis": "Increasing budget allocation to the US market will increase overall ROAS.",
-      "supporting_signals": [
-        "US ROAS: 10.28",
-        "UK ROAS: 9.08",
-        "IN ROAS: 8.71"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "issue": "Underperforming creatives impacting campaign efficiency.",
-      "hypothesis": "Pausing or replacing creatives with ROAS below 3 will improve overall campaign ROAS.",
-      "supporting_signals": [
-        "Creatives with lowest ROAS all below 3"
-      ],
-      "confidence": 0.9
-    },
-    {
-      "issue": "Platform performance disparity between Facebook and Instagram.",
-      "hypothesis": "Reallocating budget from Instagram to Facebook will increase overall campaign ROAS.",
-      "supporting_signals": [
-        "Facebook ROAS: 9.90",
-        "Instagram ROAS: 9.38"
-      ],
-      "confidence": 0.65
-    },
-    {
-      "issue": "ROAS fluctuation suggests instability.",
-      "hypothesis": "Implementing more stable campaign settings (e.g., budget pacing, bid strategies) will reduce ROAS fluctuation and improve consistency.",
-      "supporting_signals": [
-        "Daily ROAS variation between 6.36 (2025-02-01) and 18.60 (2025-03-02)"
+        "ROAS decreased from 12.63 on 2025-01-28 to 6.67 on 2025-01-30"
       ],
       "confidence": 0.7
     },
     {
-      "issue": "High performing creative opportunity for scaling.",
-      "hypothesis": "Increasing budget or broadening the target audience for the creative 'Doctors recommend breathable modal — meet our men boxers' will increase overall revenue.",
+      "issue": "Declining CTR",
+      "hypothesis": "The declining CTR is caused by increasing ad fatigue or a decrease in ad relevance for the target audience. Introducing fresh ad creative and refining audience targeting will improve CTR.",
       "supporting_signals": [
-        "Creatives with highest ROAS is 50.90"
+        "CTR declined from 0.0146 on 2025-01-06 to 0.0121 on 2025-02-27"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "issue": "Creative Fatigue",
+      "hypothesis": "Creatives with high impressions are experiencing fatigue, leading to decreased ROAS. Replacing or refreshing these creatives with new variations will improve ROAS.",
+      "supporting_signals": [
+        "Creatives 'Breathable cotton that moves with you — limited offer on women bras.' has 1794973 impressions and 41.27 ROAS.",
+        "Creatives 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.' has 6678048 impressions and 20.65 ROAS."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "issue": "Instagram Underperformance",
+      "hypothesis": "Instagram underperforms compared to Facebook due to creative format mismatch or audience preferences. Tailoring ad creative specifically for Instagram's format (e.g., using video ads and focusing on visual appeal) and refining audience targeting within Instagram will improve ROAS and CTR on the platform.",
+      "supporting_signals": [
+        "Instagram's ROAS (9.38) and CTR (0.012) are slightly lower than Facebook's (ROAS: 9.90, CTR: 0.014)"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "issue": "Retargeting Audience High Performance",
+      "hypothesis": "The retargeting audience performs well due to familiarity with the brand and products. Increasing budget allocation and expanding retargeting audiences (e.g., by including website visitors from the past 180 days) will further improve ROAS from retargeting campaigns.",
+      "supporting_signals": [
+        "Retargeting audience has the highest ROAS (14.40) and a relatively low CPC (0.21)"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "issue": "Low ROAS Creatives",
+      "hypothesis": "Low ROAS creatives are negatively impacting overall campaign performance. Pausing or replacing these creatives with higher-performing alternatives or new concepts will improve overall ROAS.",
+      "supporting_signals": [
+        "Creative 'Breathable modal that moves with you — limited offer on women sports bras.' has a ROAS of 0.67.",
+        "Creative 'Doctors recommend breathable bamboo — meet our men inner vests.' has a ROAS of 2.09."
+      ],
+      "confidence": 0.85
+    },
+    {
+      "issue": "Broad Audience Underperformance",
+      "hypothesis": "Broad audiences are underperforming because the targeting is too generic. Layering additional targeting criteria (e.g., interests, demographics) onto the broad audience or creating more specific lookalike audiences will improve ROAS for non-retargeting campaigns.",
+      "supporting_signals": [
+        "Broad ROAS: 8.06, Lookalike ROAS: 9.66, Retargeting ROAS: 14.4"
       ],
       "confidence": 0.7
     }
   ],
   "meta": {
     "agent": "HypothesisAgent",
-    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"Retargeting audience outperforming other audiences.\",\n      \"hypothesis\": \"Increasing budget allocation to the retargeting audience will increase overall ROAS.\",\n      \"supporting_signals\": [\n        \"Retargeting audience ROAS: 14.40\",\n        \"Broad audience ROAS: 8.06\",\n        \"Lookalike audience ROAS: 9.66\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Creative fatigue affecting campaign performance.\",\n      \"hypothesis\": \"Replacing or refreshing creatives with high impressions and lower ROAS will improve overall campaign ROAS.\",\n      \"supporting_signals\": [\n        \"Creatives with highest impressions showing ROAS between 7.83 and 20.65\"\n      ],\n      \"confidence\": 0.75\n    },\n    {\n      \"issue\": \"US market exhibiting"
+    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"ROAS Decline in Late January\",\n      \"hypothesis\": \"The ROAS decline at the end of January was caused by a change in ad platform algorithm impacting ad delivery and optimization. Reverting to campaign settings from before January 28th or adopting bidding strategies focused on conversions will improve ROAS.\",\n      \"supporting_signals\": [\n        \"ROAS decreased from 12.63 on 2025-01-28 to 6.67 on 2025-01-30\"\n      ],\n      \"confidence\": 0.7\n    },\n    {\n      \"issue\": \"Declining CTR\",\n      \"hypothesis\": \"The declining CTR is caused by increasing ad fatigue or a decrease in ad relevance for the target audience. Introducing fresh ad creative and refining audience targeting will improve CTR.\",\n      \"supporting_signals\": [\n        \"CTR declin"
   }
 }
