@@ -1,50 +1,57 @@
 {
   "validated_hypotheses": [
     {
-      "issue": "Retargeting Audience ROAS",
-      "hypothesis": "Increasing the budget allocation to retargeting audiences by 20% will increase overall ROAS by at least 5%.",
+      "issue": "Retargeting audience outperforming other audiences.",
+      "hypothesis": "Increasing budget allocation to the retargeting audience will increase overall ROAS.",
       "status": "validated",
-      "strengthened_reasoning": "Given the significantly higher ROAS of retargeting audiences, a budget increase is likely to drive a positive impact. Retargeting capitalizes on existing customer interest, making conversions more probable. A 20% budget increase should, proportionally, increase conversions and associated revenue more than other audiences, resulting in the hypothesized ROAS increase. This assumes ad spend is optimized within the retargeting audience.",
+      "strengthened_reasoning": "The retargeting audience's superior ROAS (14.40) compared to broad (8.06) and lookalike (9.66) audiences indicates a higher efficiency in converting existing interest. Allocating more budget capitalizes on this established efficiency, creating a causal effect where increased investment directly translates to higher overall ROAS due to the audience's propensity to convert. Causal relationship: More retargeting budget -> More conversions -> Higher overall ROAS.",
       "confidence": 0.9
     },
     {
-      "issue": "Creative Fatigue",
-      "hypothesis": "Replacing the bottom 20% performing creatives (based on ROAS) with new creatives that highlight different product features (e.g., emphasizing breathability vs. wire-free) will increase overall campaign ROAS by 10% within two weeks.",
+      "issue": "Creative fatigue affecting campaign performance.",
+      "hypothesis": "Replacing or refreshing creatives with high impressions and lower ROAS will improve overall campaign ROAS.",
       "status": "validated",
-      "strengthened_reasoning": "Creative fatigue is a common issue. Replacing underperforming creatives addresses this directly. Introducing varied messaging around product features like breathability vs. wire-free provides new angles that can resonate with different segments within the target audience. This refresh can counteract ad blindness and potentially improve click-through and conversion rates, leading to a higher ROAS. The two-week timeframe is reasonable for observing a noticeable change.",
-      "confidence": 0.85
-    },
-    {
-      "issue": "US Market Performance",
-      "hypothesis": "Shifting 15% of the budget from IN and UK to the US market will increase overall ROAS by at least 3% without significantly impacting performance in IN and UK.",
-      "status": "partial",
-      "strengthened_reasoning": "While the US market exhibits a higher ROAS, shifting budget requires careful consideration. A 15% budget reduction in IN and UK could potentially decrease their ROAS due to reduced reach and frequency. The hypothesis is partially validated because the potential for increased ROAS in the US is strong, but the assumption of minimal impact in IN and UK needs further scrutiny. The impact also depends on the absolute spend in each region; a small reduction in a low-spend market may have minimal impact, while a large reduction in a high-spend market could be detrimental.",
-      "confidence": 0.8
-    },
-    {
-      "issue": "Broad Audience Optimization",
-      "hypothesis": "Implementing interest-based targeting within the broad audience segment, focusing on 'active lifestyle' and 'comfort clothing', will increase the ROAS of the broad audience by at least 15%.",
-      "status": "validated",
-      "strengthened_reasoning": "Broad audiences, by definition, lack specific targeting, resulting in lower ROAS. Layering interest-based targeting helps refine the audience and improve ad relevance. Focusing on 'active lifestyle' and 'comfort clothing' aligns with potential customer needs and preferences. This increased relevance should translate to higher engagement and conversion rates, resulting in the hypothesized ROAS increase. The 15% increase target is ambitious but achievable with effective implementation.",
-      "confidence": 0.8
-    },
-    {
-      "issue": "Underperforming Creatives",
-      "hypothesis": "Pausing creatives with a ROAS below 3 and replacing them with variations focusing on customer testimonials will increase the overall campaign ROAS by 7% within one week.",
-      "status": "validated",
-      "strengthened_reasoning": "Removing low-performing creatives is a fundamental optimization step. Customer testimonials provide social proof and can be highly persuasive, increasing user confidence and purchase likelihood. Replacing underperforming ads with testimonial-focused variations directly addresses the issue of low ROAS. The one-week timeframe is reasonable for observing a positive impact, assuming new ads are launched promptly and gain sufficient impressions. A 7% increase is realistic, assuming the existing low-ROAS ads were significantly dragging down the average.",
-      "confidence": 0.85
-    },
-    {
-      "issue": "Facebook vs. Instagram Performance",
-      "hypothesis": "Allocating 10% more budget to Facebook from Instagram will increase overall ROAS by 2%.",
-      "status": "partial",
-      "strengthened_reasoning": "While Facebook has a slightly higher ROAS, a 10% budget shift might not automatically translate to a proportional ROAS increase. Factors such as audience overlap, creative performance differences on each platform, and varying ad formats come into play. It is partially validated as the data shows FB performing better, but the effect needs close monitoring to validate the assumption of an overall ROAS increase and that a shift doesnt adversely affect instagrams ROAS more than expected. The 2% increase is within a possible range, but depends on the nuances of performance on both platforms after the change.",
+      "strengthened_reasoning": "Creatives with high impressions but lower ROAS suggest user fatigue or irrelevance. Replacing them introduces fresh content that is more likely to capture attention and drive conversions. This creates a causal link where new or refreshed creatives will reduce ad fatigue, leading to increased engagement and higher ROAS. Causal relationship: New creatives -> Higher engagement -> Higher ROAS.",
       "confidence": 0.75
+    },
+    {
+      "issue": "US market exhibiting strong performance.",
+      "hypothesis": "Increasing budget allocation to the US market will increase overall ROAS.",
+      "status": "validated",
+      "strengthened_reasoning": "The US market's higher ROAS (10.28) compared to the UK (9.08) and India (8.71) indicates a stronger return on ad spend. Allocating more budget to the US market leverages this higher-performing geography. Causal relationship: More US budget -> More conversions in US -> Higher overall ROAS.",
+      "confidence": 0.8
+    },
+    {
+      "issue": "Underperforming creatives impacting campaign efficiency.",
+      "hypothesis": "Pausing or replacing creatives with ROAS below 3 will improve overall campaign ROAS.",
+      "status": "validated",
+      "strengthened_reasoning": "Creatives with a ROAS below 3 are demonstrably inefficient, dragging down the overall campaign performance. Removing or replacing these underperforming creatives eliminates wasted ad spend and focuses resources on more profitable areas. Causal relationship: Fewer low ROAS creatives -> Higher average ROAS -> Higher overall ROAS.",
+      "confidence": 0.9
+    },
+    {
+      "issue": "Platform performance disparity between Facebook and Instagram.",
+      "hypothesis": "Reallocating budget from Instagram to Facebook will increase overall campaign ROAS.",
+      "status": "validated",
+      "strengthened_reasoning": "Given Facebook's higher ROAS (9.90) compared to Instagram (9.38), shifting budget from the latter to the former ensures that resources are allocated to the more efficient platform, driving overall campaign ROAS upward. Causal relationship: More Facebook budget, less Instagram budget -> More efficient ad spend -> Higher overall ROAS.",
+      "confidence": 0.65
+    },
+    {
+      "issue": "ROAS fluctuation suggests instability.",
+      "hypothesis": "Implementing more stable campaign settings (e.g., budget pacing, bid strategies) will reduce ROAS fluctuation and improve consistency.",
+      "status": "validated",
+      "strengthened_reasoning": "High ROAS fluctuation, with daily ROAS varying significantly, points to unstable campaign settings. Implementing more stable settings, such as controlled budget pacing and consistent bid strategies, is likely to reduce these fluctuations. Causal relationship: More stable campaign settings -> More predictable ad delivery -> Lower ROAS fluctuation and improved consistency.",
+      "confidence": 0.7
+    },
+    {
+      "issue": "High performing creative opportunity for scaling.",
+      "hypothesis": "Increasing budget or broadening the target audience for the creative 'Doctors recommend breathable modal — meet our men boxers' will increase overall revenue.",
+      "status": "validated",
+      "strengthened_reasoning": "A creative with a ROAS of 50.90 significantly outperforms other creatives, indicating a highly effective ad. Increasing the budget or broadening the target audience exposes this creative to more potential customers. More exposure leads to increased conversions and, subsequently, higher overall revenue. Causal relationship: Increased Exposure of high ROAS ad -> Increased conversions -> higher overall revenue.",
+      "confidence": 0.7
     }
   ],
   "meta": {
     "agent": "ValidatorAgent",
-    "raw_preview": "```json\n{\n  \"validated_hypotheses\": [\n    {\n      \"issue\": \"Retargeting Audience ROAS\",\n      \"hypothesis\": \"Increasing the budget allocation to retargeting audiences by 20% will increase overall ROAS by at least 5%.\",\n      \"status\": \"validated\",\n      \"strengthened_reasoning\": \"Given the significantly higher ROAS of retargeting audiences, a budget increase is likely to drive a positive impact. Retargeting capitalizes on existing customer interest, making conversions more probable. A 20% budget increase should, proportionally, increase conversions and associated revenue more than other audiences, resulting in the hypothesized ROAS increase. This assumes ad spend is optimized within the retargeting audience.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Creative Fatigue\",\n      \"h"
+    "raw_preview": "```json\n{\n  \"validated_hypotheses\": [\n    {\n      \"issue\": \"Retargeting audience outperforming other audiences.\",\n      \"hypothesis\": \"Increasing budget allocation to the retargeting audience will increase overall ROAS.\",\n      \"status\": \"validated\",\n      \"strengthened_reasoning\": \"The retargeting audience's superior ROAS (14.40) compared to broad (8.06) and lookalike (9.66) audiences indicates a higher efficiency in converting existing interest. Allocating more budget capitalizes on this established efficiency, creating a causal effect where increased investment directly translates to higher overall ROAS due to the audience's propensity to convert. Causal relationship: More retargeting budget -> More conversions -> Higher overall ROAS.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\""
   }
 }

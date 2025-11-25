@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 class DataAgent:
-    def __init__(self, csv_path="E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\data\synthetic_fb_ads_undergarments.csv"):
+    def __init__(self, csv_path=r"E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\data\synthetic_fb_ads_undergarments.csv"):
         self.csv_path = csv_path
         self.df = None
 
@@ -14,6 +14,7 @@ class DataAgent:
     def compute_metrics(self):
         df = self.df.copy()
 
+        # compute derived metrics safely
         df["ctr"] = df["clicks"] / df["impressions"].replace(0, 1)
         df["roas"] = df["revenue"] / df["spend"].replace(0, 1)
         df["cpc"] = df["spend"] / df["clicks"].replace(0, 1)
@@ -45,6 +46,7 @@ class DataAgent:
             }).reset_index().iterrows()
         ]
 
+        # CREATIVE PERFORMANCE
         creative_perf = (
             df.groupby("creative_message")
             .agg({
@@ -74,45 +76,30 @@ class DataAgent:
                     "roas": float(row["roas"])
                 })
 
-        audience_perf = (
-            df.groupby("audience_type")
-            .agg({
-                "roas": "mean",
-                "ctr": "mean",
-                "cpm": "mean",
-                "cpc": "mean",
-                "spend": "sum",
-                "revenue": "sum"
-            })
-            .reset_index()
-            .to_dict(orient="records")
-        )
+        audience_perf = df.groupby("audience_type").agg({
+            "roas": "mean",
+            "ctr": "mean",
+            "cpm": "mean",
+            "cpc": "mean",
+            "spend": "sum",
+            "revenue": "sum"
+        }).reset_index().to_dict(orient="records")
 
-        country_perf = (
-            df.groupby("country")
-            .agg({
-                "roas": "mean",
-                "ctr": "mean",
-                "cpm": "mean",
-                "spend": "sum",
-                "revenue": "sum"
-            })
-            .reset_index()
-            .to_dict(orient="records")
-        )
+        country_perf = df.groupby("country").agg({
+            "roas": "mean",
+            "ctr": "mean",
+            "cpm": "mean",
+            "spend": "sum",
+            "revenue": "sum"
+        }).reset_index().to_dict(orient="records")
 
-        platform_perf = (
-            df.groupby("platform")
-            .agg({
-                "roas": "mean",
-                "ctr": "mean",
-                "cpm": "mean",
-                "spend": "sum",
-                "revenue": "sum"
-            })
-            .reset_index()
-            .to_dict(orient="records")
-        )
+        platform_perf = df.groupby("platform").agg({
+            "roas": "mean",
+            "ctr": "mean",
+            "cpm": "mean",
+            "spend": "sum",
+            "revenue": "sum"
+        }).reset_index().to_dict(orient="records")
 
         return {
             "kpi_summary": kpi_summary,

@@ -5,7 +5,7 @@ import os
 from tqdm import tqdm
 
 RESULTS_DIR = r"E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\results"
-DEFAULT_DATASET_PATH = "/mnt/data/synthetic_fb_ads_undergarments.csv"
+DEFAULT_DATASET_PATH = r"E:\Kasparo\kasparro-agentic-fb-analyst-kunal-singh\data\synthetic_fb_ads_undergarments.csv"
 
 JSON_EXTRACTOR_REGEX = re.compile(r'({[\s\S]*})|(\[[\s\S]*\])', re.MULTILINE)
 
@@ -21,9 +21,11 @@ def _extract_json(text: str):
         return json.loads(cleaned)
     except:
         pass
+
     m = JSON_EXTRACTOR_REGEX.search(cleaned)
     if not m:
         raise ValueError("No JSON block found")
+
     json_str = re.sub(r',\s*([}\]])', r'\1', m.group(0))
     return json.loads(json_str)
 
@@ -66,9 +68,10 @@ Schema:
 Rules:
 - JSON only
 - 3–8 insights
-- Evidence must include numeric signals when possible
+- Must include numeric signals (ROAS change, CTR drop, CPC rise, fatigue)
 - No <think> tags
 - No explanations outside JSON
+- Ensure evidence references the dataset metrics
 
 Metrics:
 {metrics_small}
@@ -86,6 +89,7 @@ Return JSON now.
     def run(self, metrics: dict, max_attempts: int = 2) -> dict:
         prompt = self._build_prompt(metrics)
         last_exc = None
+        raw = ""   # <-- FIX
 
         for attempt in range(1, max_attempts + 1):
             for _ in tqdm(range(3), desc="InsightAgent", leave=False):

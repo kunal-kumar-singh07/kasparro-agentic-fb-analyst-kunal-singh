@@ -12,31 +12,37 @@ class ReportAgent:
         self.llm = llm
 
     def clean_markdown(self, text):
-        """
-        Extracts markdown from code blocks if present,
-        otherwise returns the raw text stripped of whitespace.
-        """
-        # Look for content inside ```markdown ... ``` or ``` ... ```
-        code_block_pattern = r"```(?:markdown)?\s*([\s\S]*?)\s*```"
-        match = re.search(code_block_pattern, text)
-        if match:
-            return match.group(1).strip()
+        """Extract clean markdown from LLM output."""
 
-        # If no code blocks, just return the text
+        # Remove <think> tags
+        text = re.sub(r"<think>[\s\S]*?</think>", "", text, flags=re.IGNORECASE)
+
+        # Remove HTML-like tags
+        text = re.sub(r"</?[^>]+>", "", text)
+
+        # Remove stray JSON at bottom of output
+        text = re.sub(r"\{[\s\S]*?\}$", "", text).strip()
+
+        # Extract markdown from code block if provided
+        code_block = re.search(r"```(?:markdown)?\s*([\s\S]*?)\s*```", text)
+        if code_block:
+            return code_block.group(1).strip()
+
+        # No code block → return cleaned text
         return text.strip()
 
     def build_prompt(self, metrics, insights, hypotheses, validations):
-        # CHANGED: We now ask for direct Markdown, not JSON.
         return f"""
 You are the ReportAgent.
 
-Your task is to write a comprehensive, professional Final Report in MARKDOWN format based on the data provided below.
+Write a complete, professional FINAL REPORT in pure MARKDOWN.
 
-INSTRUCTIONS:
-- Do NOT output JSON.
-- Output ONLY the Markdown text.
-- Use headers (#, ##), bullet points, and clear sections.
-- Synthesize the findings into a cohesive narrative.
+Rules:
+- Output ONLY markdown (no JSON, no XML, no commentary).
+- Use sections, headers, lists, tables.
+- Synthesize insights, hypotheses, validation, recommendations.
+
+DATA BELOW:
 
 METRICS:
 {json.dumps(metrics, indent=2)}
@@ -53,29 +59,27 @@ VALIDATIONS:
 
     def run(self, metrics, insights, hypotheses, validations, retries=2):
         prompt = self.build_prompt(metrics, insights, hypotheses, validations)
+
         last_raw = None
 
         for attempt in range(retries + 1):
 
-            # Simulated thinking bar
             for _ in tqdm(range(3), desc="ReportAgent", leave=False):
                 time.sleep(0.08)
 
             raw = self.llm.generate(prompt)
             last_raw = raw
 
-            # Save raw output for debugging
             debug_path = os.path.join(RESULTS_DIR, "report_raw_debug.txt")
             os.makedirs(RESULTS_DIR, exist_ok=True)
             with open(debug_path, "w", encoding="utf-8") as f:
                 f.write(raw)
 
             try:
-                # CHANGED: We use clean_markdown instead of extract_json
                 markdown = self.clean_markdown(raw)
 
-                if len(markdown) < 50:  # Increased threshold slightly
-                    raise ValueError("Generated report is too short or empty.")
+                if len(markdown) < 50:
+                    raise ValueError("Markdown too short — invalid response")
 
                 report_path = os.path.join(RESULTS_DIR, "final_report.md")
                 with open(report_path, "w", encoding="utf-8") as f:
@@ -85,7 +89,8 @@ VALIDATIONS:
                 return markdown
 
             except Exception as e:
-                print(f"ReportAgent error (Attempt {attempt + 1}/{retries + 1}):", e)
-                continue
+                print(f"ReportAgent error (Attempt {attempt+1}/{retries+1}): {e}")
 
-        raise ValueError(f"ReportAgent failed after {retries} retries.\nRaw saved at: {debug_path}")
+        raise ValueError(
+            f"ReportAgent failed after retries. Debug saved at: {debug_path}"
+        )

@@ -4,10 +4,11 @@ import os
 import time
 from tqdm import tqdm
 
+from config import RESULTS_DIR
+
 JSON_REGEX = re.compile(r'({[\s\S]*})|(\[[\s\S]*\])', re.MULTILINE)
 
 def clean_llm_output(text: str) -> str:
-    """Remove <think> tags, HTML tags, backticks, code fences."""
     text = re.sub(r'<think>[\s\S]*?</think>', '', text, flags=re.IGNORECASE)
     text = re.sub(r'</?[^>]+>', '', text)
     text = text.replace("```json", "").replace("```", "")
@@ -16,13 +17,11 @@ def clean_llm_output(text: str) -> str:
 def extract_json(text: str):
     text = clean_llm_output(text)
 
-    # Try direct parse
     try:
         return json.loads(text)
     except Exception:
         pass
 
-    # Try regex extraction
     m = JSON_REGEX.search(text)
     if not m:
         raise ValueError("No JSON object found")
@@ -34,9 +33,7 @@ def extract_json(text: str):
 
 
 class HypothesisAgent:
-
     def __init__(self, llm, save_path=None):
-        from config import RESULTS_DIR
         self.llm = llm
         self.save_path = save_path or os.path.join(RESULTS_DIR, "hypotheses.json")
 
@@ -76,6 +73,7 @@ INSIGHTS:
     def run(self, insights: dict, max_attempts=2):
         prompt = self._build_prompt(insights)
         last_err = None
+        raw = ""   # <-- FIXED (prevents UnboundLocalError)
 
         for attempt in range(1, max_attempts + 1):
             for _ in tqdm(range(3), desc="HypothesisAgent processing", leave=False):
@@ -91,7 +89,6 @@ INSIGHTS:
                     "agent": "HypothesisAgent"
                 })
 
-                # Save final output
                 os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
                 with open(self.save_path, "w", encoding="utf-8") as f:
                     json.dump(parsed, f, indent=2, ensure_ascii=False)
@@ -111,17 +108,13 @@ INSIGHTS:
                     continue
                 break
 
-        # ---- FALLBACK ----
         fallback = {
             "hypotheses": [],
             "meta": {"error": str(last_err), "agent": "HypothesisAgent"}
         }
 
-        # Save fallback in results folder
-        from config import RESULTS_DIR
-        path = os.path.join(RESULTS_DIR, "hypotheses.json")
-        with open(path, "w", encoding="utf-8") as f:
+        with open(self.save_path, "w", encoding="utf-8") as f:
             json.dump(fallback, f, indent=2)
 
-        print("Saved fallback hypotheses ->", path)
+        print("Saved fallback hypotheses ->", self.save_path)
         return fallback
