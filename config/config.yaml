@@ -1,0 +1,16 @@
+paths:
+  dataset: "data/synthetic_fb_ads_undergarments.csv"
+  results_dir: "reports"
+  logs_dir: "logs"
+
+llm:
+  model: "gemini-2.0-flash"
+  temperature: 0.2
+  max_retries: 2
+
+thresholds:
+  low_ctr: 0.012
+  high_impressions: 300000
+  min_confidence: 0.45
+
+seed: 42
