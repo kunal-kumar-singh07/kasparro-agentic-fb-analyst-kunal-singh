@@ -1,7 +1,9 @@
 import json, re, os, time
 from tqdm import tqdm
-from config import RESULTS_DIR
-from logging_utils import log_event
+from config.config_loader import RESULTS_DIR
+from utils.logging_utils import log_event
+
+from config.config_loader import LOGS_DIR
 
 def clean_markdown(text):
     text = re.sub(r"<think>[\s\S]*?</think>", "", text, flags=re.IGNORECASE)

@@ -1,6 +1,8 @@
 import pandas as pd
 import os
-from config import DATA_CSV_PATH
+from config.config_loader import DATA_CSV_PATH
+from utils.logging_utils import log_event
+
 
 class DataAgent:
     def __init__(self, csv_path=None):

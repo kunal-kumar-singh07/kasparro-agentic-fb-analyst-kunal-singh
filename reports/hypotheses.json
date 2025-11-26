@@ -1,74 +1,62 @@
 {
   "hypotheses": [
     {
-      "issue": "Creative Performance",
-      "hypothesis": "Duplicating the 'Doctors recommend breathable modal — meet our men boxers' creative and targeting it to a similar audience will result in a comparable ROAS (above 20.0).",
+      "issue": "Retargeting audience ROAS is significantly higher than broad and lookalike audiences.",
+      "hypothesis": "Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.",
       "supporting_signals": [
-        "High ROAS of 'Doctors recommend breathable modal — meet our men boxers' (50.91)",
-        "Top creatives significantly outperform average ROAS",
-        "ROAS ranges from 20.57 to 50.91 for top performing creatives"
+        "Retargeting ROAS is 14.40 compared to Broad (8.06) and Lookalike (9.66)",
+        "Users who have previously interacted with the brand are more likely to convert"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "issue": "Facebook platform is generating slightly higher ROAS than Instagram.",
+      "hypothesis": "Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.",
+      "supporting_signals": [
+        "Facebook ROAS is 9.90 compared to Instagram's 9.38"
       ],
       "confidence": 0.8
     },
     {
-      "issue": "Creative Performance",
-      "hypothesis": "Replacing underperforming creatives (ROAS below 3), such as 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable modal that moves with you — limited offer on women sports bras,' with variations of the top-performing creative will improve overall ROAS.",
+      "issue": "Creative fatigue is impacting campaign performance.",
+      "hypothesis": "Replacing the two creatives with the highest impression counts (1794973 and 6678048) with new creatives will improve overall ROAS by 8% within one week.",
       "supporting_signals": [
-        "Low ROAS of 'Breathable microfiber that moves with you — limited offer on women panties.' (2.76)",
-        "Low ROAS of 'Breathable modal that moves with you — limited offer on women sports bras.' (0.67)",
-        "Significant difference between top and bottom performing creatives"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "issue": "Creative Fatigue",
-      "hypothesis": "Refreshing creatives that have high impression counts (e.g., 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.') with new variations will improve CTR and ROAS.",
-      "supporting_signals": [
-        "High impression count for 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.' (6678048)",
-        "Decline in ROAS and CTR for creatives with high impressions"
-      ],
-      "confidence": 0.7
-    },
-    {
-      "issue": "Audience Targeting",
-      "hypothesis": "Increasing budget allocation to retargeting audiences will lead to a higher overall ROAS compared to broad or lookalike audiences.",
-      "supporting_signals": [
-        "Retargeting audience has the highest ROAS (14.40)",
-        "Retargeting audience significantly outperforms broad and lookalike audiences"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "issue": "Geographic Targeting",
-      "hypothesis": "Shifting budget allocation to the US market will yield a higher ROAS compared to IN and UK markets.",
-      "supporting_signals": [
-        "US market ROAS is 10.28",
-        "IN market ROAS is 8.71",
-        "UK market ROAS is 9.08"
+        "High impression counts and declining ROAS and CTR for specific creatives",
+        "Creative message: Breathable cotton that moves with you — limited offer on women bras.",
+        "Creative message: Wire‑free ease, cloud‑soft cups — women sports bras that fits right."
       ],
       "confidence": 0.75
     },
     {
-      "issue": "Platform Optimization",
-      "hypothesis": "Reallocating a portion of the budget from Instagram to Facebook will result in a slight increase in overall ROAS and CTR.",
+      "issue": "Underperforming creatives are negatively impacting ROAS.",
+      "hypothesis": "Pausing the two creatives with the lowest ROAS (0.67 and 1.9) will increase overall ROAS by 5% within one week.",
       "supporting_signals": [
-        "Facebook ROAS (9.90) is slightly higher than Instagram ROAS (9.38)",
-        "Facebook CTR (0.0136) is slightly higher than Instagram CTR (0.0125)"
+        "Low ROAS for specific creatives",
+        "Creative message: Breathable modal that moves with you — limited offer on women sports bras.",
+        "Creative message: Breathable microfiber that moves with you — limited offer on women sports bras."
       ],
-      "confidence": 0.6
+      "confidence": 0.9
     },
     {
-      "issue": "ROAS Variance",
-      "hypothesis": "Identifying and mitigating the causes behind significant daily ROAS fluctuations will reduce ROAS volatility and improve predictability.",
+      "issue": "ROAS in India (IN) and United Kingdom (UK) underperforms the US.",
+      "hypothesis": "Implementing a localized creative strategy specifically targeting IN and UK markets will increase ROAS in those regions by 15% within two weeks.",
       "supporting_signals": [
-        "Daily ROAS fluctuates significantly (5.27 to 18.60)",
-        "Unstable ROAS performance makes planning difficult"
+        "US ROAS is 10.28, while UK ROAS is 9.08 and IN ROAS is 8.71",
+        "Similar spend in IN and UK compared to the US"
       ],
-      "confidence": 0.65
+      "confidence": 0.7
+    },
+    {
+      "issue": "High Performing Creative Theme: Doctors recommend breathable...",
+      "hypothesis": "Developing three new creatives with the theme \"Doctors recommend breathable...\" but testing different materials and product types (e.g., Doctors recommend breathable silk underwear) will outperform current creatives and increase ROAS by 10% within 1 week.",
+      "supporting_signals": [
+        "Creatives starting with \"Doctors recommend breathable\" consistently outperform others."
+      ],
+      "confidence": 0.7
     }
   ],
   "meta": {
     "agent": "HypothesisAgent",
-    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"Creative Performance\",\n      \"hypothesis\": \"Duplicating the 'Doctors recommend breathable modal — meet our men boxers' creative and targeting it to a similar audience will result in a comparable ROAS (above 20.0).\",\n      \"supporting_signals\": [\n        \"High ROAS of 'Doctors recommend breathable modal — meet our men boxers' (50.91)\",\n        \"Top creatives significantly outperform average ROAS\",\n        \"ROAS ranges from 20.57 to 50.91 for top performing creatives\"\n      ],\n      \"confidence\": 0.8\n    },\n    {\n      \"issue\": \"Creative Performance\",\n      \"hypothesis\": \"Replacing underperforming creatives (ROAS below 3), such as 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable modal that moves wi"
+    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"Retargeting audience ROAS is significantly higher than broad and lookalike audiences.\",\n      \"hypothesis\": \"Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.\",\n      \"supporting_signals\": [\n        \"Retargeting ROAS is 14.40 compared to Broad (8.06) and Lookalike (9.66)\",\n        \"Users who have previously interacted with the brand are more likely to convert\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Facebook platform is generating slightly higher ROAS than Instagram.\",\n      \"hypothesis\": \"Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.\",\n      \"supporting_signals\": [\n        \"Facebook ROAS is 9.90 compared"
   }
 }

@@ -1,4 +1,4 @@
-from logging_utils import log_event
+from utils.logging_utils import log_event
 
 class PlannerAgent:
     def plan(self, user_query: str):
@@ -15,5 +15,6 @@ class PlannerAgent:
                 {"step":"Generate final report","agent":"ReportAgent","description":"Synthesize everything into a final markdown report."},
             ]
         }
+
         log_event("PlannerAgent", "plan_generated", {"query": user_query})
         return plan_dict

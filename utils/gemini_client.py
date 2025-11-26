@@ -3,7 +3,7 @@ import google.generativeai as genai
 class GeminiClient:
     def __init__(self, model="gemini-2.0-flash"):
         # setting api key directly
-        genai.configure(api_key="place api key here please")
+        genai.configure(api_key="you api key here please")
         self.model_name = model
         self.model = genai.GenerativeModel(model)
 

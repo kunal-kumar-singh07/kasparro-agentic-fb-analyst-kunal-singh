@@ -1,68 +1,107 @@
 {
-  "actions": [
+  "strategy_recommendations": [
     {
-      "action_type": "Pause Creative",
-      "target": "creative",
-      "target_details": "Breathable microfiber that moves with you — limited offer on women panties.",
-      "reason": "Low ROAS and potential creative fatigue.",
-      "priority": "High"
+      "title": "Prioritize Retargeting Efforts",
+      "description": "Given the significantly higher ROAS from retargeting audiences, allocate more budget and focus on refining retargeting strategies. This could involve creating more personalized ads based on user behavior, optimizing landing pages for returning visitors, and ensuring seamless cross-device experiences.",
+      "priority": "High",
+      "impact": "High",
+      "confidence": 0.95,
+      "required_steps": [
+        "Increase budget allocation for retargeting campaigns.",
+        "Segment retargeting audiences based on past interactions (e.g., viewed products, abandoned carts, past purchases).",
+        "Develop personalized ad creatives tailored to each retargeting segment.",
+        "Optimize landing page experience for returning visitors.",
+        "Implement cross-device tracking to ensure consistent messaging."
+      ]
     },
     {
-      "action_type": "Pause Creative",
-      "target": "creative",
-      "target_details": "Breathable modal that moves with you — limited offer on women sports bras.",
-      "reason": "Very low ROAS.",
-      "priority": "High"
+      "title": "Rebalance Budget Towards Facebook",
+      "description": "Since Facebook is generating a higher ROAS than Instagram, consider reallocating budget from Instagram to Facebook to maximize overall return. Continuously monitor performance to ensure this shift maintains positive results.",
+      "priority": "Medium",
+      "impact": "Medium",
+      "confidence": 0.8,
+      "required_steps": [
+        "Analyze the performance of individual campaigns on Facebook and Instagram.",
+        "Identify campaigns with the highest ROAS on Facebook and scale those.",
+        "Gradually reduce budget for underperforming Instagram campaigns.",
+        "Reallocate the freed-up budget to top-performing Facebook campaigns.",
+        "Monitor performance closely after the budget shift and adjust as needed."
+      ]
     },
     {
-      "action_type": "Scale Budget",
-      "target": "audience",
-      "target_details": "Retargeting",
-      "adjustment": "Increase budget by 20%",
-      "reason": "High ROAS compared to other audiences.",
-      "priority": "Medium"
+      "title": "Refresh Stale Creatives",
+      "description": "Identify and replace creatives with high impression counts and declining ROAS/CTR. Experiment with new ad formats, messaging, and visuals to re-engage the target audience. Focus on testing completely new creatives rather than minor tweaks.",
+      "priority": "High",
+      "impact": "High",
+      "confidence": 0.75,
+      "required_steps": [
+        "Identify creatives with high impression counts and low/declining ROAS and CTR.",
+        "Brainstorm new ad concepts and messaging.",
+        "Develop new creative assets (images, videos, ad copy).",
+        "Launch A/B tests to compare new creatives with existing ones.",
+        "Pause or replace underperforming creatives with winning variations."
+      ]
     },
     {
-      "action_type": "Scale Budget",
-      "target": "country",
-      "target_details": "US",
-      "adjustment": "Increase budget by 15%",
-      "reason": "Higher ROAS compared to other countries.",
-      "priority": "Medium"
+      "title": "Pause or Rework Underperforming Creatives",
+      "description": "Immediately pause or rework creatives with extremely low ROAS. Analyze why these creatives are not performing well and test different approaches, focusing on core messaging, target audience alignment, and visual appeal.",
+      "priority": "High",
+      "impact": "High",
+      "confidence": 0.9,
+      "required_steps": [
+        "Pause creatives with ROAS below a predefined threshold (e.g., ROAS < 2).",
+        "Analyze the underperforming creatives to identify common issues (e.g., weak headline, irrelevant imagery, poor targeting).",
+        "Develop revised creative concepts that address the identified issues.",
+        "Test the reworked creatives against a control group to measure improvement.",
+        "If performance does not improve, explore entirely new concepts."
+      ]
     },
     {
-      "action_type": "Reallocate Budget",
-      "target": "platform",
-      "target_details": "Facebook",
-      "from": "Instagram",
-      "adjustment": "Move 10% of Instagram budget to Facebook",
-      "reason": "Slightly better performance on Facebook (higher ROAS and CTR).",
-      "priority": "Low"
+      "title": "Investigate Performance in IN and UK Markets",
+      "description": "Conduct further analysis to understand why ROAS is lower in India (IN) and the United Kingdom (UK) compared to the United States (US). This might involve analyzing audience demographics, ad creative performance, and competitive landscape in each market, and the impact of currency.",
+      "priority": "Medium",
+      "impact": "Medium",
+      "confidence": 0.7,
+      "required_steps": [
+        "Segment performance data by country (IN, UK, US).",
+        "Analyze audience demographics, interests, and behaviors in each country.",
+        "Review ad creative performance by country to identify winning and losing concepts.",
+        "Investigate competitive landscape and pricing in each market.",
+        "Adjust ad targeting, messaging, and budget allocation based on findings.",
+        "Consider currency and payment option localisation."
+      ]
     },
     {
-      "action_type": "Refresh Creative",
-      "target": "creative",
-      "target_details": "Wire‑free ease, cloud‑soft cups — women sports bras that fits right.",
-      "reason": "Creative fatigue (high impressions, declining performance). Consider A/B testing new variations of this ad.",
-      "priority": "Medium"
+      "title": "Monitor Daily ROAS and Investigate Dips",
+      "description": "Closely monitor daily ROAS trends and proactively investigate any significant drops. This could involve analyzing recent campaign changes, identifying potential external factors (e.g., seasonality, competitor activity), and implementing corrective actions to restore performance.",
+      "priority": "Low",
+      "impact": "Low",
+      "confidence": 0.6,
+      "required_steps": [
+        "Set up daily ROAS performance tracking and alerts.",
+        "Establish a process for investigating ROAS dips.",
+        "Analyze recent campaign changes, external factors, and data anomalies when a dip occurs.",
+        "Implement corrective actions (e.g., budget adjustments, creative changes, targeting refinements).",
+        "Document and share learnings to prevent future dips."
+      ]
     },
     {
-      "action_type": "Investigate",
-      "target": "daily_performance",
-      "target_details": "Daily ROAS fluctuations",
-      "reason": "Significant variations in daily ROAS performance warrant further investigation to understand contributing factors and optimize accordingly.",
-      "priority": "Medium"
-    },
-    {
-      "action_type": "Test Creative",
-      "target": "creative_theme",
-      "target_details": "Doctors recommend breathable modal — meet our men boxers.",
-      "reason": "High ROAS on this creative. Test similar creative themes for other products.",
-      "priority": "High"
+      "title": "Expand on 'Doctors Recommend' Creative Theme",
+      "description": "Given the success of creatives featuring \"Doctors recommend breathable...\", explore variations of this theme with different materials, product types, and target audiences. Conduct thorough testing to identify the most effective combinations and scale those accordingly.",
+      "priority": "Medium",
+      "impact": "Medium",
+      "confidence": 0.7,
+      "required_steps": [
+        "Brainstorm new ad concepts featuring \"Doctors recommend breathable...\" for different materials (e.g., bamboo, modal, microfiber).",
+        "Adapt the theme to different product types (e.g., bras, underwear, socks).",
+        "Test the variations with different target audiences (e.g., men, women, age groups).",
+        "Analyze performance data to identify winning combinations.",
+        "Scale successful creatives and continuously test new variations."
+      ]
     }
   ],
   "meta": {
     "agent": "CreativeImprovementAgent",
-    "raw_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_type\": \"Pause Creative\",\n      \"target\": \"creative\",\n      \"target_details\": \"Breathable microfiber that moves with you — limited offer on women panties.\",\n      \"reason\": \"Low ROAS and potential creative fatigue.\",\n      \"priority\": \"High\"\n    },\n    {\n      \"action_type\": \"Pause Creative\",\n      \"target\": \"creative\",\n      \"target_details\": \"Breathable modal that moves with you — limited offer on women sports bras.\",\n      \"reason\": \"Very low ROAS.\",\n      \"priority\": \"High\"\n    },\n    {\n      \"action_type\": \"Scale Budget\",\n      \"target\": \"audience\",\n      \"target_details\": \"Retargeting\",\n      \"adjustment\": \"Increase budget by 20%\",\n      \"reason\": \"High ROAS compared to other audiences.\",\n      \"priority\": \"Medium\"\n    },\n    {\n      \"actio"
+    "raw_preview": "```json\n{\n  \"strategy_recommendations\": [\n    {\n      \"title\": \"Prioritize Retargeting Efforts\",\n      \"description\": \"Given the significantly higher ROAS from retargeting audiences, allocate more budget and focus on refining retargeting strategies. This could involve creating more personalized ads based on user behavior, optimizing landing pages for returning visitors, and ensuring seamless cross-device experiences.\",\n      \"priority\": \"High\",\n      \"impact\": \"High\",\n      \"confidence\": 0.95,\n      \"required_steps\": [\n        \"Increase budget allocation for retargeting campaigns.\",\n        \"Segment retargeting audiences based on past interactions (e.g., viewed products, abandoned carts, past purchases).\",\n        \"Develop personalized ad creatives tailored to each retargeting segment.\",\n "
   }
 }

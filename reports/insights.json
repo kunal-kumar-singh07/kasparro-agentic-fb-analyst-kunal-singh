@@ -1,75 +1,124 @@
 {
-  "summary_text": "Overall ROAS is 5.83. Performance varies across countries, platforms and audience types. There are also significant performance differences between the top and worst performing creatives.",
+  "summary_text": "Overall ROAS is strong at 5.83. Retargeting audiences and Facebook platform are performing well, but there's some creative fatigue and underperforming creatives dragging down performance.",
   "insights": [
     {
-      "title": "High Performing Creatives",
-      "description": "The top creatives significantly outperform the average, with ROAS ranging from 20.57 to 50.91. Doctors recommend breathable modal — meet our men boxers is performing well with ROAS of 50.91.",
+      "title": "High ROAS from Retargeting Audiences",
+      "description": "Retargeting audiences show the highest ROAS (14.40) compared to Broad (8.06) and Lookalike (9.66) audiences. This indicates that users who have previously interacted with the brand are more likely to convert.",
       "evidence": {
-        "kpi_changes": [],
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "from_value": 5.83,
+            "to_value": 14.4,
+            "change": "Increase"
+          }
+        ],
         "creative_issues": [],
         "audience_issues": []
       },
       "severity": "High",
-      "confidence": 0.9
+      "confidence": 0.95
     },
     {
-      "title": "Underperforming Creatives",
-      "description": "Several creatives are underperforming, with ROAS below 3. These include 'Breathable microfiber that moves with you — limited offer on women panties.' at 2.76 and 'Breathable modal that moves with you — limited offer on women sports bras.' at 0.67 ROAS.",
+      "title": "Facebook is Outperforming Instagram",
+      "description": "Facebook is generating a slightly higher ROAS (9.90) than Instagram (9.38). Consider shifting budget to Facebook to capitalize on the higher return.",
       "evidence": {
-        "kpi_changes": [],
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "from_value": 9.38,
+            "to_value": 9.9,
+            "change": "Increase"
+          }
+        ],
         "creative_issues": [],
         "audience_issues": []
       },
-      "severity": "High",
-      "confidence": 0.9
+      "severity": "Medium",
+      "confidence": 0.8
     },
     {
-      "title": "Creative Fatigue",
-      "description": "Several creatives with high impressions counts have experienced a decline in ROAS and CTR indicating potential creative fatigue. For example 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.' has 6678048 impressions with a ROAS of 20.65.",
+      "title": "Creative Fatigue Detected",
+      "description": "Several creatives show signs of fatigue, indicated by high impression counts and declining ROAS and CTR. Refreshing these creatives could improve performance.",
       "evidence": {
         "kpi_changes": [],
-        "creative_issues": [],
+        "creative_issues": [
+          {
+            "creative_message": "Breathable cotton that moves with you — limited offer on women bras.",
+            "impressions": 1794973,
+            "ctr": 0.01195,
+            "roas": 41.28
+          },
+          {
+            "creative_message": "Wire‑free ease, cloud‑soft cups — women sports bras that fits right.",
+            "impressions": 6678048,
+            "ctr": 0.01118,
+            "roas": 20.65
+          }
+        ],
         "audience_issues": []
       },
       "severity": "Medium",
       "confidence": 0.75
     },
     {
-      "title": "Retargeting Audience Performance",
-      "description": "The retargeting audience demonstrates the highest ROAS at 14.40, significantly outperforming broad and lookalike audiences. Consider increasing spend in retargeting.",
+      "title": "Underperforming Creatives Identified",
+      "description": "Some creatives have very low ROAS. These creatives are likely detracting from overall campaign performance and should be paused or significantly reworked.",
       "evidence": {
         "kpi_changes": [],
+        "creative_issues": [
+          {
+            "creative_message": "Breathable modal that moves with you — limited offer on women sports bras.",
+            "roas": 0.67
+          },
+          {
+            "creative_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
+            "roas": 1.9
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "High",
+      "confidence": 0.9
+    },
+    {
+      "title": "Potential for Improvement in India (IN) and United Kingdom (UK)",
+      "description": "The US is the top performing country, while IN and UK have similar spend but lower ROAS. Focus efforts to improve ROAS in IN and UK.",
+      "evidence": {
+        "kpi_changes": [
+          {
+            "metric": "ROAS - US",
+            "to_value": 10.28
+          },
+          {
+            "metric": "ROAS - UK",
+            "to_value": 9.08
+          },
+          {
+            "metric": "ROAS - IN",
+            "to_value": 8.71
+          }
+        ],
         "creative_issues": [],
         "audience_issues": []
       },
       "severity": "Medium",
-      "confidence": 0.8
+      "confidence": 0.7
     },
     {
-      "title": "US Market Performance",
-      "description": "The US market is showing strong performance with a ROAS of 10.28, outperforming both IN (8.71) and UK (9.08). Consider allocating more budget to the US market.",
-      "evidence": {
-        "kpi_changes": [],
-        "creative_issues": [],
-        "audience_issues": []
-      },
-      "severity": "Medium",
-      "confidence": 0.8
-    },
-    {
-      "title": "Instagram vs Facebook Performance",
-      "description": "Facebook is showing slightly higher ROAS at 9.90 compared to Instagram's 9.38. Facebook also leads in CTR with 0.0136 compared to 0.0125. Consider optimizing budget allocation to leverage Facebook's slightly better performance.",
+      "title": "ROAS Fluctuation towards the End of the Period",
+      "description": "ROAS showed a downward trend towards the end of the reporting period. The last few days had lower ROAS than average.",
       "evidence": {
         "kpi_changes": [],
         "creative_issues": [],
         "audience_issues": []
       },
       "severity": "Low",
-      "confidence": 0.65
+      "confidence": 0.6
     },
     {
-      "title": "ROAS Fluctuation",
-      "description": "The ROAS has considerable daily fluctuation ranging from 5.27 on '2025-03-24' to 18.60 on '2025-03-02'. Investigate the reasons behind the large differences in daily performance to inform future strategies.",
+      "title": "High Performing Creative Theme: Doctors recommend breathable...",
+      "description": "Creatives starting with \"Doctors recommend breathable\" consistently outperform others. Focus on this theme, but test different materials and product types.",
       "evidence": {
         "kpi_changes": [],
         "creative_issues": [],
@@ -82,6 +131,6 @@
   "meta": {
     "agent": "InsightAgent",
     "dataset_path": null,
-    "raw_preview": "```json\n{\n  \"summary_text\": \"Overall ROAS is 5.83. Performance varies across countries, platforms and audience types. There are also significant performance differences between the top and worst performing creatives.\",\n  \"insights\": [\n    {\n      \"title\": \"High Performing Creatives\",\n      \"description\": \"The top creatives significantly outperform the average, with ROAS ranging from 20.57 to 50.91. Doctors recommend breathable modal — meet our men boxers is performing well with ROAS of 50.91.\",\n      \"evidence\": {\n        \"kpi_changes\": [],\n        \"creative_issues\": [],\n        \"audience_issues\": []\n      },\n      \"severity\": \"High\",\n      \"confidence\": 0.9\n    },\n    {\n      \"title\": \"Underperforming Creatives\",\n      \"description\": \"Several creatives are underperforming, with ROAS below"
+    "raw_preview": "```json\n{\n  \"summary_text\": \"Overall ROAS is strong at 5.83. Retargeting audiences and Facebook platform are performing well, but there's some creative fatigue and underperforming creatives dragging down performance.\",\n  \"insights\": [\n    {\n      \"title\": \"High ROAS from Retargeting Audiences\",\n      \"description\": \"Retargeting audiences show the highest ROAS (14.40) compared to Broad (8.06) and Lookalike (9.66) audiences. This indicates that users who have previously interacted with the brand are more likely to convert.\",\n      \"evidence\": {\n        \"kpi_changes\": [\n          {\n            \"metric\": \"ROAS\",\n            \"from_value\": 5.83,\n            \"to_value\": 14.40,\n            \"change\": \"Increase\"\n          }\n        ],\n        \"creative_issues\": [],\n        \"audience_issues\": []\n    "
   }
 }
