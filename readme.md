@@ -1,41 +1,37 @@
 
----
-
 # Agentic Facebook Ads Analyst
 
-Automated insights, hypotheses, validation, creative optimization, and final reporting using a multi-agent intelligence system.
+Automated insights, hypotheses, validation, creative optimization, and final reporting using a modular multi-agent analytics system.
 
 ---
 
 ## Overview
 
-This project implements a modular, agentic marketing analytics system that analyzes Facebook Ads performance end-to-end using an orchestrated multi-agent workflow.
+This project implements a complete, agent-driven marketing analytics pipeline designed to analyze Facebook Ads performance end-to-end.
 
-The system automatically produces:
+The pipeline produces:
 
 * Structured insights
 * Testable hypotheses
 * Quantitative validation
-* Creative recommendations
-* Final markdown report
-* JSON logs for observability
-* Reproducible, config-driven pipeline
+* Creative improvement recommendations
+* Consolidated markdown reports
+* JSON logs and metrics for observability
 
-Built with:
+Technologies used:
 
 * Python 3.10+
 * Gemini 2.0 Flash API
-* Modular agent architecture
+* Multi-agent modular architecture
+* Configuration-driven execution
 
 ---
 
 ## Direct Download
 
-Download the full project as a ZIP:
+Download ZIP:
 
 **[https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/archive/refs/heads/main.zip](https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/archive/refs/heads/main.zip)**
-
-You can put this link directly in the README.
 
 ---
 
@@ -54,15 +50,15 @@ cd kasparro-agentic-fb-analyst-kunal-singh
 pip install -r requirements.txt
 ```
 
-### 3. Add Your Gemini API Key
+### 3. Configure Your Gemini API Key
 
-Edit:
+Open:
 
 ```
 utils/gemini_client.py
 ```
 
-Replace:
+Set:
 
 ```
 api_key = "YOUR_API_KEY"
@@ -70,22 +66,46 @@ api_key = "YOUR_API_KEY"
 
 ### 4. Run the Pipeline
 
-Default run:
+Default:
 
 ```
 python src/run.py
 ```
 
-Custom query:
+With custom query:
 
 ```
 python src/run.py "Analyze ROAS drop and creative fatigue"
 ```
 
-Optional (Makefile):
+---
+
+## Running With Makefile (Optional)
+
+A Makefile is included for simplified execution.
+
+### Run default pipeline:
 
 ```
 make run
+```
+
+### Run with custom query:
+
+```
+make run-query QUERY="Why did ROAS drop last week?"
+```
+
+### Install requirements:
+
+```
+make install
+```
+
+### Clean results/logs:
+
+```
+make clean
 ```
 
 ---
@@ -106,6 +126,13 @@ make run
 ├── reports/
 ├── src/
 │   ├── agents/
+│   │   ├── data_agent.py
+│   │   ├── insight_agent.py
+│   │   ├── hypothesis_agent.py
+│   │   ├── evaluator_agent.py
+│   │   ├── validator_agent.py
+│   │   ├── creative_agent.py
+│   │   └── report_agent.py
 │   ├── utils/
 │   ├── orchestrator/
 │   └── run.py
@@ -115,16 +142,14 @@ make run
 
 ## Features
 
-* Planner Agent
-* Data Agent
-* Insight Agent
-* Hypothesis Agent
-* Evaluator Agent
-* Validator Agent
-* Creative Improvement Agent
-* Report Agent
-* Central logging system
-* Structured JSON outputs
-* Deterministic and reproducible pipeline
+* Planner Agent for execution strategy
+* Data Agent for metrics computation
+* Insight Agent for evidence extraction
+* Hypothesis Agent for generating testable hypotheses
+* Evaluator Agent for quantitative scoring
+* Validator Agent for reasoning refinement
+* Creative Agent for generating improved ad messaging
+* Report Agent for final markdown reporting
+* Full logging and result tracking system
 
 ---
