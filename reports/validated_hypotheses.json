@@ -1,0 +1,57 @@
+{
+  "validated_hypotheses": [
+    {
+      "issue": "Creative Performance",
+      "hypothesis": "Duplicating the 'Doctors recommend breathable modal — meet our men boxers' creative and targeting it to a similar audience will result in a comparable ROAS (above 20.0).",
+      "status": "validated",
+      "strengthened_reasoning": "The consistently high ROAS of the original creative, coupled with the observed outperformance of top creatives in general, strongly suggests that replicating this strategy will likely yield similar positive results.",
+      "confidence": 0.9
+    },
+    {
+      "issue": "Creative Performance",
+      "hypothesis": "Replacing underperforming creatives (ROAS below 3), such as 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable modal that moves with you — limited offer on women sports bras,' with variations of the top-performing creative will improve overall ROAS.",
+      "status": "validated",
+      "strengthened_reasoning": "Given the significant disparity between the ROAS of top and bottom performing creatives, replacing the underperforming ones with variations of high-performing creatives is a logical and likely effective strategy to improve overall ROAS.",
+      "confidence": 0.9
+    },
+    {
+      "issue": "Creative Fatigue",
+      "hypothesis": "Refreshing creatives that have high impression counts (e.g., 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.') with new variations will improve CTR and ROAS.",
+      "status": "validated",
+      "strengthened_reasoning": "High impression counts often lead to creative fatigue, which manifests as declining CTR and ROAS. Refreshing these creatives with new variations is a standard practice to combat this and revitalize performance.",
+      "confidence": 0.8
+    },
+    {
+      "issue": "Audience Targeting",
+      "hypothesis": "Increasing budget allocation to retargeting audiences will lead to a higher overall ROAS compared to broad or lookalike audiences.",
+      "status": "validated",
+      "strengthened_reasoning": "The consistently superior ROAS of retargeting audiences, as evidenced by the data, makes it a prime candidate for increased budget allocation to maximize overall ROAS.",
+      "confidence": 0.9
+    },
+    {
+      "issue": "Geographic Targeting",
+      "hypothesis": "Shifting budget allocation to the US market will yield a higher ROAS compared to IN and UK markets.",
+      "status": "validated",
+      "strengthened_reasoning": "The US market's higher ROAS compared to the IN and UK markets justifies a shift in budget allocation to capitalize on the more profitable geographic region.",
+      "confidence": 0.85
+    },
+    {
+      "issue": "Platform Optimization",
+      "hypothesis": "Reallocating a portion of the budget from Instagram to Facebook will result in a slight increase in overall ROAS and CTR.",
+      "status": "partial",
+      "strengthened_reasoning": "While the differences in ROAS and CTR between Facebook and Instagram are not drastic, the slight advantage of Facebook suggests that a modest reallocation could lead to incremental improvements.",
+      "confidence": 0.7
+    },
+    {
+      "issue": "ROAS Variance",
+      "hypothesis": "Identifying and mitigating the causes behind significant daily ROAS fluctuations will reduce ROAS volatility and improve predictability.",
+      "status": "validated",
+      "strengthened_reasoning": "Reducing ROAS volatility is crucial for effective planning and resource allocation. Identifying and addressing the underlying causes of these fluctuations is a necessary step towards achieving greater stability and predictability.",
+      "confidence": 0.75
+    }
+  ],
+  "meta": {
+    "agent": "ValidatorAgent",
+    "raw_preview": "```json\n{\n  \"validated_hypotheses\": [\n    {\n      \"issue\": \"Creative Performance\",\n      \"hypothesis\": \"Duplicating the 'Doctors recommend breathable modal — meet our men boxers' creative and targeting it to a similar audience will result in a comparable ROAS (above 20.0).\",\n      \"status\": \"validated\",\n      \"strengthened_reasoning\": \"The consistently high ROAS of the original creative, coupled with the observed outperformance of top creatives in general, strongly suggests that replicating this strategy will likely yield similar positive results.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Creative Performance\",\n      \"hypothesis\": \"Replacing underperforming creatives (ROAS below 3), such as 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Brea"
+  }
+}

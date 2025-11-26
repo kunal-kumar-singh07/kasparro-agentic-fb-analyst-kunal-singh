@@ -1,0 +1,175 @@
+# FINAL REPORT
+
+## Executive Summary
+
+This report analyzes advertising campaign performance based on data from January 1, 2025, to March 31, 2025. Overall, the campaign achieved a ROAS of 5.83, generating $12,265,700.72 in revenue from a spend of $2,105,579.90 and 341,144 purchases. Key insights include significant performance variations across creatives, audience segments, countries, and platforms. The report validates several hypotheses related to improving campaign performance, including duplicating high-performing creatives, replacing underperforming creatives, addressing creative fatigue, optimizing audience targeting, and adjusting geographic budget allocation. ROAS exhibits daily fluctuation and is an area for investigation.
+
+## Key Performance Indicators (KPIs)
+
+### Overall Summary
+
+| Metric          | Value        |
+|-----------------|--------------|
+| Total Spend     | $2,105,579.90  |
+| Total Revenue   | $12,265,700.72 |
+| Total Purchases | 341,144      |
+| Overall ROAS    | 5.83         |
+| Overall CTR     | 0.0131       |
+| Overall CPC     | $0.28         |
+| Overall CPM     | $3.19         |
+
+### Daily Metrics
+
+| Date       | ROAS   | CTR    | Spend       | Revenue      |
+|------------|--------|--------|-------------|--------------|
+| 2025-01-01 | 9.38   | 0.0139 | $21,427.75  | $112,993.75 |
+| 2025-01-02 | 11.93  | 0.0132 | $24,977.68  | $158,374.54 |
+| 2025-01-03 | 7.61   | 0.0134 | $24,362.07  | $131,669.13 |
+| 2025-01-04 | 9.48   | 0.0139 | $23,681.91  | $160,393.11 |
+| 2025-01-05 | 8.24   | 0.0131 | $21,452.16  | $112,283.65 |
+| 2025-01-06 | 11.37  | 0.0146 | $22,832.64  | $152,838.61 |
+| 2025-01-07 | 7.28   | 0.0135 | $27,264.27  | $141,374.86 |
+| 2025-01-08 | 10.93  | 0.0133 | $22,486.32  | $124,789.51 |
+| 2025-01-09 | 9.77   | 0.0130 | $23,333.18  | $154,377.79 |
+| 2025-01-10 | 11.11  | 0.0132 | $21,488.67  | $148,442.54 |
+| 2025-01-11 | 12.15  | 0.0136 | $23,448.06  | $142,372.05 |
+| 2025-01-12 | 11.09  | 0.0144 | $21,983.26  | $145,147.64 |
+| 2025-01-13 | 6.80   | 0.0128 | $23,406.43  | $141,927.71 |
+| 2025-01-14 | 12.35  | 0.0136 | $21,770.00  | $149,918.98 |
+| 2025-01-15 | 10.11  | 0.0126 | $22,334.87  | $114,368.58 |
+| 2025-01-16 | 13.23  | 0.0143 | $24,137.54  | $202,860.05 |
+| 2025-01-17 | 9.17   | 0.0135 | $24,424.28  | $137,617.80 |
+| 2025-01-18 | 10.91  | 0.0141 | $24,694.69  | $134,224.95 |
+| 2025-01-19 | 10.17  | 0.0126 | $23,494.84  | $121,143.91 |
+| 2025-01-20 | 7.24   | 0.0128 | $23,323.13  | $123,207.25 |
+| 2025-01-21 | 14.54  | 0.0142 | $21,521.10  | $157,938.67 |
+| 2025-01-22 | 9.81   | 0.0125 | $25,039.07  | $144,086.32 |
+| 2025-01-23 | 12.84  | 0.0135 | $19,219.72  | $156,702.87 |
+| 2025-01-24 | 8.89   | 0.0131 | $22,237.09  | $132,932.19 |
+| 2025-01-25 | 9.88   | 0.0139 | $23,520.64  | $133,792.81 |
+| 2025-01-26 | 7.30   | 0.0127 | $24,340.90  | $114,985.23 |
+| 2025-01-27 | 11.65  | 0.0131 | $22,657.29  | $150,949.68 |
+| 2025-01-28 | 12.63  | 0.0132 | $26,817.12  | $169,931.82 |
+| 2025-01-29 | 9.29   | 0.0139 | $22,075.23  | $135,832.75 |
+| 2025-01-30 | 6.67   | 0.0138 | $20,642.77  | $112,185.29 |
+| 2025-01-31 | 8.78   | 0.0135 | $22,558.07  | $141,078.52 |
+| 2025-02-01 | 6.36   | 0.0128 | $26,558.51  | $105,600.44 |
+| 2025-02-02 | 8.23   | 0.0132 | $26,672.64  | $126,644.28 |
+| 2025-02-03 | 13.92  | 0.0136 | $21,338.27  | $177,677.83 |
+| 2025-02-04 | 9.68   | 0.0132 | $23,080.49  | $135,232.68 |
+| 2025-02-05 | 9.30   | 0.0134 | $22,725.08  | $137,439.05 |
+| 2025-02-06 | 11.75  | 0.0134 | $23,000.92  | $115,250.11 |
+| 2025-02-07 | 9.95   | 0.0126 | $21,997.27  | $112,580.08 |
+| 2025-02-08 | 7.50   | 0.0132 | $22,576.54  | $118,427.50 |
+| 2025-02-09 | 6.70   | 0.0129 | $27,864.51  | $133,935.44 |
+| 2025-02-10 | 10.10  | 0.0132 | $24,390.14  | $148,611.83 |
+| 2025-02-11 | 11.22  | 0.0123 | $20,370.37  | $129,496.76 |
+| 2025-02-12 | 13.72  | 0.0134 | $20,659.93  | $153,406.09 |
+| 2025-02-13 | 7.69   | 0.0127 | $23,491.69  | $136,941.92 |
+| 2025-02-14 | 6.85   | 0.0140 | $26,486.38  | $150,752.12 |
+| 2025-02-15 | 9.62   | 0.0132 | $23,232.61  | $121,965.74 |
+| 2025-02-16 | 8.41   | 0.0130 | $21,439.03  | $133,012.61 |
+| 2025-02-17 | 10.17  | 0.0130 | $22,758.40  | $140,051.75 |
+| 2025-02-18 | 8.33   | 0.0129 | $24,579.29  | $133,845.78 |
+| 2025-02-19 | 8.97   | 0.0130 | $22,790.81  | $132,859.91 |
+| 2025-02-20 | 8.03   | 0.0130 | $23,633.85  | $138,739.31 |
+| 2025-02-21 | 10.23  | 0.0136 | $23,136.45  | $167,211.57 |
+| 2025-02-22 | 8.68   | 0.0123 | $28,252.22  | $181,384.80 |
+| 2025-02-23 | 10.10  | 0.0123 | $25,407.87  | $141,209.90 |
+| 2025-02-24 | 13.65  | 0.0128 | $24,363.54  | $138,484.28 |
+| 2025-02-25 | 9.02   | 0.0128 | $25,051.86  | $140,085.80 |
+| 2025-02-26 | 11.15  | 0.0121 | $21,302.37  | $141,748.77 |
+| 2025-02-27 | 10.60  | 0.0121 | $22,180.73  | $144,888.22 |
+| 2025-02-28 | 6.71   | 0.0134 | $25,415.47  | $117,683.86 |
+| 2025-03-01 | 7.98   | 0.0128 | $26,526.77  | $136,675.88 |
+| 2025-03-02 | 18.60  | 0.0127 | $20,735.23  | $143,869.24 |
+| 2025-03-03 | 8.81   | 0.0127 | $23,798.82  | $123,047.37 |
+| 2025-03-04 | 7.27   | 0.0126 | $24,186.60  | $128,368.63 |
+| 2025-03-05 | 8.74   | 0.0137 | $27,146.75  | $154,114.55 |
+| 2025-03-06 | 8.64   | 0.0131 | $22,098.94  | $113,896.45 |
+| 2025-03-07 | 9.28   | 0.0125 | $23,091.40  | $122,364.05 |
+| 2025-03-08 | 7.40   | 0.0130 | $24,050.98  | $128,559.01 |
+| 2025-03-09 | 14.16  | 0.0130 | $21,425.61  | $154,300.04 |
+| 2025-03-10 | 12.41  | 0.0128 | $20,464.38  | $109,697.48 |
+| 2025-03-11 | 11.19  | 0.0126 | $26,418.40  | $162,753.22 |
+| 2025-03-12 | 9.92   | 0.0132 | $21,591.50  | $130,470.51 |
+| 2025-03-13 | 8.73   | 0.0121 | $22,575.09  | $113,550.83 |
+| 2025-03-14 | 11.47  | 0.0132 | $22,374.84  | $103,943.45 |
+| 2025-03-15 | 10.27  | 0.0131 | $20,924.63  | $147,991.04 |
+| 2025-03-16 | 14.17  | 0.0127 | $19,521.40  | $141,778.13 |
+| 2025-03-17 | 7.69   | 0.0137 | $26,345.98  | $158,850.09 |
+| 2025-03-18 | 7.75   | 0.0129 | $23,318.06  | $142,353.70 |
+| 2025-03-19 | 7.01   | 0.0122 | $26,025.78  | $128,111.65 |
+| 2025-03-20 | 7.28   | 0.0125 | $24,941.62  | $127,089.29 |
+| 2025-03-21 | 8.50   | 0.0124 | $22,962.32  | $126,983.57 |
+| 2025-03-22 | 10.28  | 0.0122 | $22,974.04  | $146,510.37 |
+| 2025-03-23 | 9.97   | 0.0125 | $20,082.41  | $126,806.86 |
+| 2025-03-24 | 5.27   | 0.0118 | $26,261.24  | $110,139.69 |
+| 2025-03-25 | 10.08  | 0.0131 | $22,262.75  | $129,957.05 |
+| 2025-03-26 | 10.56  | 0.0128 | $24,592.22  | $130,563.30 |
+| 2025-03-27 | 7.71   | 0.0131 | $22,907.85  | $125,314.66 |
+| 2025-03-28 | 7.08   | 0.0127 | $20,926.73  | $124,076.03 |
+| 2025-03-29 | 7.35   | 0.0121 | $22,646.14  | $125,341.48 |
+| 2025-03-30 | 5.84   | 0.0129 | $26,046.53  | $115,855.21 |
+| 2025-03-31 | 7.06   | 0.0123 | $24,644.90  | $116,456.90 |
+
+### Top Performing Creatives
+
+| Creative Message                                                                  | ROAS  | CTR    | CPC   | CPM   | Spend      | Revenue      | Impressions | Clicks  |
+|-----------------------------------------------------------------------------------|-------|--------|-------|-------|------------|--------------|-------------|---------|
+| Doctors recommend breathable modal — meet our men boxers.                           | 50.91 | 0.0142 | $0.09 | $0.95 | $1,134.25   | $17,583.20   | 1,529,258   | 21,037   |
+| Doctors recommend breathable cotton — meet our men athletic briefs.                  | 42.58 | 0.0179 | $0.11 | $1.16 | $548.40    | $11,618.09   | 537,737     | 10,431   |
+| Breathable cotton that moves with you — limited offer on women bras.                 | 41.28 | 0.0120 | $0.15 | $1.66 | $1,846.21   | $26,698.48   | 1,794,973   | 21,181   |
+| Doctors recommend breathable bamboo — meet our women wire‑free bras.                 | 36.02 | 0.0133 | $0.13 | $1.38 | $1,041.94   | $17,319.08   | 1,438,359   | 20,764   |
+| Doctors recommend breathable organic cotton — meet our men athletic briefs.           | 32.26 | 0.0162 | $0.10 | $1.22 | $2,853.82   | $37,696.58   | 2,580,700   | 44,075   |
+| Breathable microfiber that moves with you — limited offer on women wire‑free bras.     | 27.99 | 0.0128 | $0.05 | $0.53 | $874.27    | $13,673.83   | 1,628,316   | 20,589   |
+| Breathable modal that moves with you — limited offer on women boyshorts.            | 24.96 | 0.0148 | $0.26 | $3.68 | $2,769.76   | $14,368.65   | 1,521,081   | 23,044   |
+| Doctors recommend breathable organic cotton — meet our men briefs.                    | 21.30 | 0.0151 | $0.15 | $2.07 | $4,663.43   | $44,368.50   | 2,988,189   | 47,047   |
+| Wire‑free ease, cloud‑soft cups — women sports bras that fits right.                | 20.65 | 0.0112 | $0.34 | $3.24 | $9,702.29   | $92,888.41   | 6,678,048   | 71,234   |
+| Push comfort, not wires — everyday men inner vests.                                | 20.57 | 0.0140 | $0.16 | $1.84 | $9,795.64   | $88,242.86   | 7,740,749   | 108,373  |
+
+### Worst Performing Creatives
+
+| Creative Message                                                                   | ROAS  | CTR    | CPC   | CPM    | Spend      | Revenue     | Impressions | Clicks  |
+|------------------------------------------------------------------------------------|-------|--------|-------|--------|------------|-------------|-------------|---------|
+| Breathable microfiber that moves with you — limited offer on women panties.          | 2.76  | 0.0144 | $0.25 | $3.38  | $1,111.11   | $3,105.09   | 431,497     | 5,402   |
+| Breathable cotton that moves with you — limited offer on women sports bras.         | 2.71  | 0.0114 | $0.39 | $4.33  | $3,553.49   | $9,680.14   | 1,106,506   | 9,541   |
+| Doctors recommend breathable organic cotton — meet our men trunks.                   | 2.70  | 0.0124 | $0.21 | $1.89  | $1,248.69   | $3,641.00   | 1,081,164   | 17,435  |
+| Breathable organic cotton that moves with you — limited offer on men athletic briefs.| 2.35  | 0.0120 | $0.51 | $6.12  | $3,942.62   | $8,380.61   | 1,802,908   | 21,235  |
+| Breathable organic cotton that moves with you — limited offer on men briefs.        | 2.14  | 0.0145 | $0.21 | $2.96  | $2,405.59   | $5,183.75   | 1,070,231   | 16,116  |
+| Doctors recommend breathable cotton — meet our men briefs.                          | 2.11  | 0.0115 | $0.23 | $2.13  | $3,106.80   | $9,756.34   | 1,868,119   | 21,697  |
+| Doctors recommend breathable bamboo — meet our men inner vests.                      | 2.09  | 0.0113 | $0.32 | $3.91  | $1,918.70   | $2,502.29   | 759,527     | 6,699   |
+| Doctors recommend breathable modal — meet our men athletic briefs.                   | 1.95  | 0.0108 | $0.18 | $1.42  | $1,384.70   | $5,592.50   | 1,467,865   | 13,987  |
+| Breathable microfiber that moves with you — limited offer on women sports bras.      | 1.90  | 0.0084 | $1.14 | $9.22  | $4,453.95   | $5,940.66   | 840,524     | 6,862   |
+| Breathable modal that moves with you — limited offer on women sports bras.         | 0.67  | 0.0133 | $1.16 | $14.85 | $1,060.14   | $720.08     | 77,722      | 1,062   |
+
+### Creative Fatigue Signals
+
+| Creative Message                                                                   | CTR    | Impressions | ROAS  |
+|------------------------------------------------------------------------------------|--------|-------------|-------|
+| Breathable cotton that moves with you — limited offer on women bras.                | 0.0120 | 1,794,973   | 41.28 |
+| Wire‑free ease, cloud‑soft cups — women sports bras that fits right.               | 0.0112 | 6,678,048   | 20.65 |
+| Breathable bamboo that moves with you — limited offer on men inner vests.           | 0.0113 | 1,529,847   | 19.60 |
+| Doctors recommend breathable cotton — meet our women wire‑free bras.                 | 0.0106 | 1,107,216   | 19.59 |
+| Push comfort, not wires — everyday women panties.                                 | 0.0119 | 9,155,867   | 16.26 |
+| Breathable bamboo that moves with you — limited offer on women boyshorts.          | 0.0118 | 1,857,082   | 14.48 |
+| Push comfort, not wires — everyday women sports bras.                             | 0.0108 | 8,342,284   | 14.48 |
+| Breathable organic cotton that moves with you — limited offer on women boyshorts.    | 0.0116 | 1,101,181   | 14.31 |
+| Doctors recommend breathable bamboo — meet our women boyshorts.                     | 0.0105 | 1,210,746   | 14.31 |
+| No ride‑up guarantee — best‑selling women wire‑free bras back in stock.             | 0.0117 | 7,828,527   | 13.91 |
+| Cooling mesh panels for workouts — women boyshorts you’ll actually love.            | 0.0108 | 8,736,708   | 13.72 |
+| Invisible under tees — seamless women sports bras.                                 | 0.0117 | 9,216,022   | 13.66 |
+| Confidence starts inside — elevate with women boyshorts.                          | 0.0116 | 7,594,809   | 13.34 |
+| No ride‑up guarantee — best‑selling women sports bras back in stock.                | 0.0099 | 8,655,357   | 12.62 |
+| Ultra‑soft waistband, no marks — premium women bras.                               | 0.0113 | 11,194,043  | 12.56 |
+| Invisible under tees — seamless women boyshorts.                                  | 0.0112 | 7,314,624   | 12.43 |
+| Doctors recommend breathable bamboo — meet our women sports bras.                    | 0.0112 | 2,794,307   | 12.18 |
+| Breathable bamboo that moves with you — limited offer on women bras.                | 0.0110 | 3,436,333   | 12.16 |
+| Confidence starts inside — elevate with women sports bras.                         | 0.0117 | 10,730,606  | 11.48 |
+| Push comfort, not wires — everyday women bras.                                    | 0.0101 | 9,607,436   | 11.42 |
+| Stretch that snaps back — durable women boyshorts.                                 | 0.0115 | 7,893,896   | 11.32 |
+| Ultra‑soft waistband, no marks — premium women boyshorts.                          | 0.0113 | 10,224,645  | 11.05 |
+| Wire‑free ease, cloud‑soft cups — women panties that fits right.                   | 0.0118 | 7,872,388   | 10.80 |
+| Doctors recommend breathable organic cotton — meet our women sports bras.            | 0.0106 | 1,328,338   | 10.72 |
+| Invisible under tees — seamless women panties.                                   | 0.0116 | 7,237,597   | 10.59 |
+| Breathable cotton that moves with you — limited offer on men athletic briefs.       | 0.0115 | 3,368,

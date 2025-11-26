@@ -1,0 +1,68 @@
+{
+  "actions": [
+    {
+      "action_type": "Pause Creative",
+      "target": "creative",
+      "target_details": "Breathable microfiber that moves with you — limited offer on women panties.",
+      "reason": "Low ROAS and potential creative fatigue.",
+      "priority": "High"
+    },
+    {
+      "action_type": "Pause Creative",
+      "target": "creative",
+      "target_details": "Breathable modal that moves with you — limited offer on women sports bras.",
+      "reason": "Very low ROAS.",
+      "priority": "High"
+    },
+    {
+      "action_type": "Scale Budget",
+      "target": "audience",
+      "target_details": "Retargeting",
+      "adjustment": "Increase budget by 20%",
+      "reason": "High ROAS compared to other audiences.",
+      "priority": "Medium"
+    },
+    {
+      "action_type": "Scale Budget",
+      "target": "country",
+      "target_details": "US",
+      "adjustment": "Increase budget by 15%",
+      "reason": "Higher ROAS compared to other countries.",
+      "priority": "Medium"
+    },
+    {
+      "action_type": "Reallocate Budget",
+      "target": "platform",
+      "target_details": "Facebook",
+      "from": "Instagram",
+      "adjustment": "Move 10% of Instagram budget to Facebook",
+      "reason": "Slightly better performance on Facebook (higher ROAS and CTR).",
+      "priority": "Low"
+    },
+    {
+      "action_type": "Refresh Creative",
+      "target": "creative",
+      "target_details": "Wire‑free ease, cloud‑soft cups — women sports bras that fits right.",
+      "reason": "Creative fatigue (high impressions, declining performance). Consider A/B testing new variations of this ad.",
+      "priority": "Medium"
+    },
+    {
+      "action_type": "Investigate",
+      "target": "daily_performance",
+      "target_details": "Daily ROAS fluctuations",
+      "reason": "Significant variations in daily ROAS performance warrant further investigation to understand contributing factors and optimize accordingly.",
+      "priority": "Medium"
+    },
+    {
+      "action_type": "Test Creative",
+      "target": "creative_theme",
+      "target_details": "Doctors recommend breathable modal — meet our men boxers.",
+      "reason": "High ROAS on this creative. Test similar creative themes for other products.",
+      "priority": "High"
+    }
+  ],
+  "meta": {
+    "agent": "CreativeImprovementAgent",
+    "raw_preview": "```json\n{\n  \"actions\": [\n    {\n      \"action_type\": \"Pause Creative\",\n      \"target\": \"creative\",\n      \"target_details\": \"Breathable microfiber that moves with you — limited offer on women panties.\",\n      \"reason\": \"Low ROAS and potential creative fatigue.\",\n      \"priority\": \"High\"\n    },\n    {\n      \"action_type\": \"Pause Creative\",\n      \"target\": \"creative\",\n      \"target_details\": \"Breathable modal that moves with you — limited offer on women sports bras.\",\n      \"reason\": \"Very low ROAS.\",\n      \"priority\": \"High\"\n    },\n    {\n      \"action_type\": \"Scale Budget\",\n      \"target\": \"audience\",\n      \"target_details\": \"Retargeting\",\n      \"adjustment\": \"Increase budget by 20%\",\n      \"reason\": \"High ROAS compared to other audiences.\",\n      \"priority\": \"Medium\"\n    },\n    {\n      \"actio"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "evaluated_hypotheses": [
+    {
+      "issue": "Creative Performance",
+      "hypothesis": "Duplicating the 'Doctors recommend breathable modal — meet our men boxers' creative and targeting it to a similar audience will result in a comparable ROAS (above 20.0).",
+      "quantitative_support": "The creative 'Doctors recommend breathable modal — meet our men boxers' has a ROAS of 50.91. Other top creatives have ROAS ranging from 20.57 to 42.58. Overall ROAS is 5.83. These signals indicate potentially successful creative strategies.",
+      "strength_score": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "issue": "Creative Performance",
+      "hypothesis": "Replacing underperforming creatives (ROAS below 3), such as 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable modal that moves with you — limited offer on women sports bras,' with variations of the top-performing creative will improve overall ROAS.",
+      "quantitative_support": "The creatives 'Breathable microfiber that moves with you — limited offer on women panties.' and 'Breathable modal that moves with you — limited offer on women sports bras,' have very low ROAS values of 2.76 and 0.67 respectively. The overall ROAS is 5.83. Replacing these with better performing creatives should improve performance.",
+      "strength_score": 0.85,
+      "confidence": 0.85
+    },
+    {
+      "issue": "Creative Fatigue",
+      "hypothesis": "Refreshing creatives that have high impression counts (e.g., 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.') with new variations will improve CTR and ROAS.",
+      "quantitative_support": "The creative 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.' has a high impression count of 6678048. Given the creative_fatigue_signals data, several creatives show high impressions with lower ROAS/CTR compared to top creatives, suggesting fatigue.",
+      "strength_score": 0.7,
+      "confidence": 0.7
+    },
+    {
+      "issue": "Audience Targeting",
+      "hypothesis": "Increasing budget allocation to retargeting audiences will lead to a higher overall ROAS compared to broad or lookalike audiences.",
+      "quantitative_support": "The retargeting audience has a ROAS of 14.40, compared to 8.06 for broad and 9.66 for lookalike audiences.",
+      "strength_score": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "issue": "Geographic Targeting",
+      "hypothesis": "Shifting budget allocation to the US market will yield a higher ROAS compared to IN and UK markets.",
+      "quantitative_support": "The US market has a ROAS of 10.28, while IN has 8.71 and UK has 9.08.",
+      "strength_score": 0.75,
+      "confidence": 0.75
+    },
+    {
+      "issue": "Platform Optimization",
+      "hypothesis": "Reallocating a portion of the budget from Instagram to Facebook will result in a slight increase in overall ROAS and CTR.",
+      "quantitative_support": "Facebook has a ROAS of 9.90 and a CTR of 0.0136, while Instagram has a ROAS of 9.38 and a CTR of 0.0125.",
+      "strength_score": 0.6,
+      "confidence": 0.6
+    },
+    {
+      "issue": "ROAS Variance",
+      "hypothesis": "Identifying and mitigating the causes behind significant daily ROAS fluctuations will reduce ROAS volatility and improve predictability.",
+      "quantitative_support": "Daily ROAS fluctuates significantly, ranging from 5.27 to 18.60, as per the 'daily_metrics'.",
+      "strength_score": 0.65,
+      "confidence": 0.65
+    }
+  ],
+  "meta": {
+    "agent": "EvaluatorAgent",
+    "raw_preview": "```json\n{\n  \"evaluated_hypotheses\": [\n    {\n      \"issue\": \"Creative Performance\",\n      \"hypothesis\": \"Duplicating the 'Doctors recommend breathable modal — meet our men boxers' creative and targeting it to a similar audience will result in a comparable ROAS (above 20.0).\",\n      \"quantitative_support\": \"The creative 'Doctors recommend breathable modal — meet our men boxers' has a ROAS of 50.91. Other top creatives have ROAS ranging from 20.57 to 42.58. Overall ROAS is 5.83. These signals indicate potentially successful creative strategies.\",\n      \"strength_score\": 0.8,\n      \"confidence\": 0.8\n    },\n    {\n      \"issue\": \"Creative Performance\",\n      \"hypothesis\": \"Replacing underperforming creatives (ROAS below 3), such as 'Breathable microfiber that moves with you — limited offer on wo"
+  }
+}
