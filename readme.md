@@ -4,7 +4,8 @@
 Automated insights, hypotheses, validation, creative optimization, and final reporting using a modular multi-agent analytics system.
 ---
 ### Agent Graph  
-[📄 Open agent_graph.md](https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/blob/main/reports/agent_graph.md)
+[![Agent Graph](https://img.shields.io/badge/Agent%20Graph-View%20Report-blue?style=for-the-badge)](https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/blob/main/reports/agent_graph.md)
+
 
 ---
 
