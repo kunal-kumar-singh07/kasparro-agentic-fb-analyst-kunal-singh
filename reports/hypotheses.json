@@ -1,62 +1,34 @@
 {
   "hypotheses": [
     {
-      "issue": "Retargeting audience ROAS is significantly higher than broad and lookalike audiences.",
-      "hypothesis": "Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.",
+      "issue": "ROAS Decline",
+      "hypothesis": "The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.",
       "supporting_signals": [
-        "Retargeting ROAS is 14.40 compared to Broad (8.06) and Lookalike (9.66)",
-        "Users who have previously interacted with the brand are more likely to convert"
+        "ROAS declined from 11.22 to 6.92",
+        "Low ROAS and CTR for specific creatives ('Breathable microfiber that moves with you — limited offer on women sports bras.')"
       ],
-      "confidence": 0.9
+      "confidence": 0.85
     },
     {
-      "issue": "Facebook platform is generating slightly higher ROAS than Instagram.",
-      "hypothesis": "Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.",
+      "issue": "Creative Fatigue - Specific Creative",
+      "hypothesis": "The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.",
       "supporting_signals": [
-        "Facebook ROAS is 9.90 compared to Instagram's 9.38"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "issue": "Creative fatigue is impacting campaign performance.",
-      "hypothesis": "Replacing the two creatives with the highest impression counts (1794973 and 6678048) with new creatives will improve overall ROAS by 8% within one week.",
-      "supporting_signals": [
-        "High impression counts and declining ROAS and CTR for specific creatives",
-        "Creative message: Breathable cotton that moves with you — limited offer on women bras.",
-        "Creative message: Wire‑free ease, cloud‑soft cups — women sports bras that fits right."
+        "Creative 'Breathable microfiber that moves with you — limited offer on women sports bras.' has a low ROAS of 1.66 and a CTR of 0.0084"
       ],
       "confidence": 0.75
     },
     {
-      "issue": "Underperforming creatives are negatively impacting ROAS.",
-      "hypothesis": "Pausing the two creatives with the lowest ROAS (0.67 and 1.9) will increase overall ROAS by 5% within one week.",
+      "issue": "Creative Performance Variance",
+      "hypothesis": "The significant difference in ROAS and CTR between top and bottom performing creatives indicates a need to identify and scale successful creative themes while discontinuing underperforming ones.",
       "supporting_signals": [
-        "Low ROAS for specific creatives",
-        "Creative message: Breathable modal that moves with you — limited offer on women sports bras.",
-        "Creative message: Breathable microfiber that moves with you — limited offer on women sports bras."
-      ],
-      "confidence": 0.9
-    },
-    {
-      "issue": "ROAS in India (IN) and United Kingdom (UK) underperforms the US.",
-      "hypothesis": "Implementing a localized creative strategy specifically targeting IN and UK markets will increase ROAS in those regions by 15% within two weeks.",
-      "supporting_signals": [
-        "US ROAS is 10.28, while UK ROAS is 9.08 and IN ROAS is 8.71",
-        "Similar spend in IN and UK compared to the US"
-      ],
-      "confidence": 0.7
-    },
-    {
-      "issue": "High Performing Creative Theme: Doctors recommend breathable...",
-      "hypothesis": "Developing three new creatives with the theme \"Doctors recommend breathable...\" but testing different materials and product types (e.g., Doctors recommend breathable silk underwear) will outperform current creatives and increase ROAS by 10% within 1 week.",
-      "supporting_signals": [
-        "Creatives starting with \"Doctors recommend breathable\" consistently outperform others."
+        "Top performing creatives ('Doctors recommend breathable cotton — meet our men athletic briefs.') have a ROAS of 42.58 and a CTR of 0.0179",
+        "Bottom performing creatives have significantly lower ROAS and CTR"
       ],
       "confidence": 0.7
     }
   ],
   "meta": {
     "agent": "HypothesisAgent",
-    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"Retargeting audience ROAS is significantly higher than broad and lookalike audiences.\",\n      \"hypothesis\": \"Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.\",\n      \"supporting_signals\": [\n        \"Retargeting ROAS is 14.40 compared to Broad (8.06) and Lookalike (9.66)\",\n        \"Users who have previously interacted with the brand are more likely to convert\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Facebook platform is generating slightly higher ROAS than Instagram.\",\n      \"hypothesis\": \"Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.\",\n      \"supporting_signals\": [\n        \"Facebook ROAS is 9.90 compared"
+    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"ROAS Decline\",\n      \"hypothesis\": \"The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.\",\n      \"supporting_signals\": [\n        \"ROAS declined from 11.22 to 6.92\",\n        \"Low ROAS and CTR for specific creatives ('Breathable microfiber that moves with you — limited offer on women sports bras.')\"\n      ],\n      \"confidence\": 0.85\n    },\n    {\n      \"issue\": \"Creative Fatigue - Specific Creative\",\n      \"hypothesis\": \"The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.\",\n      \"supporting_signals\":"
   }
 }

@@ -1,50 +1,29 @@
 {
   "validated_hypotheses": [
     {
-      "issue": "Retargeting audience ROAS is significantly higher than broad and lookalike audiences.",
-      "hypothesis": "Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.",
+      "issue": "ROAS Decline",
+      "hypothesis": "The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.",
       "status": "validated",
-      "strengthened_reasoning": "The ROAS for retargeting audiences is significantly higher than broad and lookalike audiences, indicating that users who have previously interacted with the brand are more likely to convert. Allocating more budget to this audience segment should lead to a higher overall ROAS.",
+      "strengthened_reasoning": "The substantial drop in ROAS coupled with the observed low performance of specific creatives strongly suggests that the target audience is becoming less responsive to the existing ads. The initial novelty and appeal of these creatives have likely diminished, leading to a decrease in engagement and conversion rates. ROAS often declines when creatives are shown repeatedly to the same audience.",
       "confidence": 0.9
     },
     {
-      "issue": "Facebook platform is generating slightly higher ROAS than Instagram.",
-      "hypothesis": "Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.",
+      "issue": "Creative Fatigue - Specific Creative",
+      "hypothesis": "The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.",
       "status": "validated",
-      "strengthened_reasoning": "Facebook's ROAS is marginally better than Instagram's, suggesting a slightly better ad performance. Shifting a portion of the budget from Instagram to Facebook could potentially improve the overall ROAS.",
+      "strengthened_reasoning": "The very low ROAS and CTR for the 'Breathable microfiber' creative strongly indicate that this specific creative is not resonating with the target audience, either due to ad fatigue from repeated exposure or an inherent disconnect between the creative's message and the audience's needs or preferences. A mismatch in targeting could also contribute to the low performance.",
+      "confidence": 0.85
+    },
+    {
+      "issue": "Creative Performance Variance",
+      "hypothesis": "The significant difference in ROAS and CTR between top and bottom performing creatives indicates a need to identify and scale successful creative themes while discontinuing underperforming ones.",
+      "status": "validated",
+      "strengthened_reasoning": "The stark contrast in performance metrics (ROAS and CTR) between the best and worst-performing creatives emphasizes the critical need for a data-driven approach. By focusing resources on the themes and elements that drive the highest engagement and conversion, and eliminating those that consistently underperform, it is possible to improve overall campaign effectiveness and ROAS. This also highlights the importance of ongoing A/B testing and creative iteration.",
       "confidence": 0.8
-    },
-    {
-      "issue": "Creative fatigue is impacting campaign performance.",
-      "hypothesis": "Replacing the two creatives with the highest impression counts (1794973 and 6678048) with new creatives will improve overall ROAS by 8% within one week.",
-      "status": "validated",
-      "strengthened_reasoning": "High impression counts coupled with potentially declining ROAS and CTR for those specific creatives strongly suggest creative fatigue. Introducing new creatives is a reasonable approach to refresh the audience and potentially improve ROAS.",
-      "confidence": 0.75
-    },
-    {
-      "issue": "Underperforming creatives are negatively impacting ROAS.",
-      "hypothesis": "Pausing the two creatives with the lowest ROAS (0.67 and 1.9) will increase overall ROAS by 5% within one week.",
-      "status": "validated",
-      "strengthened_reasoning": "Creatives with significantly low ROAS are pulling down the overall campaign performance. Removing these underperforming assets allows the budget to be allocated more effectively towards higher-performing creatives, thus increasing the overall ROAS.",
-      "confidence": 0.9
-    },
-    {
-      "issue": "ROAS in India (IN) and United Kingdom (UK) underperforms the US.",
-      "hypothesis": "Implementing a localized creative strategy specifically targeting IN and UK markets will increase ROAS in those regions by 15% within two weeks.",
-      "status": "validated",
-      "strengthened_reasoning": "The US market is generating a higher ROAS compared to the UK and India, despite similar spending, suggesting that a generic creative strategy may not be as effective in these regions. A localized creative strategy tailored to the specific cultural nuances and preferences of the UK and Indian markets could potentially improve ROAS.",
-      "confidence": 0.7
-    },
-    {
-      "issue": "High Performing Creative Theme: Doctors recommend breathable...",
-      "hypothesis": "Developing three new creatives with the theme \"Doctors recommend breathable...\" but testing different materials and product types (e.g., Doctors recommend breathable silk underwear) will outperform current creatives and increase ROAS by 10% within 1 week.",
-      "status": "validated",
-      "strengthened_reasoning": "Since creatives starting with \"Doctors recommend breathable\" consistently outperform others, it indicates that this message resonates with the audience. Experimenting with different materials and products while maintaining the core message could further enhance performance and increase ROAS.",
-      "confidence": 0.7
     }
   ],
   "meta": {
     "agent": "ValidatorAgent",
-    "raw_preview": "```json\n{\n  \"validated_hypotheses\": [\n    {\n      \"issue\": \"Retargeting audience ROAS is significantly higher than broad and lookalike audiences.\",\n      \"hypothesis\": \"Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.\",\n      \"status\": \"validated\",\n      \"strengthened_reasoning\": \"The ROAS for retargeting audiences is significantly higher than broad and lookalike audiences, indicating that users who have previously interacted with the brand are more likely to convert. Allocating more budget to this audience segment should lead to a higher overall ROAS.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Facebook platform is generating slightly higher ROAS than Instagram.\",\n      \"hypothesis\": \"Shifting 15% of the Instagram ad b"
+    "raw_preview": "```json\n{\n  \"validated_hypotheses\": [\n    {\n      \"issue\": \"ROAS Decline\",\n      \"hypothesis\": \"The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.\",\n      \"status\": \"validated\",\n      \"strengthened_reasoning\": \"The substantial drop in ROAS coupled with the observed low performance of specific creatives strongly suggests that the target audience is becoming less responsive to the existing ads. The initial novelty and appeal of these creatives have likely diminished, leading to a decrease in engagement and conversion rates. ROAS often declines when creatives are shown repeatedly to the same audience.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Creative Fatigue - Specific Creative\",\n      \"hypothesis\": \""
   }
 }

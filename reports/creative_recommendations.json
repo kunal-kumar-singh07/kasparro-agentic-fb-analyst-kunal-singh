@@ -1,107 +1,36 @@
 {
-  "strategy_recommendations": [
+  "creative_recommendations": [
     {
-      "title": "Prioritize Retargeting Efforts",
-      "description": "Given the significantly higher ROAS from retargeting audiences, allocate more budget and focus on refining retargeting strategies. This could involve creating more personalized ads based on user behavior, optimizing landing pages for returning visitors, and ensuring seamless cross-device experiences.",
-      "priority": "High",
-      "impact": "High",
-      "confidence": 0.95,
-      "required_steps": [
-        "Increase budget allocation for retargeting campaigns.",
-        "Segment retargeting audiences based on past interactions (e.g., viewed products, abandoned carts, past purchases).",
-        "Develop personalized ad creatives tailored to each retargeting segment.",
-        "Optimize landing page experience for returning visitors.",
-        "Implement cross-device tracking to ensure consistent messaging."
-      ]
+      "issue": "Creative Fatigue - Low ROAS and CTR",
+      "old_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
+      "new_creative": "Experience unparalleled support and comfort with our new ActiveFlex sports bras, designed with breathable microfiber for your best workout yet!",
+      "reasoning": "The old creative is underperforming, indicating creative fatigue. The new creative introduces a new name 'ActiveFlex' to refresh the product offering, emphasizing support and comfort alongside breathability, targeting active women.",
+      "expected_ctr_lift": "15-20%"
     },
     {
-      "title": "Rebalance Budget Towards Facebook",
-      "description": "Since Facebook is generating a higher ROAS than Instagram, consider reallocating budget from Instagram to Facebook to maximize overall return. Continuously monitor performance to ensure this shift maintains positive results.",
-      "priority": "Medium",
-      "impact": "Medium",
-      "confidence": 0.8,
-      "required_steps": [
-        "Analyze the performance of individual campaigns on Facebook and Instagram.",
-        "Identify campaigns with the highest ROAS on Facebook and scale those.",
-        "Gradually reduce budget for underperforming Instagram campaigns.",
-        "Reallocate the freed-up budget to top-performing Facebook campaigns.",
-        "Monitor performance closely after the budget shift and adjust as needed."
-      ]
+      "issue": "Underperforming Creative - Low ROAS",
+      "old_message": "Doctors recommend breathable bamboo — meet our men inner vests.",
+      "new_creative": "Stay cool and comfortable all day with our new men's Bamboo Comfort Undershirts. Naturally breathable bamboo for superior moisture wicking and a perfect fit. Doctor Recommended!",
+      "reasoning": "The existing creative has very low ROAS. The new creative highlights the benefits of bamboo (moisture wicking) while emphasizing a comfortable fit, directly addressing potential customer needs and reinforcing the 'Doctor Recommended' angle with stronger wording.",
+      "expected_ctr_lift": "20-25%"
     },
     {
-      "title": "Refresh Stale Creatives",
-      "description": "Identify and replace creatives with high impression counts and declining ROAS/CTR. Experiment with new ad formats, messaging, and visuals to re-engage the target audience. Focus on testing completely new creatives rather than minor tweaks.",
-      "priority": "High",
-      "impact": "High",
-      "confidence": 0.75,
-      "required_steps": [
-        "Identify creatives with high impression counts and low/declining ROAS and CTR.",
-        "Brainstorm new ad concepts and messaging.",
-        "Develop new creative assets (images, videos, ad copy).",
-        "Launch A/B tests to compare new creatives with existing ones.",
-        "Pause or replace underperforming creatives with winning variations."
-      ]
+      "issue": "Underperforming Creative - Low ROAS and CTR",
+      "old_message": "Breathable organic cotton that moves with you — limited offer on men athletic briefs.",
+      "new_creative": "Upgrade your comfort with our Organic Cotton Performance Briefs. Designed for athletes, breathable, supportive, and made with sustainably sourced organic cotton. Limited Time Offer!",
+      "reasoning": "This creative suffers from low ROAS and CTR. The new creative uses stronger action-oriented language ('Upgrade your comfort') and explicitly states the target audience (athletes), while highlighting key benefits (breathable, supportive, organic cotton) and maintains the limited-time offer to create urgency.",
+      "expected_ctr_lift": "18-22%"
     },
     {
-      "title": "Pause or Rework Underperforming Creatives",
-      "description": "Immediately pause or rework creatives with extremely low ROAS. Analyze why these creatives are not performing well and test different approaches, focusing on core messaging, target audience alignment, and visual appeal.",
-      "priority": "High",
-      "impact": "High",
-      "confidence": 0.9,
-      "required_steps": [
-        "Pause creatives with ROAS below a predefined threshold (e.g., ROAS < 2).",
-        "Analyze the underperforming creatives to identify common issues (e.g., weak headline, irrelevant imagery, poor targeting).",
-        "Develop revised creative concepts that address the identified issues.",
-        "Test the reworked creatives against a control group to measure improvement.",
-        "If performance does not improve, explore entirely new concepts."
-      ]
-    },
-    {
-      "title": "Investigate Performance in IN and UK Markets",
-      "description": "Conduct further analysis to understand why ROAS is lower in India (IN) and the United Kingdom (UK) compared to the United States (US). This might involve analyzing audience demographics, ad creative performance, and competitive landscape in each market, and the impact of currency.",
-      "priority": "Medium",
-      "impact": "Medium",
-      "confidence": 0.7,
-      "required_steps": [
-        "Segment performance data by country (IN, UK, US).",
-        "Analyze audience demographics, interests, and behaviors in each country.",
-        "Review ad creative performance by country to identify winning and losing concepts.",
-        "Investigate competitive landscape and pricing in each market.",
-        "Adjust ad targeting, messaging, and budget allocation based on findings.",
-        "Consider currency and payment option localisation."
-      ]
-    },
-    {
-      "title": "Monitor Daily ROAS and Investigate Dips",
-      "description": "Closely monitor daily ROAS trends and proactively investigate any significant drops. This could involve analyzing recent campaign changes, identifying potential external factors (e.g., seasonality, competitor activity), and implementing corrective actions to restore performance.",
-      "priority": "Low",
-      "impact": "Low",
-      "confidence": 0.6,
-      "required_steps": [
-        "Set up daily ROAS performance tracking and alerts.",
-        "Establish a process for investigating ROAS dips.",
-        "Analyze recent campaign changes, external factors, and data anomalies when a dip occurs.",
-        "Implement corrective actions (e.g., budget adjustments, creative changes, targeting refinements).",
-        "Document and share learnings to prevent future dips."
-      ]
-    },
-    {
-      "title": "Expand on 'Doctors Recommend' Creative Theme",
-      "description": "Given the success of creatives featuring \"Doctors recommend breathable...\", explore variations of this theme with different materials, product types, and target audiences. Conduct thorough testing to identify the most effective combinations and scale those accordingly.",
-      "priority": "Medium",
-      "impact": "Medium",
-      "confidence": 0.7,
-      "required_steps": [
-        "Brainstorm new ad concepts featuring \"Doctors recommend breathable...\" for different materials (e.g., bamboo, modal, microfiber).",
-        "Adapt the theme to different product types (e.g., bras, underwear, socks).",
-        "Test the variations with different target audiences (e.g., men, women, age groups).",
-        "Analyze performance data to identify winning combinations.",
-        "Scale successful creatives and continuously test new variations."
-      ]
+      "issue": "Creative Refresh - High ROAS creative, small changes",
+      "old_message": "Doctors recommend breathable cotton — meet our men athletic briefs.",
+      "new_creative": "The ultimate in comfort and performance. Our doctor-recommended, breathable cotton athletic briefs will keep you cool and supported all day long.",
+      "reasoning": "This creative is performing well. Small changes in wording ensure that the message is still fresh. The new creative shifts the focus to the feeling that you get when you wear the product.",
+      "expected_ctr_lift": "5-10%"
     }
   ],
   "meta": {
     "agent": "CreativeImprovementAgent",
-    "raw_preview": "```json\n{\n  \"strategy_recommendations\": [\n    {\n      \"title\": \"Prioritize Retargeting Efforts\",\n      \"description\": \"Given the significantly higher ROAS from retargeting audiences, allocate more budget and focus on refining retargeting strategies. This could involve creating more personalized ads based on user behavior, optimizing landing pages for returning visitors, and ensuring seamless cross-device experiences.\",\n      \"priority\": \"High\",\n      \"impact\": \"High\",\n      \"confidence\": 0.95,\n      \"required_steps\": [\n        \"Increase budget allocation for retargeting campaigns.\",\n        \"Segment retargeting audiences based on past interactions (e.g., viewed products, abandoned carts, past purchases).\",\n        \"Develop personalized ad creatives tailored to each retargeting segment.\",\n "
+    "raw_preview": "```json\n{\n  \"creative_recommendations\": [\n    {\n      \"issue\": \"Creative Fatigue - Low ROAS and CTR\",\n      \"old_message\": \"Breathable microfiber that moves with you — limited offer on women sports bras.\",\n      \"new_creative\": \"Experience unparalleled support and comfort with our new ActiveFlex sports bras, designed with breathable microfiber for your best workout yet!\",\n      \"reasoning\": \"The old creative is underperforming, indicating creative fatigue. The new creative introduces a new name 'ActiveFlex' to refresh the product offering, emphasizing support and comfort alongside breathability, targeting active women.\",\n      \"expected_ctr_lift\": \"15-20%\"\n    },\n    {\n      \"issue\": \"Underperforming Creative - Low ROAS\",\n      \"old_message\": \"Doctors recommend breathable bamboo — meet our"
   }
 }

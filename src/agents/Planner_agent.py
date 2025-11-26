@@ -5,14 +5,48 @@ class PlannerAgent:
         plan_dict = {
             "original_query": user_query,
             "steps": [
-                {"step":"Load dataset","agent":"DataAgent","description":"Load CSV and structure advertising metrics."},
-                {"step":"Compute metrics","agent":"DataAgent","description":"Compute ROAS, CTR, CPC, CPM, creative performance."},
-                {"step":"Generate insights","agent":"InsightAgent","description":"Analyze patterns and anomalies in performance data."},
-                {"step":"Generate hypotheses","agent":"HypothesisAgent","description":"Transform insights into testable marketing hypotheses."},
-                {"step":"Validate hypotheses","agent":"ValidatorAgent","description":"Strengthen reasoning and classify hypotheses."},
-                {"step":"Evaluate hypotheses quantitatively","agent":"EvaluatorAgent","description":"Check numerical evidence supporting each hypothesis."},
-                {"step":"Generate improved creatives","agent":"CreativeImprovementAgent","description":"Produce better headlines, hooks, messaging for low CTR ads."},
-                {"step":"Generate final report","agent":"ReportAgent","description":"Synthesize everything into a final markdown report."},
+                {
+                    "id": 1,
+                    "step": "Load dataset",
+                    "agent": "DataAgent",
+                    "description": "Load CSV and structure advertising metrics."
+                },
+                {
+                    "id": 2,
+                    "step": "Compute metrics",
+                    "agent": "DataAgent",
+                    "description": "Compute ROAS, CTR, CPC, CPM, creative performance."
+                },
+                {
+                    "id": 3,
+                    "step": "Generate insights",
+                    "agent": "InsightAgent",
+                    "description": "Analyze patterns, anomalies, and key performance movements."
+                },
+                {
+                    "id": 4,
+                    "step": "Generate hypotheses",
+                    "agent": "HypothesisAgent",
+                    "description": "Convert insights into testable marketing hypotheses."
+                },
+                {
+                    "id": 5,
+                    "step": "Evaluate hypotheses",
+                    "agent": "EvaluatorAgent",
+                    "description": "Quantitatively validate each hypothesis using metrics data."
+                },
+                {
+                    "id": 6,
+                    "step": "Improve creatives",
+                    "agent": "CreativeImprovementAgent",
+                    "description": "Generate better hooks, angles, messaging for underperforming creatives."
+                },
+                {
+                    "id": 7,
+                    "step": "Generate final report",
+                    "agent": "ReportAgent",
+                    "description": "Synthesize conclusions into a final markdown report."
+                }
             ]
         }
 

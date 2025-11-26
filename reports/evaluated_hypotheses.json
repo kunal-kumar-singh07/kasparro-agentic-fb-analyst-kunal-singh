@@ -1,50 +1,29 @@
 {
   "evaluated_hypotheses": [
     {
-      "issue": "Retargeting audience ROAS is significantly higher than broad and lookalike audiences.",
-      "hypothesis": "Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.",
-      "quantitative_support": "Retargeting ROAS is 14.40 compared to Broad (8.06) and Lookalike (9.66). The higher ROAS suggests retargeting is more efficient at converting users.",
-      "strength_score": 0.9,
-      "confidence": 0.9
-    },
-    {
-      "issue": "Facebook platform is generating slightly higher ROAS than Instagram.",
-      "hypothesis": "Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.",
-      "quantitative_support": "Facebook ROAS is 9.90 compared to Instagram's 9.38. This supports the hypothesis that Facebook is currently a more efficient platform.",
-      "strength_score": 0.8,
-      "confidence": 0.8
-    },
-    {
-      "issue": "Creative fatigue is impacting campaign performance.",
-      "hypothesis": "Replacing the two creatives with the highest impression counts (1794973 and 6678048) with new creatives will improve overall ROAS by 8% within one week.",
-      "quantitative_support": "The creatives 'Breathable cotton that moves with you — limited offer on women bras.' and 'Wire‑free ease, cloud‑soft cups — women sports bras that fits right.' have high impression counts (1794973 and 6678048 respectively), suggesting potential for fatigue.",
+      "issue": "ROAS Decline",
+      "hypothesis": "The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.",
+      "quantitative_support": "The daily ROAS started at 9.01 on 2025-01-01 and reached a high of 14.54 on 2025-01-21. It then declined to 6.92 on 2025-03-31.  The creative_fatigue_signals show some creatives with lower CTRs and ROAS. For example, 'Breathable bamboo that moves with you — limited offer on men briefs.' has a CTR of 0.0085 and a ROAS of 9.49.",
       "strength_score": 0.75,
+      "confidence": 0.85
+    },
+    {
+      "issue": "Creative Fatigue - Specific Creative",
+      "hypothesis": "The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.",
+      "quantitative_support": "The creative 'Breathable microfiber that moves with you — limited offer on women sports bras.' has a low ROAS of 1.66 and a CTR of 0.0084, as listed in the worst_creatives. The creative_fatigue_signals confirms that the ROAS and CTR have dropped for this creative.",
+      "strength_score": 0.8,
       "confidence": 0.75
     },
     {
-      "issue": "Underperforming creatives are negatively impacting ROAS.",
-      "hypothesis": "Pausing the two creatives with the lowest ROAS (0.67 and 1.9) will increase overall ROAS by 5% within one week.",
-      "quantitative_support": "The creatives 'Breathable modal that moves with you — limited offer on women sports bras.' (ROAS 0.67) and 'Breathable microfiber that moves with you — limited offer on women sports bras.' (ROAS 1.9) have the lowest ROAS, indicating poor performance.",
-      "strength_score": 0.9,
-      "confidence": 0.9
-    },
-    {
-      "issue": "ROAS in India (IN) and United Kingdom (UK) underperforms the US.",
-      "hypothesis": "Implementing a localized creative strategy specifically targeting IN and UK markets will increase ROAS in those regions by 15% within two weeks.",
-      "quantitative_support": "US ROAS is 10.28, while UK ROAS is 9.08 and IN ROAS is 8.71. Similar spend in IN and UK compared to the US implies an opportunity for improvement through localization.",
-      "strength_score": 0.7,
-      "confidence": 0.7
-    },
-    {
-      "issue": "High Performing Creative Theme: Doctors recommend breathable...",
-      "hypothesis": "Developing three new creatives with the theme \"Doctors recommend breathable...\" but testing different materials and product types (e.g., Doctors recommend breathable silk underwear) will outperform current creatives and increase ROAS by 10% within 1 week.",
-      "quantitative_support": "Creatives starting with \"Doctors recommend breathable\" consistently outperform others, suggesting a strong positive association with this theme.",
-      "strength_score": 0.7,
+      "issue": "Creative Performance Variance",
+      "hypothesis": "The significant difference in ROAS and CTR between top and bottom performing creatives indicates a need to identify and scale successful creative themes while discontinuing underperforming ones.",
+      "quantitative_support": "The top performing creative ('Doctors recommend breathable cotton — meet our men athletic briefs.') has a ROAS of 42.58 and a CTR of 0.0179. In contrast, the worst performing creative ('Breathable modal that moves with you — limited offer on women sports bras.') has a ROAS of 0.67 and a CTR of 0.0133. This large variance supports the hypothesis.",
+      "strength_score": 0.85,
       "confidence": 0.7
     }
   ],
   "meta": {
     "agent": "EvaluatorAgent",
-    "raw_preview": "```json\n{\n  \"evaluated_hypotheses\": [\n    {\n      \"issue\": \"Retargeting audience ROAS is significantly higher than broad and lookalike audiences.\",\n      \"hypothesis\": \"Allocating 25% more budget to retargeting audiences will increase overall ROAS by 10% in the next two weeks.\",\n      \"quantitative_support\": \"Retargeting ROAS is 14.40 compared to Broad (8.06) and Lookalike (9.66). The higher ROAS suggests retargeting is more efficient at converting users.\",\n      \"strength_score\": 0.9,\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Facebook platform is generating slightly higher ROAS than Instagram.\",\n      \"hypothesis\": \"Shifting 15% of the Instagram ad budget to Facebook will increase overall ROAS by 5% in the next week.\",\n      \"quantitative_support\": \"Facebook ROAS is 9.90 compar"
+    "raw_preview": "```json\n{\n  \"evaluated_hypotheses\": [\n    {\n      \"issue\": \"ROAS Decline\",\n      \"hypothesis\": \"The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.\",\n      \"quantitative_support\": \"The daily ROAS started at 9.01 on 2025-01-01 and reached a high of 14.54 on 2025-01-21. It then declined to 6.92 on 2025-03-31.  The creative_fatigue_signals show some creatives with lower CTRs and ROAS. For example, 'Breathable bamboo that moves with you — limited offer on men briefs.' has a CTR of 0.0085 and a ROAS of 9.49.\",\n      \"strength_score\": 0.75,\n      \"confidence\": 0.85\n    },\n    {\n      \"issue\": \"Creative Fatigue - Specific Creative\",\n      \"hypothesis\": \"The 'Breathable microfiber that moves with you \\u2014 limited offer"
   }
 }

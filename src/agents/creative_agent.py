@@ -1,11 +1,8 @@
 import json, re, os, time
 from tqdm import tqdm
 from config.config_loader import RESULTS_DIR
-
 from config.config_loader import LOGS_DIR
-
 from utils.logging_utils import log_event
-
 
 JSON_REGEX = re.compile(r'({[\s\S]*})|(\[[\s\S]*\])', re.MULTILINE)
 
@@ -21,9 +18,11 @@ def extract_json(text: str):
         return json.loads(text)
     except Exception:
         pass
+
     m = JSON_REGEX.search(text)
     if not m:
         raise ValueError("No JSON found")
+
     json_str = m.group(0)
     json_str = re.sub(r',\s*([}\]])', r'\1', json_str)
     return json.loads(json_str)
@@ -33,16 +32,35 @@ class CreativeImprovementAgent:
         self.llm = llm
         self.save_path = save_path or os.path.join(RESULTS_DIR, "creative_recommendations.json")
 
-    def _build_prompt(self, metrics, insights):
-        schema = {"creative_recommendations":[{"issue":"string","old_message":"string","new_creative":"string","reasoning":"string","expected_ctr_lift":"string"}],"meta":{"agent":"CreativeImprovementAgent"}}
-        return f"""You are a Creative Improvement Agent. Return ONLY JSON following schema.
+    def _build_prompt(self, metrics, insights, query):
+        schema = {
+            "creative_recommendations": [
+                {
+                    "issue": "string",
+                    "old_message": "string",
+                    "new_creative": "string",
+                    "reasoning": "string",
+                    "expected_ctr_lift": "string"
+                }
+            ],
+            "meta": {"agent": "CreativeImprovementAgent"}
+        }
 
-Metrics:
-{json.dumps(metrics, indent=2, ensure_ascii=False)}
+        return f"""
+        You are the Creative Improvement Agent.
 
-Insights:
-{json.dumps(insights, indent=2, ensure_ascii=False)}
-"""
+        User Question:
+        {query}
+
+        Metrics:
+        {json.dumps(metrics, indent=2)}
+
+        Insights:
+        {json.dumps(insights, indent=2)}
+
+        Output JSON only following schema:
+        {json.dumps(schema, indent=2)}
+        """
 
     def _call_llm(self, prompt: str):
         if hasattr(self.llm, "generate"):
@@ -51,40 +69,73 @@ Insights:
             return self.llm.generate_content(prompt)
         raise RuntimeError("LLM client missing generate method")
 
-    def run(self, metrics, insights, max_attempts=2):
-        log_event("CreativeImprovementAgent", "start", {"message":"start creative improvements"})
-        prompt = self._build_prompt(metrics, insights)
+    def run(self, metrics: dict, insights: dict, query: str, max_attempts=2):
+
+        log_event("CreativeImprovementAgent", "start", {"message": "start creative improvements"})
+        prompt = self._build_prompt(metrics, insights, query)
+
         last_err = None
         raw = ""
+
         for attempt in range(1, max_attempts + 1):
             for _ in tqdm(range(3), desc="CreativeImprovementAgent", leave=False):
                 time.sleep(0.08)
+
             try:
                 raw = self._call_llm(prompt)
             except Exception as e:
                 last_err = e
-                log_event("CreativeImprovementAgent", "api_error", {"attempt": attempt, "error": str(e)})
+                log_event("CreativeImprovementAgent", "api_error", {
+                    "attempt": attempt,
+                    "error": str(e)
+                })
                 time.sleep(attempt)
                 continue
+
             try:
                 parsed = extract_json(raw)
                 parsed.setdefault("meta", {})
-                parsed["meta"].update({"agent":"CreativeImprovementAgent","raw_preview": raw[:800]})
+                parsed["meta"].update({
+                    "agent": "CreativeImprovementAgent",
+                    "raw_preview": raw[:800]
+                })
+
                 os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
                 with open(self.save_path, "w", encoding="utf-8") as f:
                     json.dump(parsed, f, indent=2, ensure_ascii=False)
+
                 log_event("CreativeImprovementAgent", "success", {"path": self.save_path})
                 return parsed
+
             except Exception as e:
                 last_err = e
-                log_event("CreativeImprovementAgent", "parse_error", {"attempt": attempt, "error": str(e), "raw_preview": raw[:500]})
+
+                log_event("CreativeImprovementAgent", "parse_error", {
+                    "attempt": attempt,
+                    "error": str(e),
+                    "raw_preview": raw[:500]
+                })
+
                 if attempt < max_attempts:
-                    prompt = "Your last output was invalid JSON. Return ONLY JSON.\nPrevious output:\n" + raw + "\n" + self._build_prompt(metrics, insights)
+                    prompt = (
+                        "Your last output was invalid JSON. Return ONLY JSON.\n"
+                        f"Previous output:\n{raw}\n\n"
+                        + self._build_prompt(metrics, insights, query)
+                    )
                     continue
                 break
-        fallback = {"creative_recommendations":[],"meta":{"error":str(last_err),"agent":"CreativeImprovementAgent"}}
+
+        fallback = {
+            "creative_recommendations": [],
+            "meta": {
+                "error": str(last_err),
+                "agent": "CreativeImprovementAgent"
+            }
+        }
+
         os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
         with open(self.save_path, "w", encoding="utf-8") as f:
             json.dump(fallback, f, indent=2, ensure_ascii=False)
+
         log_event("CreativeImprovementAgent", "fallback", {"error": str(last_err)})
         return fallback
