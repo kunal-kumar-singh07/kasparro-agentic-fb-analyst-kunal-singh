@@ -1,31 +1,50 @@
+
+---
+
 # Agentic Facebook Ads Analyst
 
-Automated insights, hypotheses, validation, creative optimization, and final reporting using a multi-agent system.
+Automated insights, hypotheses, validation, creative optimization, and final reporting using a multi-agent intelligence system.
+
+---
 
 ## Overview
 
-This project implements a modular agentic marketing analytics system that analyzes Facebook Ads performance end-to-end.  
-It produces:
+This project implements a modular, agentic marketing analytics system that analyzes Facebook Ads performance end-to-end using an orchestrated multi-agent workflow.
 
-- Structured insights  
-- Testable hypotheses  
-- Quantitative validation  
-- Creative recommendations  
-- Final consolidated report  
-- JSON logs for observability  
+The system automatically produces:
 
-The system uses:
+* Structured insights
+* Testable hypotheses
+* Quantitative validation
+* Creative recommendations
+* Final markdown report
+* JSON logs for observability
+* Reproducible, config-driven pipeline
 
-- Python 3.10+  
-- Gemini 2.0 flash API  
-- Deterministic config and reproducible pipeline  
+Built with:
+
+* Python 3.10+
+* Gemini 2.0 Flash API
+* Modular agent architecture
+
+---
+
+## Direct Download
+
+Download the full project as a ZIP:
+
+**[https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/archive/refs/heads/main.zip](https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/archive/refs/heads/main.zip)**
+
+You can put this link directly in the README.
+
+---
 
 ## Quick Start
 
 ### 1. Clone the Repository
 
 ```
-git clone https://github.com/<your-username>/kasparro-agentic-fb-analyst-kunal-singh.git
+git clone https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh.git
 cd kasparro-agentic-fb-analyst-kunal-singh
 ```
 
@@ -46,57 +65,66 @@ utils/gemini_client.py
 Replace:
 
 ```
-api_key="place api key here please"
+api_key = "YOUR_API_KEY"
 ```
 
-### 4. Run the Full Pipeline
+### 4. Run the Pipeline
 
-**Default run:**
+Default run:
 
 ```
 python src/run.py
 ```
 
-**Custom query:**
+Custom query:
 
 ```
 python src/run.py "Analyze ROAS drop and creative fatigue"
 ```
 
-### 5. Outputs Generated In:
+Optional (Makefile):
 
-- `reports/`
-- `logs/`
+```
+make run
+```
+
+---
 
 ## Folder Structure
 
 ```
 ├── README.md
+├── Makefile
 ├── requirements.txt
 ├── config/
-│   ├── config.yaml
+│   └── config.yaml
 ├── data/
-│   ├── synthetic_fb_ads_undergarments.csv
-│   ├── README.md
+│   ├── sample_facebook_ads.csv
+│   └── README.md
+├── logs/
+├── results/
+├── reports/
 ├── src/
 │   ├── agents/
-│   ├── orchestrator/
 │   ├── utils/
-│   ├── run.py
-├── logs/
-├── reports/
-├── tests/
+│   ├── orchestrator/
+│   └── run.py
 ```
+
+---
 
 ## Features
 
-- Planner Agent  
-- Data Agent  
-- Insight Agent  
-- Hypothesis Agent  
-- Validator Agent  
-- Evaluator Agent  
-- Creative Improvement Agent  
-- Report Agent  
-- Central logging system  
+* Planner Agent
+* Data Agent
+* Insight Agent
+* Hypothesis Agent
+* Evaluator Agent
+* Validator Agent
+* Creative Improvement Agent
+* Report Agent
+* Central logging system
+* Structured JSON outputs
+* Deterministic and reproducible pipeline
 
+---
