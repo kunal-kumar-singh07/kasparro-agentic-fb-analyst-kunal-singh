@@ -40,7 +40,7 @@ pip install -r requirements.txt
 Edit:
 
 ```
-src/utils/gemini_client.py
+utils/gemini_client.py
 ```
 
 Replace:
