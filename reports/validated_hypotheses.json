@@ -2,28 +2,41 @@
   "validated_hypotheses": [
     {
       "issue": "ROAS Decline",
-      "hypothesis": "The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.",
+      "hypothesis": "The recent drop in ROAS is due to increased competition in the ad auction, driving up costs and lowering returns.",
+      "status": "partial",
+      "strengthened_reasoning": "While decreasing ROAS can be an indicator, it's crucial to analyze CPM/CPC trends to confirm increased competition. Market conditions should include specific competitive data (e.g., new entrants, competitor spending). A higher confidence level would be justified with supporting CPM/CPC data. The hypothesis is plausible, but further data is needed to validate.",
+      "confidence": 0.6
+    },
+    {
+      "issue": "ROAS Decline",
+      "hypothesis": "Changes in the target audience's preferences or behaviors are contributing to the decline in ROAS.",
+      "status": "partial",
+      "strengthened_reasoning": "Decreasing ROAS is a symptom, not definitive proof. Audience demographics data should also include behavioral data or preference shifts based on surveys or market research. This is plausible, but needs data linking ROAS decline to specific audience changes.",
+      "confidence": 0.5
+    },
+    {
+      "issue": "Creative Fatigue",
+      "hypothesis": "Ad fatigue is causing the ROAS decline, as users are becoming desensitized to existing creatives.",
       "status": "validated",
-      "strengthened_reasoning": "The substantial drop in ROAS coupled with the observed low performance of specific creatives strongly suggests that the target audience is becoming less responsive to the existing ads. The initial novelty and appeal of these creatives have likely diminished, leading to a decrease in engagement and conversion rates. ROAS often declines when creatives are shown repeatedly to the same audience.",
+      "strengthened_reasoning": "The supporting signals provide a solid basis for this hypothesis. Decreasing ROAS, declining CTR for specific creatives, and high impression counts for fatigued creatives all consistently point toward creative fatigue.",
+      "confidence": 0.8
+    },
+    {
+      "issue": "Creative Performance Disparity",
+      "hypothesis": "The large gap in performance between top and bottom creatives indicates that some ad strategies or messaging resonates better with the target audience than others.",
+      "status": "validated",
+      "strengthened_reasoning": "The provided signals directly support this hypothesis. A significant ROAS difference between best and worst creatives, combined with varying CTRs, strongly suggests that certain approaches are more effective.",
       "confidence": 0.9
     },
     {
-      "issue": "Creative Fatigue - Specific Creative",
-      "hypothesis": "The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.",
+      "issue": "Creative Performance Disparity",
+      "hypothesis": "The poor-performing creatives have underlying issues such as a misleading or irrelevant message, causing the low ROAS.",
       "status": "validated",
-      "strengthened_reasoning": "The very low ROAS and CTR for the 'Breathable microfiber' creative strongly indicate that this specific creative is not resonating with the target audience, either due to ad fatigue from repeated exposure or an inherent disconnect between the creative's message and the audience's needs or preferences. A mismatch in targeting could also contribute to the low performance.",
-      "confidence": 0.85
-    },
-    {
-      "issue": "Creative Performance Variance",
-      "hypothesis": "The significant difference in ROAS and CTR between top and bottom performing creatives indicates a need to identify and scale successful creative themes while discontinuing underperforming ones.",
-      "status": "validated",
-      "strengthened_reasoning": "The stark contrast in performance metrics (ROAS and CTR) between the best and worst-performing creatives emphasizes the critical need for a data-driven approach. By focusing resources on the themes and elements that drive the highest engagement and conversion, and eliminating those that consistently underperform, it is possible to improve overall campaign effectiveness and ROAS. This also highlights the importance of ongoing A/B testing and creative iteration.",
+      "strengthened_reasoning": "The provided signals suggest this is likely true. ROAS disparity and low CTR on worst-performing creatives align with the idea of flawed messaging. While other factors could contribute, the available data supports the hypothesis.",
       "confidence": 0.8
     }
   ],
   "meta": {
-    "agent": "ValidatorAgent",
-    "raw_preview": "```json\n{\n  \"validated_hypotheses\": [\n    {\n      \"issue\": \"ROAS Decline\",\n      \"hypothesis\": \"The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.\",\n      \"status\": \"validated\",\n      \"strengthened_reasoning\": \"The substantial drop in ROAS coupled with the observed low performance of specific creatives strongly suggests that the target audience is becoming less responsive to the existing ads. The initial novelty and appeal of these creatives have likely diminished, leading to a decrease in engagement and conversion rates. ROAS often declines when creatives are shown repeatedly to the same audience.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"issue\": \"Creative Fatigue - Specific Creative\",\n      \"hypothesis\": \""
+    "agent": "ValidatorAgent"
   }
 }

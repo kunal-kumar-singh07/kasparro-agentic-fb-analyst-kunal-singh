@@ -1,0 +1,26 @@
+{
+  "run_id": "8206379f72",
+  "counters": {
+    "rows_processed": 4500
+  },
+  "stages": {
+    "metrics_ready": 1764454552.1351035,
+    "insights_ready": 1764454557.9267304,
+    "hypotheses_ready": 1764454561.2306552,
+    "evaluation_ready": 1764454566.3395996,
+    "validated_ready": 1764454570.7084644,
+    "creatives_ready": 1764454575.8562407,
+    "report_ready": 1764454586.900363
+  },
+  "durations": {
+    "metrics_ready_to_insights_ready": 5.792,
+    "insights_ready_to_hypotheses_ready": 3.304,
+    "hypotheses_ready_to_evaluation_ready": 5.109,
+    "evaluation_ready_to_validated_ready": 4.369,
+    "validated_ready_to_creatives_ready": 5.148,
+    "creatives_ready_to_report_ready": 11.044
+  },
+  "times": {
+    "total_runtime": 34.822
+  }
+}

@@ -1,36 +1,42 @@
 {
   "creative_recommendations": [
     {
-      "issue": "Creative Fatigue - Low ROAS and CTR",
+      "issue": "Creative Fatigue - \"Breathable bamboo that moves with you — limited offer on men briefs.\"",
+      "old_message": "Breathable bamboo that moves with you — limited offer on men briefs.",
+      "new_creative": "Experience the Comfort: New breathable bamboo briefs for men. Limited-time offer!",
+      "reasoning": "The original creative shows signs of fatigue (lowering CTR and ROAS). This refresh uses stronger action-oriented language and emphasizes comfort, while still highlighting the key benefit (breathable bamboo) and scarcity (limited-time offer).",
+      "expected_ctr_lift": "10-15%"
+    },
+    {
+      "issue": "Low ROAS - \"Breathable microfiber that moves with you — limited offer on women sports bras.\"",
       "old_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
-      "new_creative": "Experience unparalleled support and comfort with our new ActiveFlex sports bras, designed with breathable microfiber for your best workout yet!",
-      "reasoning": "The old creative is underperforming, indicating creative fatigue. The new creative introduces a new name 'ActiveFlex' to refresh the product offering, emphasizing support and comfort alongside breathability, targeting active women.",
+      "new_creative": "Ultimate Support, All-Day Comfort: High-performance microfiber sports bras designed for you. Shop now!",
+      "reasoning": "This creative has very low ROAS. Focusing on 'Ultimate Support' and 'All-Day Comfort' directly addresses the needs of women seeking sports bras.  The call to action is also more direct.",
       "expected_ctr_lift": "15-20%"
     },
     {
-      "issue": "Underperforming Creative - Low ROAS",
-      "old_message": "Doctors recommend breathable bamboo — meet our men inner vests.",
-      "new_creative": "Stay cool and comfortable all day with our new men's Bamboo Comfort Undershirts. Naturally breathable bamboo for superior moisture wicking and a perfect fit. Doctor Recommended!",
-      "reasoning": "The existing creative has very low ROAS. The new creative highlights the benefits of bamboo (moisture wicking) while emphasizing a comfortable fit, directly addressing potential customer needs and reinforcing the 'Doctor Recommended' angle with stronger wording.",
-      "expected_ctr_lift": "20-25%"
+      "issue": "Doctors recommend creatives - Shift focus from doctors to core benefits to avoid ad fatigue.",
+      "old_message": "Doctors recommend breathable cotton — meet our women boyshorts.",
+      "new_creative": "Stay Cool & Comfortable All Day! Discover our breathable cotton boyshorts for women.",
+      "reasoning": "While 'doctors recommend' initially worked, it appears to be fatiguing. Switching to a benefit-driven message ('Stay Cool & Comfortable') and a clear product description may re-engage the audience.",
+      "expected_ctr_lift": "5-10%"
     },
     {
-      "issue": "Underperforming Creative - Low ROAS and CTR",
+      "issue": "Improve Low Performing Limited Time Offers",
       "old_message": "Breathable organic cotton that moves with you — limited offer on men athletic briefs.",
-      "new_creative": "Upgrade your comfort with our Organic Cotton Performance Briefs. Designed for athletes, breathable, supportive, and made with sustainably sourced organic cotton. Limited Time Offer!",
-      "reasoning": "This creative suffers from low ROAS and CTR. The new creative uses stronger action-oriented language ('Upgrade your comfort') and explicitly states the target audience (athletes), while highlighting key benefits (breathable, supportive, organic cotton) and maintains the limited-time offer to create urgency.",
-      "expected_ctr_lift": "18-22%"
+      "new_creative": "Move Freely, Stay Fresh: Organic cotton athletic briefs for men, designed for performance & all-day wear. Shop Now.",
+      "reasoning": "This ad had low ROAS, but a decent CTR. This suggest that the offer (limited time) is not that compelling. This update focuses on improved performance instead.",
+      "expected_ctr_lift": "10-15%"
     },
     {
-      "issue": "Creative Refresh - High ROAS creative, small changes",
-      "old_message": "Doctors recommend breathable cotton — meet our men athletic briefs.",
-      "new_creative": "The ultimate in comfort and performance. Our doctor-recommended, breathable cotton athletic briefs will keep you cool and supported all day long.",
-      "reasoning": "This creative is performing well. Small changes in wording ensure that the message is still fresh. The new creative shifts the focus to the feeling that you get when you wear the product.",
+      "issue": "Leverage Top Performing Creatives for Women's Bras",
+      "old_message": "Doctors recommend breathable modal — meet our women bras.",
+      "new_creative": "Experience Unmatched Comfort & Support: Discover our breathable modal bras, recommended by thousands of women.",
+      "reasoning": "The original creative has exceptionally high ROAS. This update slightly changes the wording to emphasize both comfort and support, while also leveraging social proof ('recommended by thousands of women') to further boost appeal.",
       "expected_ctr_lift": "5-10%"
     }
   ],
   "meta": {
-    "agent": "CreativeImprovementAgent",
-    "raw_preview": "```json\n{\n  \"creative_recommendations\": [\n    {\n      \"issue\": \"Creative Fatigue - Low ROAS and CTR\",\n      \"old_message\": \"Breathable microfiber that moves with you — limited offer on women sports bras.\",\n      \"new_creative\": \"Experience unparalleled support and comfort with our new ActiveFlex sports bras, designed with breathable microfiber for your best workout yet!\",\n      \"reasoning\": \"The old creative is underperforming, indicating creative fatigue. The new creative introduces a new name 'ActiveFlex' to refresh the product offering, emphasizing support and comfort alongside breathability, targeting active women.\",\n      \"expected_ctr_lift\": \"15-20%\"\n    },\n    {\n      \"issue\": \"Underperforming Creative - Low ROAS\",\n      \"old_message\": \"Doctors recommend breathable bamboo — meet our"
+    "agent": "CreativeImprovementAgent"
   }
 }

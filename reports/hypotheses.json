@@ -2,33 +2,52 @@
   "hypotheses": [
     {
       "issue": "ROAS Decline",
-      "hypothesis": "The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.",
+      "hypothesis": "The recent drop in ROAS is due to increased competition in the ad auction, driving up costs and lowering returns.",
       "supporting_signals": [
-        "ROAS declined from 11.22 to 6.92",
-        "Low ROAS and CTR for specific creatives ('Breathable microfiber that moves with you — limited offer on women sports bras.')"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "issue": "Creative Fatigue - Specific Creative",
-      "hypothesis": "The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.",
-      "supporting_signals": [
-        "Creative 'Breathable microfiber that moves with you — limited offer on women sports bras.' has a low ROAS of 1.66 and a CTR of 0.0084"
-      ],
-      "confidence": 0.75
-    },
-    {
-      "issue": "Creative Performance Variance",
-      "hypothesis": "The significant difference in ROAS and CTR between top and bottom performing creatives indicates a need to identify and scale successful creative themes while discontinuing underperforming ones.",
-      "supporting_signals": [
-        "Top performing creatives ('Doctors recommend breathable cotton — meet our men athletic briefs.') have a ROAS of 42.58 and a CTR of 0.0179",
-        "Bottom performing creatives have significantly lower ROAS and CTR"
+        "Decreasing ROAS trend",
+        "General market conditions (if available)"
       ],
       "confidence": 0.7
+    },
+    {
+      "issue": "ROAS Decline",
+      "hypothesis": "Changes in the target audience's preferences or behaviors are contributing to the decline in ROAS.",
+      "supporting_signals": [
+        "Decreasing ROAS trend",
+        "Audience demographics data (if available)"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "issue": "Creative Fatigue",
+      "hypothesis": "Ad fatigue is causing the ROAS decline, as users are becoming desensitized to existing creatives.",
+      "supporting_signals": [
+        "Decreasing ROAS trend",
+        "Declining CTR for specific creatives",
+        "High impression counts for fatigued creatives"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "issue": "Creative Performance Disparity",
+      "hypothesis": "The large gap in performance between top and bottom creatives indicates that some ad strategies or messaging resonates better with the target audience than others.",
+      "supporting_signals": [
+        "Significant ROAS difference between best and worst creatives",
+        "Varying CTRs across different creatives"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "issue": "Creative Performance Disparity",
+      "hypothesis": "The poor-performing creatives have underlying issues such as a misleading or irrelevant message, causing the low ROAS.",
+      "supporting_signals": [
+        "ROAS disparity between creatives",
+        "Low CTR on worst performing creatives"
+      ],
+      "confidence": 0.8
     }
   ],
   "meta": {
-    "agent": "HypothesisAgent",
-    "raw_preview": "```json\n{\n  \"hypotheses\": [\n    {\n      \"issue\": \"ROAS Decline\",\n      \"hypothesis\": \"The decline in ROAS is due to creative fatigue, as the initial high-performing creatives have lost their effectiveness over time.\",\n      \"supporting_signals\": [\n        \"ROAS declined from 11.22 to 6.92\",\n        \"Low ROAS and CTR for specific creatives ('Breathable microfiber that moves with you — limited offer on women sports bras.')\"\n      ],\n      \"confidence\": 0.85\n    },\n    {\n      \"issue\": \"Creative Fatigue - Specific Creative\",\n      \"hypothesis\": \"The 'Breathable microfiber that moves with you — limited offer on women sports bras.' creative is underperforming due to ad fatigue and a mismatch between the creative and target audience, resulting in a low ROAS and CTR.\",\n      \"supporting_signals\":"
+    "agent": "HypothesisAgent"
   }
 }

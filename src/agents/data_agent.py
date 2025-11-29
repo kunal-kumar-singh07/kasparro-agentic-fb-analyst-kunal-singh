@@ -1,12 +1,17 @@
-import pandas as pd
 import os
-from config.config_loader import DATA_CSV_PATH, RESULTS_DIR
+import pandas as pd
+from config.config_loader import DATA_CSV_PATH
 from utils.logging_utils import log_event
 
 
 class DataAgent:
     REQUIRED_COLUMNS = [
-        "date", "impressions", "clicks", "spend", "revenue", "creative_message"
+        "date",
+        "impressions",
+        "clicks",
+        "spend",
+        "revenue",
+        "creative_message"
     ]
 
     def __init__(self, csv_path=None):
@@ -14,25 +19,16 @@ class DataAgent:
         self.df = None
 
     def load_data(self):
-        log_event("DataAgent", "start", {
-            "message": "loading dataset",
-            "path": self.csv_path
-        })
+        log_event("DataAgent", "start", {"path": self.csv_path})
 
         if not os.path.exists(self.csv_path):
-            log_event("DataAgent", "error", {
-                "error": "CSV file not found",
-                "path": self.csv_path
-            })
+            log_event("DataAgent", "error", {"error": "CSV not found"})
             raise FileNotFoundError(f"CSV file not found: {self.csv_path}")
 
         try:
             df = pd.read_csv(self.csv_path)
-
-            # Normalize column names
             df.columns = df.columns.str.lower().str.strip()
 
-            # Validate required columns
             missing = [c for c in self.REQUIRED_COLUMNS if c not in df.columns]
             if missing:
                 raise ValueError(f"Missing required columns: {missing}")
@@ -40,7 +36,6 @@ class DataAgent:
             self.df = df
 
             log_event("DataAgent", "success", {
-                "message": "dataset loaded",
                 "rows": len(self.df),
                 "columns": list(self.df.columns)
             })
@@ -55,44 +50,43 @@ class DataAgent:
         try:
             df = self.df.copy()
 
-            # SAFE numeric handling
+            # numeric cleanup
             df["impressions"] = pd.to_numeric(df["impressions"], errors="coerce").fillna(0)
             df["clicks"] = pd.to_numeric(df["clicks"], errors="coerce").fillna(0)
             df["spend"] = pd.to_numeric(df["spend"], errors="coerce").fillna(0)
             df["revenue"] = pd.to_numeric(df["revenue"], errors="coerce").fillna(0)
 
-            # CTR (click-through rate)
-            df["ctr"] = (df["clicks"] / df["impressions"].replace(0, pd.NA))
-            df["ctr"] = pd.to_numeric(df["ctr"], errors="coerce").fillna(0)
+            # ctr
+            df["ctr"] = df["clicks"] / df["impressions"].replace(0, 1)
+            df["ctr"] = pd.to_numeric(df["ctr"], errors="coerce").fillna(0.0)
 
-            # ROAS (Return On Ad Spend)
-            df["roas"] = df["revenue"] / df["spend"].replace(0, pd.NA)
-            df["roas"] = pd.to_numeric(df["roas"], errors="coerce").fillna(0)
+            # roas
+            df["roas"] = df["revenue"] / df["spend"].replace(0, 1)
+            df["roas"] = pd.to_numeric(df["roas"], errors="coerce").fillna(0.0)
 
-            # CPC (Cost Per Click)
-            df["cpc"] = df["spend"] / df["clicks"].replace(0, pd.NA)
-            df["cpc"] = pd.to_numeric(df["cpc"], errors="coerce").fillna(0)
+            # cpc
+            df["cpc"] = df["spend"] / df["clicks"].replace(0, 1)
+            df["cpc"] = pd.to_numeric(df["cpc"], errors="coerce").fillna(0.0)
 
-            # CPM (Cost Per 1000 impressions)
-            df["cpm"] = (df["spend"] / df["impressions"].replace(0, pd.NA)) * 1000
-            df["cpm"] = pd.to_numeric(df["cpm"], errors="coerce").fillna(0)
+            # cpm
+            df["cpm"] = (df["spend"] / df["impressions"].replace(0, 1)) * 1000
+            df["cpm"] = pd.to_numeric(df["cpm"], errors="coerce").fillna(0.0)
 
-            # ---------- KPI SUMMARY ----------
+            # summary kpis
             total_spend = float(df["spend"].sum())
             total_revenue = float(df["revenue"].sum())
 
             kpi_summary = {
                 "total_spend": total_spend,
                 "total_revenue": total_revenue,
-                "total_purchases": int(df["purchases"].sum()) if "purchases" in df.columns else 0,
                 "overall_roas": float(total_revenue / total_spend) if total_spend > 0 else 0.0,
                 "overall_ctr": float(df["ctr"].mean()),
                 "overall_cpc": float(df["cpc"].mean()),
-                "overall_cpm": float(df["cpm"].mean()),
+                "overall_cpm": float(df["cpm"].mean())
             }
 
-            # ---------- DAILY METRICS ----------
-            daily = (
+            # daily breakdown
+            daily_metrics = (
                 df.groupby("date")
                 .agg({
                     "roas": "mean",
@@ -104,7 +98,7 @@ class DataAgent:
                 .to_dict(orient="records")
             )
 
-            # ---------- CREATIVE PERFORMANCE ----------
+            # creative performance
             creative_perf = (
                 df.groupby("creative_message")
                 .agg({
@@ -118,53 +112,35 @@ class DataAgent:
                     "clicks": "sum"
                 })
                 .reset_index()
-            ).sort_values("roas", ascending=False)
+            )
 
-            top_creatives = creative_perf.head(10).to_dict(orient="records")
-            worst_creatives = creative_perf.tail(10).to_dict(orient="records")
+            top_creatives = creative_perf.sort_values("roas", ascending=False).head(10).to_dict(orient="records")
+            worst_creatives = creative_perf.sort_values("roas", ascending=True).head(10).to_dict(orient="records")
 
-            # ---------- CREATIVE FATIGUE ----------
-            ctr_threshold = df["ctr"].quantile(0.20)  # bottom 20% CTR
+            # fatigue detection
+            ctr_threshold = df["ctr"].quantile(0.20)
             fatigue_df = creative_perf[
                 (creative_perf["impressions"] > 300000) &
                 (creative_perf["ctr"] <= ctr_threshold)
             ]
 
             creative_fatigue = fatigue_df[[
-                "creative_message", "ctr", "impressions", "roas"
+                "creative_message",
+                "ctr",
+                "impressions",
+                "roas"
             ]].to_dict(orient="records")
 
-            # ---------- OPTIONAL GROUP PERFORMANCE ----------
-            def safe_group(col):
-                if col not in df.columns:
-                    return []
-                grouped = df.groupby(col).agg({
-                    "roas": "mean",
-                    "ctr": "mean",
-                    "cpm": "mean",
-                    "cpc": "mean",
-                    "spend": "sum",
-                    "revenue": "sum"
-                }).reset_index()
-                return grouped.to_dict(orient="records")
-
-            result = {
+            metrics = {
                 "kpi_summary": kpi_summary,
-                "daily_metrics": daily,
+                "daily_metrics": daily_metrics,
                 "top_creatives": top_creatives,
                 "worst_creatives": worst_creatives,
-                "creative_fatigue_signals": creative_fatigue,
-                "audience_performance": safe_group("audience_type"),
-                "country_performance": safe_group("country"),
-                "platform_performance": safe_group("platform")
+                "creative_fatigue_signals": creative_fatigue
             }
 
-            log_event("DataAgent", "success", {
-                "message": "metrics computed successfully",
-                "summary": kpi_summary
-            })
-
-            return result
+            log_event("DataAgent", "success", {"summary": kpi_summary})
+            return metrics
 
         except Exception as e:
             log_event("DataAgent", "error", {"error": str(e)})

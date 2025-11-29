@@ -1,0 +1,20 @@
+{"id": "d53115c0-37fb-45a3-aaae-093bc087811b", "timestamp": "2025-11-29T22:15:52.078739Z", "agent": "Pipeline", "event_type": "start", "data": {"run_id": "8206379f72", "query": "Analyze ROAS drop and creative fatigue"}}
+{"id": "c67a439a-e8ad-49a8-9eb9-ba768111e85a", "timestamp": "2025-11-29T22:15:52.084744Z", "agent": "PlannerAgent", "event_type": "plan_generated", "data": {"query": "Analyze ROAS drop and creative fatigue"}}
+{"id": "3a7f2487-9179-40c1-adc4-0cfd60326c53", "timestamp": "2025-11-29T22:15:52.085766Z", "agent": "Pipeline", "event_type": "planner_done", "data": {"steps": 8}}
+{"id": "71aa2e16-8795-4349-b5c4-eb01a9157dec", "timestamp": "2025-11-29T22:15:52.085766Z", "agent": "DataAgent", "event_type": "start", "data": {"path": "E:\\Kasparo\\kasparro-agentic-fb-analyst-kunal-singh\\data/synthetic_fb_ads_undergarments.csv"}}
+{"id": "f9e4b9e2-303f-4fb6-a4ad-192cc5163d3f", "timestamp": "2025-11-29T22:15:52.123798Z", "agent": "DataAgent", "event_type": "success", "data": {"rows": 4500, "columns": ["campaign_name", "adset_name", "date", "spend", "impressions", "clicks", "ctr", "purchases", "revenue", "roas", "creative_type", "creative_message", "audience_type", "platform", "country"]}}
+{"id": "2b8519b6-5249-4a50-8c9e-3e6f0794c504", "timestamp": "2025-11-29T22:15:52.123798Z", "agent": "DataAgent", "event_type": "start", "data": {"message": "computing metrics"}}
+{"id": "ae33ee33-a869-4eae-ab71-d0a002759482", "timestamp": "2025-11-29T22:15:52.135103Z", "agent": "DataAgent", "event_type": "success", "data": {"summary": {"total_spend": 2105579.9, "total_revenue": 12265700.719999999, "overall_roas": 5.8253314063265895, "overall_ctr": 0.01261345991366362, "overall_cpc": 14.94589153259418, "overall_cpm": 3.1076768142326956}}}
+{"id": "6c729252-aadc-436a-b620-a3e1b12ba366", "timestamp": "2025-11-29T22:15:52.135103Z", "agent": "InsightAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "bd56548b-f42e-4785-a6fb-cfbb883e0f6f", "timestamp": "2025-11-29T22:15:57.926184Z", "agent": "InsightAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "8941e5c5-6b34-4e7e-a68d-76a72f047907", "timestamp": "2025-11-29T22:15:57.926730Z", "agent": "HypothesisAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "1d9deb0a-3992-4bb2-97b0-ead501250bdd", "timestamp": "2025-11-29T22:16:01.230655Z", "agent": "HypothesisAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "dbfadc9e-2893-4a31-bcf6-58c26c0b83d4", "timestamp": "2025-11-29T22:16:01.230655Z", "agent": "EvaluatorAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "101b8039-e2ff-4a3d-8893-8e4e7398d5c1", "timestamp": "2025-11-29T22:16:06.339599Z", "agent": "EvaluatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "e1e1d51c-d0f6-44a6-a7f7-2ec1de890b5e", "timestamp": "2025-11-29T22:16:06.339599Z", "agent": "ValidatorAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "49380b16-4ce1-4852-ae8b-53bef0da60f7", "timestamp": "2025-11-29T22:16:10.708464Z", "agent": "ValidatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "88ae49db-7e0a-485e-b477-0be72ce3bbb0", "timestamp": "2025-11-29T22:16:10.708464Z", "agent": "CreativeImprovementAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "93d19af1-720b-4c2d-b913-168e07f6ac5f", "timestamp": "2025-11-29T22:16:15.855266Z", "agent": "CreativeImprovementAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "7ae9cd87-8402-42a3-81fe-644d577de775", "timestamp": "2025-11-29T22:16:15.856240Z", "agent": "ReportAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "51ccad4f-0011-4a9b-871d-d1ef068934a8", "timestamp": "2025-11-29T22:16:26.899453Z", "agent": "ReportAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "20c938e7-ce64-4144-b18e-f10c3a0b9ae9", "timestamp": "2025-11-29T22:16:26.901462Z", "agent": "Pipeline", "event_type": "complete", "data": {"run_id": "8206379f72", "total_time": 34.822}}
