@@ -2,38 +2,38 @@
   "validated_hypotheses": [
     {
       "issue": "ROAS Decline",
-      "hypothesis": "The recent drop in ROAS is due to increased competition in the ad auction, driving up costs and lowering returns.",
+      "hypothesis": "The ROAS decline is due to increased competition in the market, leading to higher ad costs without a corresponding increase in conversion rates.",
       "status": "partial",
-      "strengthened_reasoning": "While decreasing ROAS can be an indicator, it's crucial to analyze CPM/CPC trends to confirm increased competition. Market conditions should include specific competitive data (e.g., new entrants, competitor spending). A higher confidence level would be justified with supporting CPM/CPC data. The hypothesis is plausible, but further data is needed to validate.",
-      "confidence": 0.6
+      "strengthened_reasoning": "The hypothesis is plausible, especially if there have been new entrants or increased ad spend from existing competitors. It would be strengthened by data showing increased CPC or CPM without a corresponding lift in conversion rates. Analyzing auction insights could provide more information.",
+      "confidence": 0.75
     },
     {
       "issue": "ROAS Decline",
-      "hypothesis": "Changes in the target audience's preferences or behaviors are contributing to the decline in ROAS.",
+      "hypothesis": "Changes in the target audience's preferences or purchasing power are contributing to the decreased ROAS.",
       "status": "partial",
-      "strengthened_reasoning": "Decreasing ROAS is a symptom, not definitive proof. Audience demographics data should also include behavioral data or preference shifts based on surveys or market research. This is plausible, but needs data linking ROAS decline to specific audience changes.",
-      "confidence": 0.5
+      "strengthened_reasoning": "This is a valid consideration as shifts in consumer behavior can significantly impact advertising effectiveness. However, it lacks specificity. Investigating market research data, industry trends, and customer surveys could provide more concrete evidence. Also, analyze if the offer aligns with current consumer needs and preferences.",
+      "confidence": 0.7
     },
     {
       "issue": "Creative Fatigue",
-      "hypothesis": "Ad fatigue is causing the ROAS decline, as users are becoming desensitized to existing creatives.",
+      "hypothesis": "The current creatives have been shown to the target audience for too long, resulting in ad blindness and reduced engagement, leading to a decrease in CTR and ROAS.",
       "status": "validated",
-      "strengthened_reasoning": "The supporting signals provide a solid basis for this hypothesis. Decreasing ROAS, declining CTR for specific creatives, and high impression counts for fatigued creatives all consistently point toward creative fatigue.",
-      "confidence": 0.8
+      "strengthened_reasoning": "The hypothesis is well-supported by the signals. Declining CTR and ROAS for high-impression creatives strongly suggest creative fatigue. A refresh of creatives is warranted.",
+      "confidence": 0.85
     },
     {
-      "issue": "Creative Performance Disparity",
-      "hypothesis": "The large gap in performance between top and bottom creatives indicates that some ad strategies or messaging resonates better with the target audience than others.",
+      "issue": "Underperforming Creatives",
+      "hypothesis": "The messaging and visuals in the underperforming creatives are not resonating with the target audience, resulting in low ROAS.",
       "status": "validated",
-      "strengthened_reasoning": "The provided signals directly support this hypothesis. A significant ROAS difference between best and worst creatives, combined with varying CTRs, strongly suggests that certain approaches are more effective.",
+      "strengthened_reasoning": "Extremely low ROAS, particularly when compared to the average, directly points to a problem with the creative elements. A/B testing different messaging and visuals should be prioritized.",
       "confidence": 0.9
     },
     {
-      "issue": "Creative Performance Disparity",
-      "hypothesis": "The poor-performing creatives have underlying issues such as a misleading or irrelevant message, causing the low ROAS.",
-      "status": "validated",
-      "strengthened_reasoning": "The provided signals suggest this is likely true. ROAS disparity and low CTR on worst-performing creatives align with the idea of flawed messaging. While other factors could contribute, the available data supports the hypothesis.",
-      "confidence": 0.8
+      "issue": "Underperforming Creatives",
+      "hypothesis": "The offer (limited offer, discounts etc) in the underperforming creatives is not attractive enough for the target audience, resulting in low ROAS.",
+      "status": "partial",
+      "strengthened_reasoning": "This is a reasonable hypothesis if specific creatives with offers are underperforming. Analyze offer redemption rates and compare them to historical data. It could be strengthened by comparing the performance of different offers.",
+      "confidence": 0.75
     }
   ],
   "meta": {

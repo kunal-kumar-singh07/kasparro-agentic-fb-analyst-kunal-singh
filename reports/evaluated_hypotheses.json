@@ -1,39 +1,12 @@
 {
   "evaluated_hypotheses": [
     {
-      "issue": "ROAS Decline",
-      "hypothesis": "The recent drop in ROAS is due to increased competition in the ad auction, driving up costs and lowering returns.",
-      "quantitative_support": "The daily metrics show a general decreasing trend in ROAS from January to March, with some days spiking high. While overall ROAS is 5.83, many days in February and March are significantly lower than earlier in January. Without external data on auction dynamics, it's difficult to definitively attribute this decline to increased competition.",
-      "strength_score": 0.4,
-      "confidence": 0.4
+      "issue": "low CTR",
+      "hypothesis": "Creative fatigue"
     },
     {
-      "issue": "ROAS Decline",
-      "hypothesis": "Changes in the target audience's preferences or behaviors are contributing to the decline in ROAS.",
-      "quantitative_support": "The daily metrics show a fluctuating ROAS. No provided audience demographics data exists to confirm this hypothesis.",
-      "strength_score": 0.2,
-      "confidence": 0.2
-    },
-    {
-      "issue": "Creative Fatigue",
-      "hypothesis": "Ad fatigue is causing the ROAS decline, as users are becoming desensitized to existing creatives.",
-      "quantitative_support": "The `creative_fatigue_signals` and `daily_metrics` suggest that ad fatigue is a contributing factor. Some creatives, such as 'Breathable microfiber that moves with you — limited offer on women sports bras.' have high impression counts (840524) but a low ROAS (1.66) and CTR (0.00836). This suggests that users are seeing the ad but not engaging with it. Also ROAS has a decreasing trend from January to March, supporting the fatigue.",
-      "strength_score": 0.7,
-      "confidence": 0.8
-    },
-    {
-      "issue": "Creative Performance Disparity",
-      "hypothesis": "The large gap in performance between top and bottom creatives indicates that some ad strategies or messaging resonates better with the target audience than others.",
-      "quantitative_support": "There is a significant ROAS difference between the top and worst performing creatives. For example, the top creative has a ROAS of 1381.74 while the worst creative has a ROAS of 0.67. CTRs also vary across different creatives. This strongly supports the hypothesis.",
-      "strength_score": 0.9,
-      "confidence": 0.9
-    },
-    {
-      "issue": "Creative Performance Disparity",
-      "hypothesis": "The poor-performing creatives have underlying issues such as a misleading or irrelevant message, causing the low ROAS.",
-      "quantitative_support": "The worst performing creatives indeed have low ROAS and relatively low CTR, implying issues with the message. For instance, 'Breathable microfiber that moves with you — limited offer on women sports bras.' has a CTR of 0.00836 and ROAS of 1.66. Without further analysis of the creative messages, the relevancy cannot be determined but the low CTR suggests users are not connecting with the message.",
-      "strength_score": 0.7,
-      "confidence": 0.8
+      "issue": "low ROAS",
+      "hypothesis": "Audience saturation"
     }
   ],
   "meta": {

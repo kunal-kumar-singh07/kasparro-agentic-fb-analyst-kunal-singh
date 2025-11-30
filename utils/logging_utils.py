@@ -1,5 +1,5 @@
-import json
 import os
+import json
 import datetime
 import uuid
 
@@ -7,10 +7,9 @@ LOG_DIR = os.path.join(os.path.dirname(__file__), "..", "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 
 def log_event(agent_name: str, event_type: str, data: dict):
-
     record = {
         "id": str(uuid.uuid4()),
-        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.datetime.now(datetime.UTC).isoformat(),
         "agent": agent_name,
         "event_type": event_type,
         "data": data

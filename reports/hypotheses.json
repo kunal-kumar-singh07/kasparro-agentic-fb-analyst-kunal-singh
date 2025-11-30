@@ -1,50 +1,12 @@
 {
   "hypotheses": [
     {
-      "issue": "ROAS Decline",
-      "hypothesis": "The recent drop in ROAS is due to increased competition in the ad auction, driving up costs and lowering returns.",
-      "supporting_signals": [
-        "Decreasing ROAS trend",
-        "General market conditions (if available)"
-      ],
-      "confidence": 0.7
+      "issue": "low CTR",
+      "hypothesis": "Creative fatigue"
     },
     {
-      "issue": "ROAS Decline",
-      "hypothesis": "Changes in the target audience's preferences or behaviors are contributing to the decline in ROAS.",
-      "supporting_signals": [
-        "Decreasing ROAS trend",
-        "Audience demographics data (if available)"
-      ],
-      "confidence": 0.6
-    },
-    {
-      "issue": "Creative Fatigue",
-      "hypothesis": "Ad fatigue is causing the ROAS decline, as users are becoming desensitized to existing creatives.",
-      "supporting_signals": [
-        "Decreasing ROAS trend",
-        "Declining CTR for specific creatives",
-        "High impression counts for fatigued creatives"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "issue": "Creative Performance Disparity",
-      "hypothesis": "The large gap in performance between top and bottom creatives indicates that some ad strategies or messaging resonates better with the target audience than others.",
-      "supporting_signals": [
-        "Significant ROAS difference between best and worst creatives",
-        "Varying CTRs across different creatives"
-      ],
-      "confidence": 0.9
-    },
-    {
-      "issue": "Creative Performance Disparity",
-      "hypothesis": "The poor-performing creatives have underlying issues such as a misleading or irrelevant message, causing the low ROAS.",
-      "supporting_signals": [
-        "ROAS disparity between creatives",
-        "Low CTR on worst performing creatives"
-      ],
-      "confidence": 0.8
+      "issue": "low ROAS",
+      "hypothesis": "Audience saturation"
     }
   ],
   "meta": {

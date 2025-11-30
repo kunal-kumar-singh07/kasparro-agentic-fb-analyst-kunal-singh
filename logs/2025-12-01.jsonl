@@ -1,0 +1,58 @@
+{"id": "52dd2f72-ea6b-4871-b902-76acf4d58acf", "timestamp": "2025-11-30T18:41:05.656920+00:00", "agent": "Pipeline", "event_type": "start", "data": {"run_id": "20db60cc69", "query": "Analyze ROAS drop and creative fatigue"}}
+{"id": "9ba129f2-9a63-493f-b203-8d397b132e2f", "timestamp": "2025-11-30T18:41:05.685100+00:00", "agent": "PlannerAgent", "event_type": "plan_generated", "data": {"query": "Analyze ROAS drop and creative fatigue"}}
+{"id": "46316546-e4bf-4a5a-83a6-7a7a4d30c3e3", "timestamp": "2025-11-30T18:41:05.685100+00:00", "agent": "Pipeline", "event_type": "planner_done", "data": {"steps": 8}}
+{"id": "339dbf8c-baf1-4c4d-b1b2-28d093350718", "timestamp": "2025-11-30T18:41:05.685100+00:00", "agent": "DataAgent", "event_type": "start", "data": {"path": "E:\\Kasparo\\kasparro-agentic-fb-analyst-kunal-singh\\data/synthetic_fb_ads_undergarments.csv"}}
+{"id": "cb46ac1c-e0a6-45e1-ae1b-5bfd37b70125", "timestamp": "2025-11-30T18:41:05.712734+00:00", "agent": "DataAgent", "event_type": "success", "data": {"rows": 4500, "columns": ["campaign_name", "adset_name", "date", "spend", "impressions", "clicks", "ctr", "purchases", "revenue", "roas", "creative_type", "creative_message", "audience_type", "platform", "country"]}}
+{"id": "750fd766-618e-4ff2-8dc1-0b19c6f9bba8", "timestamp": "2025-11-30T18:41:05.712734+00:00", "agent": "DataAgent", "event_type": "start", "data": {"message": "computing metrics"}}
+{"id": "2006e226-1674-41e8-a1d4-9682f8f66ae1", "timestamp": "2025-11-30T18:41:05.732140+00:00", "agent": "DataAgent", "event_type": "success", "data": {"summary": {"total_spend": 2105579.9, "total_revenue": 12265700.719999999, "overall_roas": 5.8253314063265895, "overall_ctr": 0.01261345991366362, "overall_cpc": 14.94589153259418, "overall_cpm": 3.1076768142326956}}}
+{"id": "80e83a3e-e082-4cd2-8490-3d95f0beb60a", "timestamp": "2025-11-30T18:41:05.733143+00:00", "agent": "InsightAgent", "event_type": "start", "data": {}}
+{"id": "6404894c-37d6-4256-85c3-4e0e4e23ac01", "timestamp": "2025-11-30T18:41:12.735348+00:00", "agent": "InsightAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "b742e4ff-cad2-49be-91fa-ff69aaf9864b", "timestamp": "2025-11-30T18:41:12.735348+00:00", "agent": "HypothesisAgent", "event_type": "start", "data": {}}
+{"id": "2a098a59-aafb-4788-b3c5-86d87ad98416", "timestamp": "2025-11-30T18:41:16.655034+00:00", "agent": "HypothesisAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "e639044a-b36b-45a4-b6e4-530271cd8dc7", "timestamp": "2025-11-30T18:41:16.655034+00:00", "agent": "EvaluatorAgent", "event_type": "start", "data": {}}
+{"id": "941c64bb-cb33-41b3-861e-a0f852edde37", "timestamp": "2025-11-30T18:41:22.293301+00:00", "agent": "EvaluatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "96e88347-b0d9-48c6-8d1f-119036910405", "timestamp": "2025-11-30T18:41:22.293301+00:00", "agent": "ValidatorAgent", "event_type": "start", "data": {}}
+{"id": "c870459c-35db-41b8-8799-2148c7a4630c", "timestamp": "2025-11-30T18:41:26.305596+00:00", "agent": "ValidatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "36ac468e-1299-4c57-83de-a29c4abcec8d", "timestamp": "2025-11-30T18:41:26.305596+00:00", "agent": "CreativeImprovementAgent", "event_type": "start", "data": {}}
+{"id": "329182e0-4216-4a06-836f-c99116191a66", "timestamp": "2025-11-30T18:41:33.584976+00:00", "agent": "CreativeImprovementAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "c388d582-40bc-4e63-8c23-c028b1d35570", "timestamp": "2025-11-30T18:41:33.585651+00:00", "agent": "ReportAgent", "event_type": "start", "data": {"message": "agent started"}}
+{"id": "47d5f417-6c64-4d2d-a267-382e330af5f0", "timestamp": "2025-11-30T18:41:46.136049+00:00", "agent": "ReportAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "6d7c85b1-0b2b-4481-9465-3f0b9451476a", "timestamp": "2025-11-30T18:41:46.141382+00:00", "agent": "Pipeline", "event_type": "complete", "data": {"run_id": "20db60cc69", "total_time": 40.479}}
+{"id": "32ff91e1-235c-4639-87db-9bc0cabef241", "timestamp": "2025-11-30T18:42:20.404936+00:00", "agent": "DataAgent", "event_type": "start", "data": {"path": "C:\\Users\\beast\\AppData\\Local\\Temp\\pytest-of-beast\\pytest-7\\test_data_agent_loads_basic_cs0\\test.csv"}}
+{"id": "0c444639-0106-4b91-9e7c-82f9d7b988d6", "timestamp": "2025-11-30T18:42:20.407006+00:00", "agent": "DataAgent", "event_type": "success", "data": {"rows": 2, "columns": ["date", "impressions", "clicks", "spend", "revenue", "creative_message"]}}
+{"id": "66534559-be41-4d85-9a06-89fdf5359e32", "timestamp": "2025-11-30T18:42:20.407006+00:00", "agent": "DataAgent", "event_type": "start", "data": {"path": "C:\\Users\\beast\\AppData\\Local\\Temp\\pytest-of-beast\\pytest-7\\test_data_agent_handles_missin0\\bad.csv"}}
+{"id": "f5c536f9-99ca-47a2-a34b-36753783ecbe", "timestamp": "2025-11-30T18:42:20.407006+00:00", "agent": "DataAgent", "event_type": "error", "data": {"error": "Missing required columns: ['date', 'impressions', 'clicks', 'spend', 'revenue', 'creative_message']"}}
+{"id": "39439f90-2985-4b0d-a2d1-be3d86d18cba", "timestamp": "2025-11-30T18:42:20.416825+00:00", "agent": "DataAgent", "event_type": "start", "data": {"path": "C:\\Users\\beast\\AppData\\Local\\Temp\\pytest-of-beast\\pytest-7\\test_data_agent_handles_empty_0\\empty.csv"}}
+{"id": "1eea32a8-ce8b-47b8-8955-ef349b9b6f57", "timestamp": "2025-11-30T18:42:20.416825+00:00", "agent": "DataAgent", "event_type": "error", "data": {"error": "No columns to parse from file"}}
+{"id": "dc67f794-c7fe-40f4-81db-aa3417ba24a5", "timestamp": "2025-11-30T18:42:20.416825+00:00", "agent": "DataAgent", "event_type": "start", "data": {"path": "nonexistent.csv"}}
+{"id": "0c5e9ae5-f415-4f39-9e99-ce1e02db990d", "timestamp": "2025-11-30T18:42:20.416825+00:00", "agent": "DataAgent", "event_type": "error", "data": {"error": "CSV not found"}}
+{"id": "7f32b877-e51b-45a9-ace9-85f04d819636", "timestamp": "2025-11-30T18:42:20.416825+00:00", "agent": "EvaluatorAgent", "event_type": "start", "data": {}}
+{"id": "0a5e8d4d-9f1e-4fcd-a989-1cfcd2841023", "timestamp": "2025-11-30T18:42:20.419877+00:00", "agent": "EvaluatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "b276178d-3c40-412c-955c-317a46a3ce25", "timestamp": "2025-11-30T18:42:20.419877+00:00", "agent": "EvaluatorAgent", "event_type": "start", "data": {}}
+{"id": "d1a00f3b-274b-4303-aeaf-d2b9a82f6486", "timestamp": "2025-11-30T18:42:20.419877+00:00", "agent": "EvaluatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "db2e6a75-9b39-4533-a987-2fb3db592759", "timestamp": "2025-11-30T18:42:20.419877+00:00", "agent": "EvaluatorAgent", "event_type": "start", "data": {}}
+{"id": "4db3689b-bc5a-493d-9bdd-438dc4252919", "timestamp": "2025-11-30T18:42:20.422835+00:00", "agent": "EvaluatorAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "b96a44bb-a5ff-4300-a54e-c043ed850afd", "timestamp": "2025-11-30T18:42:20.422835+00:00", "agent": "HypothesisAgent", "event_type": "start", "data": {}}
+{"id": "6e659df6-e270-489d-806a-3a2f81ee03e6", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "854e66f1-a0a5-4cea-b808-aa0e8f5e5804", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "start", "data": {}}
+{"id": "2ad2b8d7-60ef-4cb1-867c-86619355ea80", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "error", "data": {"error_type": "json_parse_error", "attempt": 1, "error": "json_parse_error"}}
+{"id": "b5414392-585a-4735-8db3-ce7cbf165552", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "success", "data": {"attempt": 2}}
+{"id": "1394dd6d-9be2-4d66-962b-dbe0e793d452", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "start", "data": {}}
+{"id": "b3884438-98a8-45a2-a629-b3740f674e0e", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "error", "data": {"error_type": "json_parse_error", "attempt": 1, "error": "json_parse_error"}}
+{"id": "c6522eb8-a686-465e-86a9-470ca18ff9a4", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "error", "data": {"error_type": "json_parse_error", "attempt": 2, "error": "json_parse_error"}}
+{"id": "62716b0b-9fe7-46a3-b9d7-ab0b528c48eb", "timestamp": "2025-11-30T18:42:20.424874+00:00", "agent": "HypothesisAgent", "event_type": "fallback", "data": {"error": "json_parse_error", "error_type": "agent_fallback"}}
+{"id": "aaa34efc-4580-41ca-8345-30c9036e2821", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "start", "data": {}}
+{"id": "923cadc2-8054-4ffb-b6bf-8f2592621f39", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "70c73816-fa2a-4405-a71b-bbca20a96ddb", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "start", "data": {}}
+{"id": "742a641a-55f8-4449-8521-d67e8b77e2f0", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "error", "data": {"error_type": "json_parse_error", "attempt": 1, "error": "json_parse_error"}}
+{"id": "d6575e03-8cd9-4d74-ba8d-e39a21277974", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "success", "data": {"attempt": 2}}
+{"id": "39983cc9-6b50-4641-a604-839f9ada9549", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "start", "data": {}}
+{"id": "9aaa9bbc-54a7-41e8-97d1-c1ba6f07cab4", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "error", "data": {"error_type": "json_parse_error", "attempt": 1, "error": "json_parse_error"}}
+{"id": "156d590f-a962-404a-a58d-c54dc3646bfa", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "error", "data": {"error_type": "json_parse_error", "attempt": 2, "error": "json_parse_error"}}
+{"id": "f99e383f-e7b3-4a98-8fe9-009153b0f558", "timestamp": "2025-11-30T18:42:20.429417+00:00", "agent": "InsightAgent", "event_type": "fallback", "data": {"error": "json_parse_error", "error_type": "agent_fallback"}}
+{"id": "8c731c24-0b12-47bf-a724-41029c3052cb", "timestamp": "2025-11-30T18:42:20.435049+00:00", "agent": "InsightAgent", "event_type": "start", "data": {}}
+{"id": "025f1d5a-9bce-4041-b008-9feb0d2ed77a", "timestamp": "2025-11-30T18:42:20.435049+00:00", "agent": "InsightAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "7f51e7d9-f86e-41ab-86e5-7ea9a9a5c24f", "timestamp": "2025-11-30T18:42:20.435049+00:00", "agent": "HypothesisAgent", "event_type": "start", "data": {}}
+{"id": "52ca8f4d-e8d7-4b02-9ebf-1fb5f1dbfeef", "timestamp": "2025-11-30T18:42:20.435049+00:00", "agent": "HypothesisAgent", "event_type": "success", "data": {"attempt": 1}}
+{"id": "b6c8bae0-900e-4ebd-99d2-98882d5184a0", "timestamp": "2025-11-30T18:42:20.435049+00:00", "agent": "EvaluatorAgent", "event_type": "start", "data": {}}
+{"id": "9e9244e1-f17a-422e-af38-65e7d2033f6b", "timestamp": "2025-11-30T18:42:20.435049+00:00", "agent": "EvaluatorAgent", "event_type": "success", "data": {"attempt": 1}}

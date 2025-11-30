@@ -1,6 +1,6 @@
 import json
 import os
-from agents.base_agent import BaseAgent
+from src.agents.base_agent import BaseAgent
 from config.config_loader import RESULTS_DIR
 
 class InsightAgent(BaseAgent):

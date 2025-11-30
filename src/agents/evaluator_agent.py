@@ -1,6 +1,6 @@
 import json
 import os
-from agents.base_agent import BaseAgent
+from src.agents.base_agent import BaseAgent
 from config.config_loader import RESULTS_DIR
 
 class EvaluatorAgent(BaseAgent):
@@ -42,6 +42,21 @@ Hypotheses:
 
     # postprocess
     def _postprocess(self, parsed: dict) -> dict:
-        parsed.setdefault("meta", {})
-        parsed["meta"]["agent"] = "EvaluatorAgent"
-        return parsed
+        agent = "EvaluatorAgent"
+
+        if "evaluated_hypotheses" in parsed:
+            parsed.setdefault("meta", {})
+            parsed["meta"]["agent"] = agent
+            return parsed
+
+        if "hypotheses" in parsed:
+            return {
+                "evaluated_hypotheses": parsed["hypotheses"],
+                "meta": {"agent": agent}
+            }
+
+        return {
+            "evaluated_hypotheses": [],
+            "meta": {"agent": agent}
+        }
+

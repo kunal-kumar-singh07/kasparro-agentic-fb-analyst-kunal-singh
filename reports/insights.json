@@ -1,68 +1,9 @@
 {
-  "summary_text": "Overall ROAS is 5.83. ROAS has fluctuated significantly, with a recent decline, possibly indicating creative fatigue. The top creatives show high ROAS, while the worst creatives perform poorly, suggesting a need for creative refreshment. Some creatives show signs of fatigue, such as declining CTR and ROAS despite a large number of impressions.",
   "insights": [
-    {
-      "title": "Decline in ROAS",
-      "description": "The ROAS has dropped in the recent days, indicating a potential issue with ad performance. This may be due to a variety of factors, including increased competition, changes in the target audience, or ad fatigue.",
-      "evidence": {
-        "kpi_changes": [
-          {
-            "metric": "ROAS",
-            "trend": "decreasing",
-            "example_date": "2025-03-31"
-          }
-        ],
-        "creative_issues": [],
-        "audience_issues": []
-      },
-      "severity": "Medium",
-      "confidence": 0.75
-    },
-    {
-      "title": "Creative Fatigue Detected",
-      "description": "Several creatives show signs of fatigue, indicated by declining CTR and ROAS despite high impression counts. Refreshing or replacing these creatives could improve performance.",
-      "evidence": {
-        "kpi_changes": [],
-        "creative_issues": [
-          {
-            "creative": "Breathable bamboo that moves with you — limited offer on men briefs.",
-            "metric": "CTR",
-            "value": 0.008473810213626701
-          },
-          {
-            "creative": "Breathable bamboo that moves with you — limited offer on men briefs.",
-            "metric": "ROAS",
-            "value": 9.492285259602903
-          }
-        ],
-        "audience_issues": []
-      },
-      "severity": "Medium",
-      "confidence": 0.8
-    },
-    {
-      "title": "Creative Performance Disparity",
-      "description": "There's a large performance gap between the best and worst performing creatives. Focus on scaling the strategies used in top creatives and replacing or significantly modifying the low-performing ones.",
-      "evidence": {
-        "kpi_changes": [],
-        "creative_issues": [
-          {
-            "creative": "Doctors recommend breathable modal — meet our women bras.",
-            "metric": "ROAS",
-            "value": 1381.7378561133642
-          },
-          {
-            "creative": "Breathable modal that moves with you — limited offer on women sports bras.",
-            "metric": "ROAS",
-            "value": 0.669166208654445
-          }
-        ],
-        "audience_issues": []
-      },
-      "severity": "Medium",
-      "confidence": 0.9
-    }
+    "CTR is stable",
+    "ROAS is declining"
   ],
+  "summary_text": "Basic summary",
   "meta": {
     "agent": "InsightAgent"
   }
