@@ -1,10 +1,4 @@
-Nice catch – you’re right, the folder tree I wrote earlier didn’t include the `tests` package (and some of the extra `src` subfolders you have now).
 
-Here’s a **clean, no-emoji, copy-paste-ready README** with a corrected project structure that matches your screenshots (including `tests`).
-
----
-
-````markdown
 # Agentic Facebook Ads Analyst
 
 A modular, multi-agent analytics system for automated Facebook Ads insights, hypothesis generation, evaluation, validation, creative optimization, and final reporting.  
