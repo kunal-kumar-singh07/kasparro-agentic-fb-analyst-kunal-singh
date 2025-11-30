@@ -17,11 +17,12 @@ class MetricsTracker:
     def inc(self, key, amount=1):
         self.counters[key] = self.counters.get(key, 0) + amount
 
+    def observe_latency(self, key, value):
+        self.counters[key] = value
+
     def save(self):
-        # compute durations
         ordered = list(self.stages.items())
         durations = {}
-
         for i in range(1, len(ordered)):
             prev_name, prev_time = ordered[i - 1]
             curr_name, curr_time = ordered[i]
@@ -44,3 +45,6 @@ class MetricsTracker:
             json.dump(data, f, indent=2)
 
         return data
+
+
+metrics = MetricsTracker(run_id=str(int(time.time())))

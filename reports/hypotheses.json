@@ -1,12 +1,44 @@
 {
   "hypotheses": [
     {
-      "issue": "low CTR",
-      "hypothesis": "Creative fatigue"
+      "issue": "ROAS Decline",
+      "hypothesis": "The drop in ROAS is caused by creative fatigue, leading to decreased CTR and conversion rates.",
+      "supporting_signals": [
+        "Decreasing ROAS trend over time",
+        "Lower CTR for several creatives",
+        "Low ROAS for some creatives"
+      ],
+      "confidence": 0.9
     },
     {
-      "issue": "low ROAS",
-      "hypothesis": "Audience saturation"
+      "issue": "Creative Fatigue",
+      "hypothesis": "Creatives with declining CTR and ROAS are suffering from creative fatigue, causing them to be less effective in attracting and converting users.",
+      "supporting_signals": [
+        "Lower CTR values for specific creatives",
+        "Low ROAS values for specific creatives",
+        "High impression counts with low performance metrics"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "issue": "Underperforming Creatives",
+      "hypothesis": "Underperforming creatives are not resonating with the target audience due to poor messaging, visuals, or targeting, leading to low ROAS.",
+      "supporting_signals": [
+        "Low ROAS values for specific creatives",
+        "Potential issues with creative messaging",
+        "Potential mismatch between creative and target audience"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "issue": "Top Performing Creatives Success Factors",
+      "hypothesis": "Top performing creatives are successful due to compelling messaging (e.g., 'Doctors recommend breathable modal') and alignment with audience preferences, resulting in high ROAS.",
+      "supporting_signals": [
+        "High ROAS values for specific creatives",
+        "Compelling creative messaging",
+        "Positive audience response to the creative"
+      ],
+      "confidence": 0.75
     }
   ],
   "meta": {

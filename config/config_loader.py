@@ -1,23 +1,35 @@
-import yaml
 import os
+import yaml
 
-# ------------------------------------------------------
-# Compute absolute path to project root
-# ------------------------------------------------------
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Correct absolute paths
 CONFIG_PATH = os.path.join(ROOT_DIR, "config", "config.yaml")
 
-# Load YAML safely
 with open(CONFIG_PATH, "r") as f:
     cfg = yaml.safe_load(f)
 
-# Export values
-RESULTS_DIR = os.path.join(ROOT_DIR, cfg["paths"]["results_dir"])
-DATA_CSV_PATH = os.path.join(ROOT_DIR, cfg["paths"]["dataset"])
-LOGS_DIR = os.path.join(ROOT_DIR, cfg["paths"]["logs_dir"])
+def _env_or_cfg(env_name, cfg_value, cast=str):
+    val = os.getenv(env_name)
+    if val is None:
+        return cfg_value
+    try:
+        return cast(val)
+    except Exception:
+        return cfg_value
 
-THRESHOLDS = cfg["thresholds"]
-SEED = cfg["seed"]
-LLM_CONFIG = cfg["llm"]
+DATA_CSV_PATH = _env_or_cfg("DATA_CSV_PATH", os.path.join(ROOT_DIR, cfg["paths"]["dataset"]))
+RESULTS_DIR   = _env_or_cfg("RESULTS_DIR",   os.path.join(ROOT_DIR, cfg["paths"]["results_dir"]))
+LOGS_DIR      = _env_or_cfg("LOGS_DIR",      os.path.join(ROOT_DIR, cfg["paths"]["logs_dir"]))
+
+LLM_CONFIG = {
+    "model":       _env_or_cfg("LLM_MODEL",   cfg["llm"]["model"]),
+    "temperature": _env_or_cfg("LLM_TEMP",    cfg["llm"]["temperature"], float),
+    "max_retries": _env_or_cfg("LLM_RETRIES", cfg["llm"]["max_retries"], int),
+}
+
+THRESHOLDS = {
+    "low_ctr":         _env_or_cfg("LOW_CTR",          cfg["thresholds"]["low_ctr"], float),
+    "high_impressions": _env_or_cfg("HIGH_IMPRESSIONS", cfg["thresholds"]["high_impressions"], int),
+    "min_confidence":  _env_or_cfg("MIN_CONFIDENCE",   cfg["thresholds"]["min_confidence"], float),
+}
+
+SEED = _env_or_cfg("SEED", cfg["seed"], int)

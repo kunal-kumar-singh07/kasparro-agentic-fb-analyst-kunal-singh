@@ -1,39 +1,32 @@
 {
   "creative_recommendations": [
     {
-      "issue": "Low ROAS and potential creative fatigue for 'Breathable modal that moves with you — limited offer on women sports bras.'",
-      "old_message": "Breathable modal that moves with you — limited offer on women sports bras.",
-      "new_creative": "Discover the comfort of modal! New arrivals of women's sports bras, designed for everyday support and lasting comfort.",
-      "reasoning": "The original creative has a very low ROAS (0.67), indicating poor performance. The copy is also generic. Changing the creative to focus on 'comfort' and 'everyday support' while promoting 'new arrivals' could attract more attention and drive sales.",
-      "expected_ctr_lift": "15%"
-    },
-    {
       "issue": "Low ROAS and potential creative fatigue for 'Breathable microfiber that moves with you — limited offer on women sports bras.'",
       "old_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
-      "new_creative": "Experience the lightweight feel of our microfiber sports bras! Limited-time offer: buy one, get one 50% off.",
-      "reasoning": "The original creative is underperforming with a low ROAS (1.66). This revision adds a sense of urgency and perceived value through a 'buy one, get one' offer. Highlighting the 'lightweight feel' can also attract customers looking for comfortable activewear.",
-      "expected_ctr_lift": "20%"
+      "new_creative": "Experience ultimate comfort with our new women's sports bras, made with moisture-wicking fabric for all-day support.",
+      "reasoning": "The original creative is underperforming, with signs of creative fatigue (low CTR and ROAS).  The revised creative focuses on the benefits of moisture-wicking fabric and all-day support, which may be more compelling to the target audience. Removes the limiting 'limited offer' phrasing to allow for evergreen performance.",
+      "expected_ctr_lift": "5-10%"
     },
     {
-      "issue": "Low ROAS for 'Doctors recommend breathable bamboo — meet our men inner vests.'",
-      "old_message": "Doctors recommend breathable bamboo — meet our men inner vests.",
-      "new_creative": "Stay cool and comfortable with our breathable bamboo inner vests for men. Perfect for layering or wearing on their own!",
-      "reasoning": "The original creative has a low ROAS (1.67). While doctor recommendations can be effective, this ad might be improved by focusing on the versatility of inner vests. Highlighting their suitability for both layering and standalone wear provides a clearer use case for potential customers. The goal is to clarify the product's purpose and appeal to a broader audience.",
-      "expected_ctr_lift": "10%"
-    },
-    {
-      "issue": "Potential creative fatigue for 'Breathable bamboo that moves with you — limited offer on men briefs.'",
+      "issue": "Low ROAS and potential creative fatigue for 'Breathable bamboo that moves with you — limited offer on men briefs.'",
       "old_message": "Breathable bamboo that moves with you — limited offer on men briefs.",
-      "new_creative": "Upgrade your underwear drawer with our silky soft bamboo briefs for men. Experience the ultimate in comfort and support! Shop now for a limited time discount.",
-      "reasoning": "This creative exhibits potential fatigue with a CTR of 0.0084. Changing the copy to emphasize the 'silky soft' texture and the 'ultimate comfort and support' aims to re-engage the audience by highlighting key benefits. Furthermore, mentioning a limited-time discount adds a call to action with an incentive.",
-      "expected_ctr_lift": "18%"
+      "new_creative": "Discover the natural comfort of bamboo in our men's briefs.  Naturally breathable and odor-resistant.",
+      "reasoning": "The original creative shows signs of fatigue. Highlighting the natural comfort, breathability, and odor-resistant properties of bamboo may resonate better with male consumers. The revised creative also avoids the phrase 'limited offer', making it less time-sensitive and potentially more evergreen.",
+      "expected_ctr_lift": "7-12%"
     },
     {
-      "issue": "Replace/pause underperforming creative for 'Breathable organic cotton that moves with you — limited offer on men athletic briefs.'",
-      "old_message": "Breathable organic cotton that moves with you — limited offer on men athletic briefs.",
-      "new_creative": "None - Pause creative due to low ROAS",
-      "reasoning": "This creative is underperforming with a ROAS of 2.02 and is not worth further iteration at this stage. Pausing will help focus on better performing segments.",
-      "expected_ctr_lift": "N/A"
+      "issue": "Underperforming creative: 'Doctors recommend breathable modal — meet our women sports bras.'",
+      "old_message": "Doctors recommend breathable modal — meet our women sports bras.",
+      "new_creative": "Elevate your workout with breathable modal sports bras, designed for superior comfort and support. As recommended by leading physicians.",
+      "reasoning": "While the 'doctors recommend' angle can be effective, this creative's performance is lacking. To improve, the focus is shifted to the comfort and support aspects, still emphasizing the 'doctors recommend' for credibility but repositioning it to come at the end.",
+      "expected_ctr_lift": "3-8%"
+    },
+    {
+      "issue": "Improve performance of 'Breathable modal that moves with you — limited offer on women panties.'",
+      "old_message": "Breathable modal that moves with you — limited offer on women panties.",
+      "new_creative": "Silky smooth modal panties that feel like a second skin. Experience all-day comfort and breathability.",
+      "reasoning": "Instead of a 'limited offer,' focusing on the feel of the fabric ('silky smooth') and its benefits ('all-day comfort and breathability') may yield a better response. The old creative may not be highlighting a key selling point.",
+      "expected_ctr_lift": "6-11%"
     }
   ],
   "meta": {

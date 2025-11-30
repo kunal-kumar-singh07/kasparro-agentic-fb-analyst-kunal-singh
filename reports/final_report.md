@@ -1,115 +1,106 @@
-# Marketing Analysis Report
+## Marketing Analysis Report: ROAS Drop & Creative Fatigue
 
 **Date:** October 26, 2023
 
-## Executive Summary
+**Executive Summary:**
 
-This report analyzes a recent decline in Return on Ad Spend (ROAS) and potential creative fatigue in our marketing campaigns. The overall ROAS is 5.83, with a noticeable downward trend over the reporting period. Several creatives are underperforming, and key metrics like Click-Through Rate (CTR) have shown signs of decline. We will delve into these issues, formulate hypotheses, and recommend creative optimizations to improve campaign performance.
+Overall ROAS is 5.83. There's a noticeable drop in ROAS over the recent period, potentially due to creative fatigue, as indicated by declining performance in certain creatives and the 'creative_fatigue_signals' data. Some top creatives still perform well, suggesting a need for refreshing underperforming creatives.
 
-## Key Performance Indicators (KPIs)
+**1. Key Performance Indicators (KPIs):**
 
-| Metric          | Value       |
-|-----------------|-------------|
-| Total Spend     | $2,105,579.90|
-| Total Revenue   | $12,265,700.72|
-| Overall ROAS    | 5.83        |
-| Overall CTR     | 0.0126      |
-| Overall CPC     | $14.95      |
-| Overall CPM     | $3.11       |
+*   **Total Spend:** $2,105,579.9
+*   **Total Revenue:** $12,265,700.72
+*   **Overall ROAS:** 5.83
+*   **Overall CTR:** 0.0126
+*   **Overall CPC:** $14.95
+*   **Overall CPM:** $3.11
 
-## ROAS Trend Analysis
+**2. ROAS Trend Analysis:**
 
-The ROAS has exhibited a decline over time, starting strong in early January 2025 but decreasing towards the end of the analyzed period. Some recent dates show single-digit ROAS values, a concerning trend.
+There is a significant decline in ROAS over time. ROAS started high in January 2025 and decreased by the end of March 2025.
 
-## Potential Creative Fatigue
+| Date       | ROAS     |
+| ---------- | -------- |
+| 2025-01-01 | 145.08   |
+| 2025-03-31 | 44.94   |
 
-Several creatives display characteristics of fatigue. This is evidenced by high impression counts coupled with lower CTRs and ROAS.
+**Insight:** The declining trend in ROAS requires immediate attention.
 
-## Underperforming Creatives
+**3. Creative Performance Analysis:**
 
-A subset of creatives is significantly underperforming compared to the average. These require immediate attention and potential replacement.
+### 3.1 Top Performing Creatives:
 
-## Detailed Insights
+| Creative Message                                                                                        | ROAS     | CTR     | Spend     | Revenue   |
+| -------------------------------------------------------------------------------------------------------- | -------- | ------- | --------- | --------- |
+| Doctors recommend breathable modal — meet our women bras.                                                | 1381.74  | 0.0129  | $1,430.56 | $15,930.31 |
+| Breathable organic cotton that moves with you — limited offer on women panties.                           | 858.95   | 0.0095  | $2,704.50 | $21,932.05 |
+| Doctors recommend breathable cotton — meet our men briefs.                                                | 841.59   | 0.0115  | $3,106.80 | $9,756.34  |
+| Doctors recommend breathable modal — meet our men athletic briefs.                                       | 730.34   | 0.0108  | $1,384.70 | $5,592.50  |
+| Doctors recommend breathable bamboo — meet our men trunks.                                                | 611.70   | 0.0143  | $2,556.93 | $20,850.25 |
+| Stretch that snaps back — durable women sports bras.                                                      | 591.42   | 0.0122  | $12,424.67| $76,217.48 |
+| Doctors recommend breathable bamboo — meet our women bras.                                                | 590.21   | 0.0149  | $4,082.20 | $25,142.41 |
+| Breathable cotton that moves with you — limited offer on women bras.                                     | 565.64   | 0.0120  | $1,846.21 | $26,698.48 |
+| Doctors recommend breathable cotton — meet our women panties.                                              | 522.00  | 0.0106  | $1,703.94 | $14,099.58 |
+| Summer‐ready essentials — sweat‐wicking men athletic briefs.                                                | 511.35   | 0.0147  | $12,015.62| $84,831.74 |
 
-### 1. ROAS Decline
+**Insight:** "Doctors recommend breathable" messaging appears effective.
 
-*   **Description:** The overall ROAS is 5.83. A declining ROAS trend suggests rising costs or reduced conversion rates.
-*   **Severity:** High
-*   **Confidence:** 0.9
-*   **Evidence:**
-    *   **KPI Changes:**
-        *   ROAS: Downward trend. Started high in early January 2025, decreasing to single-digit values in recent dates.
+### 3.2 Worst Performing Creatives:
 
-### 2. Potential Creative Fatigue
+| Creative Message                                                                                        | ROAS   | CTR     | Spend     | Revenue   |
+| -------------------------------------------------------------------------------------------------------- | ------ | ------- | --------- | --------- |
+| Breathable modal that moves with you — limited offer on women sports bras.                               | 0.67   | 0.0133  | $1,060.14 | $720.08   |
+| Breathable microfiber that moves with you — limited offer on women sports bras.                           | 1.66   | 0.0084  | $4,453.95 | $5,940.66   |
+| Doctors recommend breathable bamboo — meet our men inner vests.                                          | 1.67   | 0.0113  | $1,918.70 | $2,502.29   |
+| Breathable organic cotton that moves with you — limited offer on men athletic briefs.                    | 2.02   | 0.0120  | $3,942.62 | $8,380.61   |
+| Breathable organic cotton that moves with you — limited offer on men briefs.                             | 2.14   | 0.0145  | $2,405.59 | $5,183.75   |
+| Breathable cotton that moves with you — limited offer on women sports bras.                              | 2.71   | 0.0114  | $3,553.49 | $9,680.14   |
+| Breathable microfiber that moves with you — limited offer on women panties.                              | 2.76   | 0.0144  | $1,111.11 | $3,105.09   |
+| Breathable organic cotton that moves with you — limited offer on men boxers.                              | 2.84   | 0.0103  | $2,308.16 | $3,549.32   |
+| Doctors recommend breathable bamboo — meet our women panties.                                            | 2.93   | 0.0097  | $4,059.85 | $10,174.68  |
+| Breathable modal that moves with you — limited offer on women panties.                                   | 2.99   | 0.0109  | $2,362.84 | $8,309.48   |
 
-*   **Description:**  Creatives show signs of fatigue with decreasing CTR and ROAS, despite high impressions.
-*   **Severity:** Medium
-*   **Confidence:** 0.75
-*   **Evidence:**
-    *   **Creative Issues:**
-        *   **Creative:** Breathable bamboo that moves with you — limited offer on men briefs.
-            *   **Signal:** Potential creative fatigue.
-            *   **Details:** Low CTR (0.0085), high impressions (953964).
-        *   **Creative:** Breathable microfiber that moves with you — limited offer on women sports bras.
-            *   **Signal:** Potential creative fatigue.
-            *   **Details:** Low ROAS (1.66), high impressions (840524).
-        *   **Creative:** Doctors recommend breathable modal — meet our women sports bras.
-            *   **Signal:** Potential creative fatigue.
-            *   **Details:** Low CTR (0.0070), high impressions (2050531).
+**Insight:** "Breathable [Material] that moves with you — limited offer" creatives underperform.
 
-### 3. Underperforming Creatives
+### 3.3 Creative Fatigue Signals:
 
-*   **Description:** Some creatives are significantly underperforming.
-*   **Severity:** Medium
-*   **Confidence:** 0.8
-*   **Evidence:**
-    *   **Creative Issues:**
-        *   **Creative:** Breathable modal that moves with you — limited offer on women sports bras.
-            *   **Signal:** Low ROAS.
-            *   **Details:** Extremely low ROAS (0.67).
-        *   **Creative:** Breathable microfiber that moves with you — limited offer on women sports bras.
-            *   **Signal:** Low ROAS.
-            *   **Details:** Low ROAS (1.66) compared to average.
-        *   **Creative:** Doctors recommend breathable bamboo — meet our men inner vests.
-            *   **Signal:** Low ROAS.
-            *   **Details:** Low ROAS (1.67).
+| Creative Message                                                                    | CTR     | Impressions | ROAS    |
+| ----------------------------------------------------------------------------------- | ------- | ----------- | ------- |
+| Breathable bamboo that moves with you — limited offer on men briefs.               | 0.0085  | 953,964     | 9.49    |
+| Breathable microfiber that moves with you — limited offer on women sports bras.       | 0.0084  | 840,524     | 1.66    |
+| Doctors recommend breathable cotton — meet our women boyshorts.                   | 0.0070  | 2,071,725   | 135.08  |
+| Doctors recommend breathable modal — meet our women sports bras.                    | 0.0070  | 2,050,531   | 4.46    |
 
-## Hypotheses
+**Insight:** High impressions and low CTR/ROAS strongly indicate creative fatigue.
 
-1.  **ROAS Decline:** The ROAS decline is due to increased market competition leading to higher ad costs without a corresponding increase in conversion rates.
-2.  **ROAS Decline:** Changes in target audience preferences or purchasing power contribute to the decreased ROAS.
-3.  **Creative Fatigue:** Creatives have been shown too long, resulting in ad blindness and reduced engagement, leading to decreased CTR and ROAS.
-4.  **Underperforming Creatives:** Messaging and visuals are not resonating with the target audience, resulting in low ROAS.
-5.  **Underperforming Creatives:** The offer (limited offer, discounts, etc.) in the underperforming creatives is not attractive enough for the target audience, resulting in low ROAS.
+**4. Hypotheses Evaluation:**
 
-## Evaluated Hypotheses
+| Issue                 | Hypothesis                                                                                              | Quantitative Support                                                                                                                                                                                                                                                                                                                                                                  | Strength Score | Confidence |
+| --------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------- |
+| ROAS Decline         | The drop in ROAS is caused by creative fatigue, leading to decreased CTR and conversion rates.        | The overall ROAS is 5.83, but daily ROAS fluctuates significantly. The presence of 'creative\_fatigue\_signals' supports this hypothesis, showing specific creatives with high impression counts but declining CTR and ROAS.                                                                                                                                                | 0.8            | 0.9        |
+| Creative Fatigue       | Creatives with declining CTR and ROAS are suffering from creative fatigue.                               | The 'creative\_fatigue\_signals' section lists creatives with declining CTR and high impressions. For example, 'Breathable bamboo that moves with you — limited offer on men briefs' has a CTR of 0.00847 and 953964 impressions. The difference between the best and worst creatives also supports this hypothesis.                                                       | 0.85           | 0.85       |
+| Underperforming Creatives | Underperforming creatives are not resonating with the target audience due to poor messaging.           | The 'worst\_creatives' section shows creatives with very low ROAS. For example, 'Breathable modal that moves with you — limited offer on women sports bras' has a ROAS of only 0.67. Comparing the messaging of these creatives with the 'top\_creatives' reveals differences in effectiveness. The overall CTR also seems to be impacting ROAS.                              | 0.75           | 0.8        |
+| Top Creatives          | Top performing creatives are successful due to compelling messaging and alignment with audience preferences. | The 'top\_creatives' section shows creatives with significantly high ROAS. For example, 'Doctors recommend breathable modal — meet our women bras' has a ROAS of 1381.74. The common theme of 'Doctors recommend breathable...' across multiple top creatives suggests a compelling and effective message. The highest ROAS creatives often have the highest CTR as well. | 0.7            | 0.75       |
 
-| Issue                 | Hypothesis                                                                                                                                                              | Strength Score | Confidence |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------|
-| ROAS Decline          | Increased competition leads to higher ad costs without increased conversion rates.                                                                                  | 0.7            | 0.7        |
-| ROAS Decline          | Changes in target audience preferences or purchasing power.                                                                                                           | 0.6            | 0.6        |
-| Creative Fatigue      | Current creatives have been shown too long, resulting in ad blindness and reduced engagement, decreasing CTR and ROAS.                                                   | 0.8            | 0.8        |
-| Underperforming Creatives| Messaging and visuals are not resonating, leading to low ROAS.                                                                                                             | 0.9            | 0.9        |
-| Underperforming Creatives| The 'limited offer' creatives not attractive enough.                                                                                                             | 0.8            | 0.7        |
+**5. Creative Recommendations:**
 
-## Creative Recommendations
+| Issue                                                                                                  | Old Message                                                                                              | New Creative                                                                                                                                                               | Reasoning                                                                                                                                                                                                                                               | Expected CTR Lift |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Low ROAS and potential creative fatigue for 'Breathable microfiber that moves with you...'             | Breathable microfiber that moves with you — limited offer on women sports bras.                           | Experience ultimate comfort with our new women's sports bras, made with moisture-wicking fabric for all-day support.                                                    | The original creative is underperforming.  The revised creative focuses on the benefits of moisture-wicking fabric and all-day support, which may be more compelling to the target audience. Removes the limiting 'limited offer' phrasing.            | 5-10%             |
+| Low ROAS and potential creative fatigue for 'Breathable bamboo that moves with you...'                | Breathable bamboo that moves with you — limited offer on men briefs.                                     | Discover the natural comfort of bamboo in our men's briefs.  Naturally breathable and odor-resistant.                                                                 | The original creative shows signs of fatigue. Highlighting the natural comfort, breathability, and odor-resistant properties of bamboo may resonate better with male consumers. The revised creative also avoids the phrase 'limited offer'.              | 7-12%             |
+| Underperforming creative: 'Doctors recommend breathable modal — meet our women sports bras.'         | Doctors recommend breathable modal — meet our women sports bras.                                           | Elevate your workout with breathable modal sports bras, designed for superior comfort and support. As recommended by leading physicians.                                 | While the 'doctors recommend' angle can be effective, this creative's performance is lacking. To improve, the focus is shifted to the comfort and support aspects, still emphasizing the 'doctors recommend' for credibility but repositioning it. | 3-8%              |
+| Improve performance of 'Breathable modal that moves with you — limited offer on women panties.'      | Breathable modal that moves with you — limited offer on women panties.                                    | Silky smooth modal panties that feel like a second skin. Experience all-day comfort and breathability.                                                                | Instead of a 'limited offer,' focusing on the feel of the fabric ('silky smooth') and its benefits ('all-day comfort and breathability') may yield a better response. The old creative may not be highlighting a key selling point.                 | 6-11%             |
 
-| Issue                                                                                                         | Old Creative Message                                                                                              | New Creative Message                                                                                                                                      | Reasoning                                                                                                                                                                                          | Expected CTR Lift |
-|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Low ROAS and creative fatigue for 'Breathable modal that moves with you — limited offer on women sports bras.' | Breathable modal that moves with you — limited offer on women sports bras.                                          | Discover the comfort of modal! New arrivals of women's sports bras, designed for everyday support and lasting comfort.                              | The original creative has a very low ROAS (0.67). Changing the creative to focus on "comfort" and promoting "new arrivals" could attract more attention and drive sales.                      | 15%               |
-| Low ROAS and creative fatigue for 'Breathable microfiber that moves with you — limited offer on women sports bras.'| Breathable microfiber that moves with you — limited offer on women sports bras.                                     | Experience the lightweight feel of our microfiber sports bras! Limited-time offer: buy one, get one 50% off.                                           | The original creative is underperforming with a low ROAS (1.66). Adding urgency and perceived value through a "buy one, get one" offer, and highlighting "lightweight feel".                  | 20%               |
-| Low ROAS for 'Doctors recommend breathable bamboo — meet our men inner vests.'                                 | Doctors recommend breathable bamboo — meet our men inner vests.                                                      | Stay cool and comfortable with our breathable bamboo inner vests for men. Perfect for layering or wearing on their own!                              | Focusing on the versatility of inner vests by highlighting their suitability for both layering and standalone wear.                                                                           | 10%               |
-| Creative fatigue for 'Breathable bamboo that moves with you — limited offer on men briefs.'                    | Breathable bamboo that moves with you — limited offer on men briefs.                                                | Upgrade your underwear drawer with our silky soft bamboo briefs for men. Experience the ultimate in comfort and support! Shop now for a limited time discount.| Changing the copy to emphasize the 'silky soft' texture and the 'ultimate comfort and support' aims to re-engage the audience by highlighting key benefits. Furthermore, mentioning a limited-time discount adds a call to action with an incentive.| 18%               |
-| 'Breathable organic cotton that moves with you — limited offer on men athletic briefs.'                                  | Breathable organic cotton that moves with you — limited offer on men athletic briefs.                                                | None - Pause creative due to low ROAS | This creative is underperforming with a ROAS of 2.02 and is not worth further iteration at this stage. Pausing will help focus on better performing segments.                                                                           | N/A               |
+**6. Recommendations:**
 
-## Recommendations
+*   **Pause or replace underperforming creatives immediately.**
+*   **Refresh fatigued creatives with new messaging.** Focus on benefits rather than just materials.
+*   **Capitalize on successful messaging:** Continue using the "Doctors recommend breathable..." theme, but iterate and test variations.
+*   **A/B test new creative angles:**  Explore focusing on comfort, support, and specific features rather than just materials and limited-time offers.
 
-1.  **Refresh Creatives:** Immediately implement the recommended creative changes, particularly for underperforming ads and those showing signs of fatigue.
-2.  **A/B Testing:** Conduct A/B tests with the new creatives to measure their impact and optimize further.
-3.  **Audience Segmentation:** Re-evaluate audience segmentation strategies to ensure ads are targeted to the most receptive groups.
-4.  **Monitor Key Metrics:** Continuously monitor ROAS, CTR, and other relevant KPIs to identify and address performance issues promptly.
-5.  **Offer Optimization:** Re-evaluate promotional offers to make them more attractive to the target audience. Focus offers on best performing segments.
+**7. Next Steps:**
 
-## Conclusion
-
-The ROAS decline and signs of creative fatigue require immediate action. By implementing the recommendations in this report, we can optimize our marketing campaigns and improve overall performance. Continuous monitoring and A/B testing will be essential to sustain positive results.
+*   Implement the creative recommendations outlined above.
+*   Closely monitor the performance of the new creatives.
+*   Conduct further analysis to identify audience segments that are most responsive to specific messaging.
+*   Consider testing new targeting parameters.

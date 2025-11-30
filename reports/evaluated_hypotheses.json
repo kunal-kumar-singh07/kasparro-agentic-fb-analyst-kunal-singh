@@ -1,12 +1,32 @@
 {
   "evaluated_hypotheses": [
     {
-      "issue": "low CTR",
-      "hypothesis": "Creative fatigue"
+      "issue": "ROAS Decline",
+      "hypothesis": "The drop in ROAS is caused by creative fatigue, leading to decreased CTR and conversion rates.",
+      "quantitative_support": "The overall ROAS is 5.83, but daily ROAS fluctuates significantly, with some days showing very high ROAS (e.g., 145.08 on 2025-01-01 and 384.26 on 2025-01-03) and other days showing much lower ROAS. The presence of 'creative_fatigue_signals' supports this hypothesis, showing specific creatives with high impression counts but declining CTR and ROAS.",
+      "strength_score": 0.8,
+      "confidence": 0.9
     },
     {
-      "issue": "low ROAS",
-      "hypothesis": "Audience saturation"
+      "issue": "Creative Fatigue",
+      "hypothesis": "Creatives with declining CTR and ROAS are suffering from creative fatigue, causing them to be less effective in attracting and converting users.",
+      "quantitative_support": "The 'creative_fatigue_signals' section explicitly lists creatives with declining CTR and high impressions, indicating fatigue. For example, 'Breathable bamboo that moves with you — limited offer on men briefs' has a CTR of 0.00847 and 953964 impressions, with a ROAS of 9.49. This combination of high impressions and low CTR/ROAS supports the hypothesis. The difference between the best and worst creatives also supports this hypothesis.",
+      "strength_score": 0.85,
+      "confidence": 0.85
+    },
+    {
+      "issue": "Underperforming Creatives",
+      "hypothesis": "Underperforming creatives are not resonating with the target audience due to poor messaging, visuals, or targeting, leading to low ROAS.",
+      "quantitative_support": "The 'worst_creatives' section shows creatives with very low ROAS. For example, 'Breathable modal that moves with you — limited offer on women sports bras' has a ROAS of only 0.67. Comparing the messaging of these underperforming creatives with the 'top_creatives' reveals potential differences in effectiveness. The overall CTR also seems to be impacting ROAS, as the worst creatives often have lower CTRs.",
+      "strength_score": 0.75,
+      "confidence": 0.8
+    },
+    {
+      "issue": "Top Performing Creatives Success Factors",
+      "hypothesis": "Top performing creatives are successful due to compelling messaging (e.g., 'Doctors recommend breathable modal') and alignment with audience preferences, resulting in high ROAS.",
+      "quantitative_support": "The 'top_creatives' section shows creatives with significantly high ROAS. For example, 'Doctors recommend breathable modal — meet our women bras' has a ROAS of 1381.74. The common theme of 'Doctors recommend breathable...' across multiple top creatives suggests a compelling and effective message. The highest ROAS creatives often have the highest CTR as well, indicating a successful match with audience preferences.",
+      "strength_score": 0.7,
+      "confidence": 0.75
     }
   ],
   "meta": {

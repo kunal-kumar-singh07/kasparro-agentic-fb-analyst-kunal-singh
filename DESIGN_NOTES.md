@@ -1,136 +1,152 @@
 # Design Notes (V2 Upgrade)
 
-This document summarizes the engineering improvements made in the V2 refactor of the Facebook Ads Multi-Agent Analytics System.  
-The goal of this upgrade was to increase reliability, maintainability, and production readiness while keeping the codebase readable and interview-friendly.
+This document outlines the engineering improvements delivered in the V2 refactor of the Agentic Facebook Ads Analytics System.  
+The objective of this iteration was to strengthen reliability, observability, modularity, and production readiness without increasing system complexity.
 
 ---
 
 ## 1. High-Level Upgrade Summary
 
-### ✔ Introduced a unified BaseAgent architecture
-- All LLM-based agents now inherit from a shared `BaseAgent`.
-- Standardized:
-  - retry logic
-  - JSON parsing (flexible mode)
-  - error handling
-  - fallback logic
-  - structured logging
-  - metadata output
+### 1.1 Unified `BaseAgent` Architecture  
+All LLM-powered agents now inherit from a single shared base class. This standardization consolidates:
 
-This reduced ~70% duplicate code across agents and made each agent predictable and easier to test.
+- retry logic  
+- prompt assembly  
+- LLM call handling  
+- JSON extraction (strict → regex → cleanup)  
+- fallback behavior  
+- metadata construction  
+- structured logging  
 
-### ✔ LLM error handling improved
-- Clear exception classes (`LLMError`, `JSONParseError`, `AgentRuntimeError`)
-- Auto-retries with exponential backoff
-- Prompt regeneration when JSON is invalid
-- Stable fallback data for downstream safety
+This eliminates approximately 70% of duplicated logic and ensures uniform behavior across all agents.
 
-### ✔ Improved observability
-- Added lightweight `Metrics` collector:
-  - counters
-  - timings
-  - stage timestamps
-  - run_id tracking
-- Pipeline writes a full `{run_id}_metrics.json` snapshot.
+### 1.2 Enhanced Error Handling  
+Agents now share robust fault-tolerant patterns:
 
-### ✔ Structured logs
-- Every event uses `log_event()` in JSONL format  
-- Logs include: run_id, agent, stage, payload, timestamps.
+- automatic retries with incremental backoff  
+- clear error categories (`llm_api_failure`, `json_parse_error`, `agent_fallback`)  
+- prompt regeneration for malformed model outputs  
+- guaranteed fallback structures to maintain pipeline continuity  
 
-### ✔ Cleaner pipeline (run.py)
-- Linear stage flow, no clutter
-- run_id tracked across entire pipeline
-- evaluator loop simplified
-- consistent return shape
+### 1.3 Improved Observability  
+A lightweight metrics tracker was added to capture:
 
-### ✔ Security and config hygiene
-- All runtime paths + thresholds come from YAML (no hardcoded keys)
-- Ready for environment-based key injection (Gemini/OpenAI keys)
+- agent-level latency  
+- number of LLM calls  
+- stage-level timestamps  
+- operational counters (rows processed, retries, errors)  
+- total runtime for the entire run  
 
-### ✔ Testability improved
-- Each agent now has deterministic behavior:
-  - cleaner prompts
-  - stable return shape
-  - predictable error modes
-- Shared logic moved to BaseAgent → easier to mock in tests.
+A consolidated metrics JSON file is produced for every execution.
+
+### 1.4 Structured Logging  
+The system uses a unified JSONL log schema through `log_event()`:
+
+- run_id  
+- agent name  
+- event type  
+- payload  
+- timestamp  
+
+This allows deterministic replay of the entire pipeline and fast debugging of failure points.
+
+### 1.5 Configuration & Security Hygiene  
+All operational settings are now sourced from:
+
+- `config/config.yaml`  
+- environment variable overrides  
+
+No hardcoded paths, thresholds, or API keys.  
+This improves portability and prepares the project for cloud environments.
+
+### 1.6 Expanded Test Coverage  
+Tests now include:
+
+- `DataAgent` unit tests  
+- Evaluator logic tests  
+- Deterministic LLM mocks  
+- End-to-end integration test covering  
+  **metrics → insights → hypotheses → evaluation → validation → reporting**
+
+This ensures stability and repeatability across versions.
 
 ---
 
-## 2. What Was Improved in Each Agent
+## 2. Improvements by Component
 
-### BaseAgent v2
-- Unified internal architecture for all LLM-based components.
-- Full retry system with improved prompts.
-- Flexible JSON parser with strict → regex → cleanup pipeline.
-- Consistent metadata object.
-- Clean short comments for readability.
-
-### InsightAgent
-- Now ~40 lines instead of ~130.
-- Only contains logic specific to insight generation.
-- Inherits all safety from BaseAgent.
-
-### HypothesisAgent
-- Cleaner schema, simple prompt, stable structure.
-
-### EvaluatorAgent
-- More predictable evaluation loop responses.
-- Better JSON stability.
-
-### ValidatorAgent
-- Clearer validation schema.
-- More consistent downstream compatibility.
-
-### CreativeImprovementAgent
-- Simplified prompts.
-- Predictable JSON layout for creative recommendations.
-
-### ReportAgent
-- Special behavior for markdown handled cleanly.
-- Overrode BaseAgent JSON parsing to raw text flow.
+### BaseAgent
+- deterministic life cycle  
+- unified retries, LLM calls, and JSON parsing  
+- structured fallback logic  
+- integrated latency and call-count tracking  
+- consistent metadata generation  
 
 ### DataAgent
-- Cleaner numeric safety conversions.
-- Config-driven thresholds.
-- Improved fatigue detection.
+- safer type coercion  
+- threshold-driven fatigue detection  
+- configuration-powered behavior  
+
+### InsightAgent
+- cleaner schema  
+- predictable JSON layouts  
+- improved prompt clarity  
+
+### HypothesisAgent
+- strengthened structure  
+- improved supporting-signal extraction  
+- consistent confidence scoring  
+
+### EvaluatorAgent
+- clearer scoring schema  
+- improved quantitative reasoning  
+- added debugging counters for hypothesis scoring  
+
+### ValidatorAgent
+- stronger hypothesis refinement  
+- consistent validity classifications  
+- stabilized output schema  
+
+### CreativeImprovementAgent
+- simplified logic  
+- cleaner schema adherence  
+- predictable JSON responses  
+
+### ReportAgent
+- clean Markdown generation pipeline  
+- isolation between JSON text and Markdown output  
+- improved breakdown of full pipeline results  
 
 ---
 
-## 3. What I Would Do Next (If Given More Time)
+## 3. Future Opportunities (If More Time Were Available)
 
-### 3.1. Add streaming / partial results
-- Stream LLM evaluation progressively.
-- Support mid-run interruption + checkpoint resume.
+### 3.1 Adaptive Intelligence  
+- dynamic hypothesis depth based on dataset size  
+- adaptive evaluator confidence scoring  
+- planner that conditionally enables/disables agents depending on the data  
 
-### 3.2. Add evaluation heatmaps / charts
-- Simple matplotlib rendering inside results/ folder.
-- Optional HTML export for better visualization.
+### 3.2 Enhanced Reporting  
+- visual charts (ROAS, CTR, CPM)  
+- creative clustering and fatigue visualizations  
+- optional HTML or PDF report export  
 
-### 3.3. Add more adaptive intelligence
-- HypothesisAgent could adjust depth based on dataset size.
-- EvaluatorAgent could tighten scoring rules based on repeated weak results.
-- PlannerAgent could dynamically add/remove stages.
-
-### 3.4. Memory of past runs
-- Cache insights from previous runs to compare performance over time.
-
-### 3.5. Containerization + Config Environments
-- Add Dockerfile
-- .env loader
-- Staging vs Production config files
+### 3.3 Operational Extensions  
+- incremental run caching  
+- checkpointed pipeline stages  
+- Dockerization and cloud deployment profile  
+- environment-specific config (dev/stage/prod)  
 
 ---
 
-## 4. Summary
+## 4. Conclusion
 
-This V2 upgrade moves the system from a prototype into a mini-production architecture with:
+The V2 upgrade refines the system into a robust, production-ready analytics platform with:
 
-- consistent internal conventions  
-- unified agent lifecycle  
-- strong observability  
-- safer error handling  
-- better separation of concerns  
-- more readable, smaller code  
+- strong abstractions  
+- comprehensive error handling  
+- consistent agent behavior  
+- improved observability  
+- safer configuration  
+- measurable and testable outputs  
 
-The project now reflects engineering maturity expected from a real-world ML platform.
-
+These enhancements significantly elevate the engineering quality and prepare the system for real-world, iterative use.

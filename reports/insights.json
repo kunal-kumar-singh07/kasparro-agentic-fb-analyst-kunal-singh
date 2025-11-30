@@ -1,9 +1,90 @@
 {
+  "summary_text": "Overall ROAS is 5.83. There's a noticeable drop in ROAS over the recent period, potentially due to creative fatigue, as indicated by declining performance in certain creatives and the 'creative_fatigue_signals' data. Some top creatives still perform well, suggesting a need for refreshing underperforming creatives.",
   "insights": [
-    "CTR is stable",
-    "ROAS is declining"
+    {
+      "title": "ROAS Decline",
+      "description": "There is a significant drop in ROAS over time. Initially, ROAS was very high (e.g., 145.08 on 2025-01-01), but in the recent days, ROAS has decreased significantly (e.g., 44.94 on 2025-03-31).",
+      "evidence": {
+        "kpi_changes": [
+          {
+            "metric": "ROAS",
+            "trend": "Decreasing",
+            "example": "From 145.08 on 2025-01-01 to 44.94 on 2025-03-31"
+          }
+        ],
+        "creative_issues": [],
+        "audience_issues": []
+      },
+      "severity": "High",
+      "confidence": 0.95
+    },
+    {
+      "title": "Potential Creative Fatigue",
+      "description": "Several creatives are exhibiting signs of fatigue, as indicated by lower ROAS and CTR despite high impression counts. Consider refreshing these creatives or testing new angles.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          {
+            "creative_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
+            "metric": "CTR",
+            "value": 0.00836
+          },
+          {
+            "creative_message": "Breathable bamboo that moves with you — limited offer on men briefs.",
+            "metric": "CTR",
+            "value": 0.00847
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "Medium",
+      "confidence": 0.8
+    },
+    {
+      "title": "Underperforming Creatives",
+      "description": "Some creatives are consistently underperforming (low ROAS) and need immediate attention. Review these creatives to identify issues and make improvements, or replace them with new ones.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          {
+            "creative_message": "Breathable modal that moves with you — limited offer on women sports bras.",
+            "metric": "ROAS",
+            "value": 0.669
+          },
+          {
+            "creative_message": "Breathable microfiber that moves with you — limited offer on women sports bras.",
+            "metric": "ROAS",
+            "value": 1.66
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "Medium",
+      "confidence": 0.9
+    },
+    {
+      "title": "Top Performing Creatives",
+      "description": "Several creatives are performing exceptionally well, demonstrating high ROAS and CTR. Analyze these successful creatives to understand what's resonating with the audience and use these insights to inform the creation of new creatives.",
+      "evidence": {
+        "kpi_changes": [],
+        "creative_issues": [
+          {
+            "creative_message": "Doctors recommend breathable modal — meet our women bras.",
+            "metric": "ROAS",
+            "value": 1381.74
+          },
+          {
+            "creative_message": "Breathable organic cotton that moves with you — limited offer on women panties.",
+            "metric": "ROAS",
+            "value": 858.95
+          }
+        ],
+        "audience_issues": []
+      },
+      "severity": "Low",
+      "confidence": 0.85
+    }
   ],
-  "summary_text": "Basic summary",
   "meta": {
     "agent": "InsightAgent"
   }

@@ -1,26 +1,26 @@
 {
-  "run_id": "20db60cc69",
+  "run_id": "a412b88353",
   "counters": {
     "rows_processed": 4500
   },
   "stages": {
-    "metrics_ready": 1764528065.73214,
-    "insights_ready": 1764528072.7353482,
-    "hypotheses_ready": 1764528076.6550345,
-    "evaluation_ready": 1764528082.2933018,
-    "validated_ready": 1764528086.3055964,
-    "creatives_ready": 1764528093.5849767,
-    "report_ready": 1764528106.13605
+    "metrics_ready": 1764532005.0731974,
+    "insights_ready": 1764532013.4288228,
+    "hypotheses_ready": 1764532016.4813728,
+    "evaluation_ready": 1764532021.603268,
+    "validated_ready": 1764532026.6637013,
+    "creatives_ready": 1764532032.5804777,
+    "report_ready": 1764532048.3239884
   },
   "durations": {
-    "metrics_ready_to_insights_ready": 7.003,
-    "insights_ready_to_hypotheses_ready": 3.92,
-    "hypotheses_ready_to_evaluation_ready": 5.638,
-    "evaluation_ready_to_validated_ready": 4.012,
-    "validated_ready_to_creatives_ready": 7.279,
-    "creatives_ready_to_report_ready": 12.551
+    "metrics_ready_to_insights_ready": 8.356,
+    "insights_ready_to_hypotheses_ready": 3.053,
+    "hypotheses_ready_to_evaluation_ready": 5.122,
+    "evaluation_ready_to_validated_ready": 5.06,
+    "validated_ready_to_creatives_ready": 5.917,
+    "creatives_ready_to_report_ready": 15.744
   },
   "times": {
-    "total_runtime": 40.479
+    "total_runtime": 43.286
   }
 }

@@ -19,6 +19,8 @@ class BaseAgent:
         return {"meta": {"error": str(error), "agent": self.__class__.__name__}}
 
     def _call_llm(self, prompt):
+        from utils.metrics import metrics
+        metrics.inc("llm_calls")
         if hasattr(self.llm, "generate"):
             return self.llm.generate(prompt)
         if hasattr(self.llm, "generate_content"):
@@ -54,8 +56,10 @@ class BaseAgent:
             json.dump(data, f, indent=2, ensure_ascii=False)
 
     def run(self, *args, **kwargs):
+        from utils.metrics import metrics
         agent = self.__class__.__name__
         log_event(agent, "start", {})
+        start = time.time()
 
         max_attempts = kwargs.pop("max_attempts", self.max_attempts)
         args_list = list(args)
@@ -89,6 +93,7 @@ class BaseAgent:
                 parsed = self._extract_json(raw)
                 final = self._postprocess(parsed)
                 self._save(final)
+                metrics.observe_latency(f"{agent}_latency", time.time() - start)
                 log_event(agent, "success", {"attempt": attempt})
                 return final
 
@@ -104,5 +109,6 @@ class BaseAgent:
 
         fallback = self._fallback(last_error)
         self._save(fallback)
+        metrics.observe_latency(f"{agent}_latency", time.time() - start)
         log_event(agent, "fallback", {"error": str(last_error), "error_type": "agent_fallback"})
         return fallback
