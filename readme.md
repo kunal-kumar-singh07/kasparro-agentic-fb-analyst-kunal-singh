@@ -5,11 +5,12 @@ A modular, multi-agent analytics system for automated Facebook Ads insights, hyp
 Designed with clean architecture, strong observability, and comprehensive testing.
 
 ---
+## Documentation
 
-## Agent Graph
+[▶ View Agent Graph](agent_graph.md)
 
-A visualization of the multi-agent pipeline:  
-https://github.com/kunal-kumar-singh07/kasparro-agentic-fb-analyst-kunal-singh/blob/main/reports/agent_graph.md
+[▶ View Design Notes](DESIGN_NOTES.md)
+
 
 ---
 
